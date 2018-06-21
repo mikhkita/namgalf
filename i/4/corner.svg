@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="14px" viewBox="0 0 17 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Line</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <path d="M0,13.2275889 C3.23657227,10.9618825 5.49987793,7.91602479 6.78991699,4.09001568 C8.07995605,0.264006561 11.28007,-0.00902403786 16.3902588,3.27092388 C14.4967041,5.14600526 13.4433594,6.76970318 13.2302246,8.14201763 C12.9186153,10.1483816 11.242431,12.0667482 8.19512939,12.885792 C6.80295448,13.2599763 4.07124468,13.3739086 0,13.2275889 Z" id="Line" stroke="#CDF0C8" fill="#CDF0C8"></path>
+    </g>
+</svg>

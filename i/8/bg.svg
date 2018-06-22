@@ -4,8 +4,8 @@
  width="1319.5px" height="509.5px">
 <defs>
 <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="1319px" height="509px"  >
-    <feOffset in="SourceAlpha" dx="0" dy="30" />
-    <feGaussianBlur result="blurOut" stdDeviation="9.487" />
+    <feOffset in="SourceAlpha" dx="0" dy="20" />
+    <feGaussianBlur result="blurOut" stdDeviation="23.487" />
     <feFlood flood-color="rgb(82, 76, 84)" result="floodOut" />
     <feComposite operator="atop" in="floodOut" in2="blurOut" />
     <feComponentTransfer><feFuncA type="linear" slope="0.15"/></feComponentTransfer>

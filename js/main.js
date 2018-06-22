@@ -112,6 +112,15 @@ $(document).ready(function(){
         calcActive();
     });
 
+    custom['svg-anim'] = function(el){
+        // alert();
+        document.getElementById(el.attr("data-id")).beginElement();
+    }
+
+    custom['lines-end'] = function(el){
+        $(".b-levels-email").addClass("fadeDown-show");
+    }
+
     // $(".b-give-slider").on('afterChange', function(event, slick, currentSlide, nextSlide){
     //     $(".b-give-slide[data-slick-index='"+currentSlide+"']").addClass("show");
     // });

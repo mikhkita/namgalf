@@ -113,7 +113,6 @@ $(document).ready(function(){
     });
 
     custom['svg-anim'] = function(el){
-        // alert();
         document.getElementById(el.attr("data-id")).beginElement();
     }
 
@@ -121,9 +120,63 @@ $(document).ready(function(){
         $(".b-levels-email").addClass("fadeDown-show");
     }
 
-    // $(".b-give-slider").on('afterChange', function(event, slick, currentSlide, nextSlide){
-    //     $(".b-give-slide[data-slick-index='"+currentSlide+"']").addClass("show");
-    // });
+    $(".b-reviews-slider").slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true, 
+        easing: 'easeOutCubic',
+        speed: 800,
+        useTransform: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+        touchThreshold: 100
+    }); 
+    animateIndexes($(".b-reviews-slide[data-slick-index='0']"));
+
+    $(".b-reviews-slider").on('afterChange', function(event, slick, currentSlide, nextSlide){
+        $(".b-review-index").removeClass("show");
+        animateIndexes($(".b-reviews-slide[data-slick-index='"+currentSlide+"']"));
+    });
+
+    function animateIndexes($el){
+        $el.find(".b-review-index").each(function(){
+            var $this = $(this);
+            setTimeout(function(){
+                $this.addClass("show");
+            }, $this.index() * 100);
+        });
+    }
+
+    $(".b-kind-slider").slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true, 
+        easing: 'easeOutCubic',
+        speed: 800,
+        useTransform: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+        touchThreshold: 100
+    }); 
+
+    $(".b-works-slider").slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true, 
+        easing: 'easeOutCubic',
+        speed: 800,
+        useTransform: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+        touchThreshold: 100
+    }); 
+
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {

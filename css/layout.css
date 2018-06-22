@@ -474,12 +474,30 @@ p{
 			.b-indicators + h3{
 				max-width: 560px;
 			}
-.b-2{}
+.b-2{
+	position: relative;
+}
 	.b-2 .b-check{
-
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-image: url('../i/2/ok.jpg');
+		width: 104px;
+		height: 81px;
+		position: absolute;
+		left: 50%;
+		margin-left: 486px;
+		top: -40px;
 	}
 	.b-2 .b-circle{
-
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-image: url('../i/2/o.jpg');
+		width: 103px;
+		height: 108px;
+		position: absolute;
+		left: 50%;
+		margin-left: -602px;
+		bottom: -5px;
 	}
 	.b-2 h2{
 		margin-top: -45px;

@@ -283,6 +283,24 @@ small{
 .b-svg-vk{
 
 }
+.b-note{
+	text-align: left;
+	position: relative;
+	box-shadow: 0px 30px 90px 0px rgba(82, 76, 84, 0.15);
+	margin-bottom: 110px;
+	border-radius: 5px;
+}
+	.b-note-shadow{
+		position: absolute;
+		content: "s";
+		font-size: 0px;
+		width: calc(100% - 40px);
+		left: 20px;
+		bottom: -10px;
+		height: 10px;
+		background: #bae1bb;
+		border-radius: 0px 0px 5px 5px;
+	}
 .b-btn{
 
 }
@@ -1389,7 +1407,7 @@ small{
 	.b-8 h2{
 		margin-bottom: 32px;
 	}
-	.b-note{
+	.b-note-svg{
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-image: url('../i/8/bg.svg');
@@ -1402,46 +1420,354 @@ small{
 		margin-bottom: -32px;
 		position: relative;
 	}
-		.b-note h2{
+		.b-note-svg h2{
 			font-size: 40px;
 			line-height: 45px;
 			margin-bottom: 14px;
 		}
-		.b-note p{
+		.b-note-svg p{
 			letter-spacing: 0px;
 		}
-		.b-note .b-img{
+		.b-note-svg .b-img{
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
 			position: absolute;
 		}
-		.b-note-1 .b-img{
+		.b-note-svg-1 .b-img{
 			background-image: url('../i/8/image-1.png');
 			width: 698px;
 			height: 290px;
 			right: 54px;
 			top: 20px;
 		}
-		.b-note-2 .b-img{
+		.b-note-svg-2 .b-img{
 			background-image: url('../i/8/image-2.png');
-			width: 100px;
-			height: 100px;
+			width: 457px;
+			height: 330px;
+			right: 105px;
+			top: 20px;
 		}
-		.b-note-3 .b-img{
+		.b-note-svg-3 .b-img{
 			background-image: url('../i/8/image-3.png');
-			width: 100px;
-			height: 100px;
+			width: 554px;
+			height: 413px;
+			right: 60px;
+			top: -60px;
 		}
-		.b-note-4 .b-img{
+		.b-note-svg-4 .b-img{
 			background-image: url('../i/8/image-4.png');
-			width: 100px;
-			height: 100px;
+			width: 511px;
+			height: 362px;
+			right: 129px;
+			bottom: 81px;
 		}
-		.b-note-5 .b-img{
+		.b-note-svg-5 .b-img{
 			background-image: url('../i/8/image-5.png');
-			width: 100px;
-			height: 100px;
+			width: 639px;
+			height: 423px;
+			right: 54px;
+			bottom: 43px;
 		}
+.b-10{
+
+}
+	.b-10 h2{
+		display: inline-block;
+		max-width: 1000px;
+		letter-spacing: 0px;
+		margin-bottom: 22px;
+	}
+	.b-10 h2 + p{
+		display: inline-block;
+		max-width: 1000px;
+	}
+	.b-timetable-cont{
+		text-align: left;
+		padding-top: 45px;
+	}
+		.b-legend{
+			width: 392px;
+			margin-top: 137px;
+		}
+			.b-legend__item{
+				margin-bottom: 20px;
+				opacity: 0;
+			}
+			.legendAnim-show .b-legend__item:nth-child(1){
+				opacity: 1;
+				-webkit-transition: opacity 300ms 100ms ease-out;
+				   -moz-transition: opacity 300ms 100ms ease-out;
+				    -ms-transition: opacity 300ms 100ms ease-out;
+				   	 -o-transition: opacity 300ms 100ms ease-out;
+						transition: opacity 300ms 100ms ease-out;
+			}
+			.legendAnim-show .b-legend__item:nth-child(2){
+				opacity: 1;
+				-webkit-transition: opacity 300ms 200ms ease-out;
+				   -moz-transition: opacity 300ms 200ms ease-out;
+				    -ms-transition: opacity 300ms 200ms ease-out;
+				   	 -o-transition: opacity 300ms 200ms ease-out;
+						transition: opacity 300ms 200ms ease-out;
+			}
+			.legendAnim-show .b-legend__item:nth-child(3){
+				opacity: 1;
+				-webkit-transition: opacity 300ms 300ms ease-out;
+				   -moz-transition: opacity 300ms 300ms ease-out;
+				    -ms-transition: opacity 300ms 300ms ease-out;
+				   	 -o-transition: opacity 300ms 300ms ease-out;
+						transition: opacity 300ms 300ms ease-out;
+			}
+			.legendAnim-show .b-legend__item:nth-child(4){
+				opacity: 1;
+				-webkit-transition: opacity 300ms 400ms ease-out;
+				   -moz-transition: opacity 300ms 400ms ease-out;
+				    -ms-transition: opacity 300ms 400ms ease-out;
+				   	 -o-transition: opacity 300ms 400ms ease-out;
+						transition: opacity 300ms 400ms ease-out;
+			}
+			.legendAnim-show .b-legend__item:nth-child(5){
+				opacity: 1;
+				-webkit-transition: opacity 300ms 500ms ease-out;
+				   -moz-transition: opacity 300ms 500ms ease-out;
+				    -ms-transition: opacity 300ms 500ms ease-out;
+				   	 -o-transition: opacity 300ms 500ms ease-out;
+						transition: opacity 300ms 500ms ease-out;
+			}
+			.legendAnim-show .b-legend__item:nth-child(6){
+				opacity: 1;
+				-webkit-transition: opacity 300ms 600ms ease-out;
+				   -moz-transition: opacity 300ms 600ms ease-out;
+				    -ms-transition: opacity 300ms 600ms ease-out;
+				   	 -o-transition: opacity 300ms 600ms ease-out;
+						transition: opacity 300ms 600ms ease-out;
+			}
+			.legendAnim-show .b-legend__item:nth-child(7){
+				opacity: 1;
+				-webkit-transition: opacity 300ms 700ms ease-out;
+				   -moz-transition: opacity 300ms 700ms ease-out;
+				    -ms-transition: opacity 300ms 700ms ease-out;
+				   	 -o-transition: opacity 300ms 700ms ease-out;
+						transition: opacity 300ms 700ms ease-out;
+			}
+			.legendAnim-show .b-legend__item:nth-child(8){
+				opacity: 1;
+				-webkit-transition: opacity 300ms 800ms ease-out;
+				   -moz-transition: opacity 300ms 800ms ease-out;
+				    -ms-transition: opacity 300ms 800ms ease-out;
+				   	 -o-transition: opacity 300ms 800ms ease-out;
+						transition: opacity 300ms 800ms ease-out;
+			}
+			.legendAnim-show .b-legend__item:nth-child(9){
+				opacity: 1;
+				-webkit-transition: opacity 300ms 900ms ease-out;
+				   -moz-transition: opacity 300ms 900ms ease-out;
+				    -ms-transition: opacity 300ms 900ms ease-out;
+				   	 -o-transition: opacity 300ms 900ms ease-out;
+						transition: opacity 300ms 900ms ease-out;
+			}
+			.legendAnim-show .b-legend__item:nth-child(10){
+				opacity: 1;
+				-webkit-transition: opacity 400ms 1000ms ease-out;
+				   -moz-transition: opacity 400ms 1000ms ease-out;
+				    -ms-transition: opacity 400ms 1000ms ease-out;
+				   	 -o-transition: opacity 400ms 1000ms ease-out;
+						transition: opacity 400ms 1000ms ease-out;
+			}
+			.legendAnim-show .b-legend__item:nth-child(11){
+				opacity: 1;
+				-webkit-transition: opacity 500ms 1100ms ease-out;
+				   -moz-transition: opacity 500ms 1100ms ease-out;
+				    -ms-transition: opacity 500ms 1100ms ease-out;
+				   	 -o-transition: opacity 500ms 1100ms ease-out;
+						transition: opacity 500ms 1100ms ease-out;
+			}
+			.legendAnim-show .b-legend__item:nth-child(12){
+				opacity: 1;
+				-webkit-transition: opacity 600ms 1200ms ease-out;
+				   -moz-transition: opacity 600ms 1200ms ease-out;
+				    -ms-transition: opacity 600ms 1200ms ease-out;
+				   	 -o-transition: opacity 600ms 1200ms ease-out;
+						transition: opacity 600ms 1200ms ease-out;
+			}
+				.b-legend__item span{
+					display: inline-block;
+					vertical-align: top;
+					text-align: center;
+					width: 69px;
+					border-radius: 100px;
+					margin-right: 6px;
+					padding: 0px 0px 1px;
+				}
+				.b-legend__item h4{
+					width: calc(100% - 80px);
+					display: inline-block;
+					vertical-align: top;
+					min-height: 40px;
+				}
+		.b-timetable{
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-image: url('../i/10/roadmap.svg');
+			width: 720px;
+			height: 855px;
+			padding-top: 137px;
+			text-align: center;
+		}
+			.b-lessons{
+				display: inline-block;
+				width: calc(100% - 10px);
+				overflow: hidden;
+			}
+				.b-lesson{
+					border-radius: 100px;
+					height: 20px;
+					width: 0px;
+					margin-bottom: 40px;
+				}
+				.b-lesson{
+					
+				}
+				.b-lesson:nth-child(1){
+					margin-left: 25px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(1){
+					width: 40px;
+					-webkit-transition: width 300ms 100ms ease-out;
+					-moz-transition: width 300ms 100ms ease-out;
+					-ms-transition: width 300ms 100ms ease-out;
+					-o-transition: width 300ms 100ms ease-out;
+					transition: width 300ms 100ms ease-out;
+				}
+				.b-lesson:nth-child(2){
+					margin-left: 65px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(2){
+					width: 60px;
+					-webkit-transition: width 300ms 200ms ease-out;
+					-moz-transition: width 300ms 200ms ease-out;
+					-ms-transition: width 300ms 200ms ease-out;
+					-o-transition: width 300ms 200ms ease-out;
+					transition: width 300ms 200ms ease-out;
+				}
+				.b-lesson:nth-child(3){
+					margin-left: 65px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(3){
+					width: 80px;
+					-webkit-transition: width 300ms 300ms ease-out;
+					-moz-transition: width 300ms 300ms ease-out;
+					-ms-transition: width 300ms 300ms ease-out;
+					-o-transition: width 300ms 300ms ease-out;
+					transition: width 300ms 300ms ease-out;
+				}
+				.b-lesson:nth-child(4){
+					margin-left: 65px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(4){
+					width: 100px;
+					-webkit-transition: width 300ms 400ms ease-out;
+					-moz-transition: width 300ms 400ms ease-out;
+					-ms-transition: width 300ms 400ms ease-out;
+					-o-transition: width 300ms 400ms ease-out;
+					transition: width 300ms 400ms ease-out;
+				}
+				.b-lesson:nth-child(5){
+					margin-left: 145px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(5){
+					width: 150px;
+					-webkit-transition: width 300ms 500ms ease-out;
+					-moz-transition: width 300ms 500ms ease-out;
+					-ms-transition: width 300ms 500ms ease-out;
+					-o-transition: width 300ms 500ms ease-out;
+					transition: width 300ms 500ms ease-out;
+				}
+				.b-lesson:nth-child(6){
+					margin-left: 145px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(6){
+					width: 100px;
+					-webkit-transition: width 300ms 600ms ease-out;
+					   -moz-transition: width 300ms 600ms ease-out;
+					    -ms-transition: width 300ms 600ms ease-out;
+					   	 -o-transition: width 300ms 600ms ease-out;
+							transition: width 300ms 600ms ease-out;
+				}
+				.b-lesson:nth-child(7){
+					margin-left: 245px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(7){
+					width: 80px;
+					-webkit-transition: width 300ms 700ms ease-out;
+					-moz-transition: width 300ms 700ms ease-out;
+					-ms-transition: width 300ms 700ms ease-out;
+					-o-transition: width 300ms 700ms ease-out;
+					transition: width 300ms 700ms ease-out;
+				}
+				.b-lesson:nth-child(8){
+					margin-left: 245px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(8){
+					width: 80px;
+					-webkit-transition: width 300ms 800ms ease-out;
+					-moz-transition: width 300ms 800ms ease-out;
+					-ms-transition: width 300ms 800ms ease-out;
+					-o-transition: width 300ms 800ms ease-out;
+					transition: width 300ms 800ms ease-out;
+				}
+				.b-lesson:nth-child(9){
+					margin-left: 315px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(9){
+					width: 120px;
+					-webkit-transition: width 300ms 900ms ease-out;
+					-moz-transition: width 300ms 900ms ease-out;
+					-ms-transition: width 300ms 900ms ease-out;
+					-o-transition: width 300ms 900ms ease-out;
+					transition: width 300ms 900ms ease-out;
+				}
+				.b-lesson:nth-child(10){
+					margin-left: 395px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(10){
+					width: 120px;
+					-webkit-transition: width 400ms 1000ms ease-out;
+					-moz-transition: width 400ms 1000ms ease-out;
+					-ms-transition: width 400ms 1000ms ease-out;
+					-o-transition: width 400ms 1000ms ease-out;
+					transition: width 400ms 1000ms ease-out;
+				}
+				.b-lesson:nth-child(11){
+					margin-left: 445px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(11){
+					width: 120px;
+					-webkit-transition: width 500ms 1100ms ease-out;
+					-moz-transition: width 500ms 1100ms ease-out;
+					-ms-transition: width 500ms 1100ms ease-out;
+					-o-transition: width 500ms 1100ms ease-out;
+					transition: width 500ms 1100ms ease-out;
+				}
+				.b-lesson:nth-child(12){
+					margin-left: 315px;
+				}
+				.lessonsAnim-show .b-lesson:nth-child(12){
+					width: 410px;
+					-webkit-transition: width 600ms 1200ms ease-out;
+					-moz-transition: width 600ms 1200ms ease-out;
+					-ms-transition: width 600ms 1200ms ease-out;
+					-o-transition: width 600ms 1200ms ease-out;
+					transition: width 600ms 1200ms ease-out;
+				}
+			.b-timetable-shadow{
+				background-position: 50% 50%;
+				background-image: url('../i/10/light.png');
+				width: 152px;
+				top: 20px;
+				height: calc(100% - 40px);
+				position: absolute;
+				right: 5px;
+			}
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	

@@ -64,6 +64,54 @@ $(document).ready(function(){
         $(".b-give-slide[data-slick-index='"+currentSlide+"']").addClass("show");
     });
 
+    calcActive();
+
+    function calcActive(){
+        $(".b-tabs-line").each(function(){
+            var $line = $(this).find("span"),
+                $tabs = $(this).prev(".b-tabs"),
+                $active = $tabs.find("li.active");
+
+            $line.css({
+                "left" : $active.offset().left - $tabs.offset().left,
+                "width" : $active.width() + $active.css("padding-left").replace(/\D+/g,"")*1 + $active.css("padding-right").replace(/\D+/g,"")*1
+            });
+        });
+    }
+
+    $(".b-tabs li").click(function(){
+        var $tabs = $(this).parents(".b-tabs"),
+            index = $(this).index();
+
+        $($tabs.attr("data-tabs")).find(".slick-dots li").eq(index).find("button").click();
+
+        if( $($tabs.attr("data-tabs")).find(".slick-dots li").eq(index).hasClass("slick-active") ){
+            $tabs.find("li").removeClass("active");
+            $(this).addClass("active");
+
+            calcActive();
+        }
+    });
+    $(".b-diagram-tabs-cont").slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        cssEase: 'ease', 
+        speed: 500,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+        touchThreshold: 100
+    });
+
+    $(".b-diagram-tabs-cont").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $(".b-diagram-tabs li.active").removeClass("active");
+        $(".b-diagram-tabs li").eq(nextSlide).addClass("active");
+
+        calcActive();
+    });
+
     // $(".b-give-slider").on('afterChange', function(event, slick, currentSlide, nextSlide){
     //     $(".b-give-slide[data-slick-index='"+currentSlide+"']").addClass("show");
     // });

@@ -42,6 +42,31 @@ $(document).ready(function(){
     $.fn.placeholder();
 
     $(window).enllax();
+
+    $(".b-give-slider").slick({
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true, 
+        easing: 'easeOutCubic',
+        speed: 800,
+        useTransform: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+        touchThreshold: 100
+    }); 
+
+    $(".b-give-slide.slick-active").addClass("show");
+
+    $(".b-give-slider").on('afterChange', function(event, slick, currentSlide, nextSlide){
+        $(".b-give-slide").removeClass("show");
+        $(".b-give-slide[data-slick-index='"+currentSlide+"']").addClass("show");
+    });
+
+    // $(".b-give-slider").on('afterChange', function(event, slick, currentSlide, nextSlide){
+    //     $(".b-give-slide[data-slick-index='"+currentSlide+"']").addClass("show");
+    // });
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {

@@ -217,6 +217,36 @@ $(document).ready(function(){
         $(".b-step-slide[data-slick-index='"+currentSlide+"'] .slider-anim").addClass("show");
     });
 
+    var isWindows = false,
+        timerLeave = 0,
+        showLeave = true;
+        inputFocus= false;
+
+    $( "input" ).focus(function() {
+        inputFocus = true;
+        showLeave = false;
+      });
+
+
+
+    if (navigator.userAgent.indexOf ('Windows') != -1) isWindows = true;
+
+    setInterval(function() {
+        timerLeave++;
+        if(timerLeave > 120){
+            showLeave = true;
+            timerLeave = 0;
+        }
+    }, 1000);
+
+    $(document).mouseleave(function(){
+        if(!$(".fancybox-slide .b-popup").length && showLeave){
+            $(".b-quit-popup-link").click();
+            showLeave = false;
+            timerLeave = 0;
+        }
+    });
+
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {

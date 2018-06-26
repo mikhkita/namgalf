@@ -54,7 +54,26 @@
 			<div class="b-right right">
 				<h2><b>Здравствуйте.</b> Мы помогаем бизнесу получать клиентов из интернета</h2>
 				<div class="b-right-padding">
-					<h3>Раньше мы делали это с помощью одностраничных сайтов. <span class="thin">В этом году мы разработали схему, с которой</span> <b>повысим результаты вашего бизнеса <a href="#">по более чем 20 показателям</a></b></h3>
+					<h3>Раньше мы делали это с помощью одностраничных сайтов. <span class="thin">В этом году мы разработали схему, с которой</span> <b>повысим результаты вашего бизнеса 
+						<div class="b-20-indexes">
+							<a href="#" onclick="return false;">по более чем 20 показателям</a>
+							<div class="b-note b-20-indexes-note">
+								<div class="b-border">
+									<h4>CPC</h4>
+									<h4>CPL</h4>
+									<h4>CPCustomer</h4>
+									<h4>LTV</h4>
+									<h4>Cредний чек</h4>
+									<h4>Частота покупок</h4>
+									<h4>Цикл сделки</h4>
+									<h4>EPC</h4>
+									<h4>CTR</h4>
+									<h4>Конверсия в заявку</h4>
+									<h4>Конверсия в продажу</h4>
+								</div>
+							</div>
+						</div></b>
+					</h3>
 					<div class="b-indicators">
 						<div class="b-indicators__item fadeRight anim" data-cont=".b-indicators">
 							<div class="b-indicators__item-img"><img src="i/1/1.png" alt=""></div>
@@ -1527,7 +1546,7 @@
 				</div>
 				<div class="b-three-item anim fadeDown delay200 b-new-project">
 					<h3><b>Место для<br>вашего проекта</b></h3>
-					<a href="#" class="b-btn b-green-btn"><span>Забронировать!</span></a>
+					<a href="#" class="b-btn b-green-btn b-go" data-block=".b-20" data-offset="-50"><span>Забронировать!</span></a>
 				</div>
 				<div class="b-three-item anim fadeDown delay400">
 					<div class="b-img" style="background-image: url('i/19/photo-3.jpg');">
@@ -1590,7 +1609,7 @@
 	<div class="b b-footer">
 		<div class="b-block justify">
 			<a href="#" class="b-logo"></a>
-			<div class="b-links">
+			<!-- <div class="b-links">
 				<h4><a href="#"><b>Главная</b></a></h4>
 				<h4><a href="#"><b>Портфолио</b></a></h4>
 				<h4><a href="#"><b>Проекты</b></a></h4>
@@ -1610,7 +1629,7 @@
 				<h4><a href="#"><b>Вакансии</b></a></h4>
 				<h4><a href="#"><b>Блог</b></a></h4>
 				<h4><a href="#"><b>Контакты</b></a></h4>
-			</div>
+			</div> -->
 			<div class="b-links">
 				<h4><a href="#"><b>Политика конфендиальности</b></a></h4>
 				<small class="b-copyright">© TFA 2018. Все права защищены</small>
@@ -1624,6 +1643,23 @@
 	</div>
 	<div style="display:none;">
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
+		<a href="#b-popup-quit" class="b-quit-popup-link fancy"></a>
+		<div class="b-popup b-note b-popup-quit" id="b-popup-quit">
+			<p>Жаль, что вы уходите.<br>Но у нас нет цели во что бы то ни стало<br>продать наши услуги.</p>
+			<h3>Скачайте пошаговый план бесплатно и попробуйте самостоятельно внедрить систему</h3>
+			<p>На какой email отправить план?</p>
+			<form action="kitsend.php" method="POST" data-goal="CALLBACK" method="POST" id="b-form-1">
+				<div class="b-popup-form">
+					<input type="text" id="email" name="email" placeholder="Введите ваш E-mail" required/>
+					<input type="hidden" name="subject" value="Заказ"/>
+					<input type="submit" style="display:none;">
+					<a href="#" class="b-btn b-green-btn ajax">Скачать план бесплатно</a>
+					<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных<br>данных и соглашаетесь с <a href="#">Политикой конфиденциальности</a></small>
+					<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+				</div>
+			</form>
+			<div class="b-note-shadow"></div>
+		</div>
 		<div class="b-popup" id="b-popup-1">
 			<h3>Оставьте заявку</h3>
 			<h4>и наши специалисты<br>свяжутся с Вами в ближайшее время</h4>

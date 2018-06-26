@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>pisechka</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pisechka" transform="translate(0.000000, -150.000000)">
+            <path d="M225,320 L25,320 C19.477,320 15,315.523 15,310 L15,169.142 L0.858,158 L15,150.858 L15,10 C15,4.477 19.477,0 25,0 L225,0 C230.523,0 235,4.477 235,10 L235,310 C235,315.523 230.523,320 225,320 Z" id="Shape" fill="#FFFFFF"></path>
+            <path d="M225,315 L25,315 C22.239,315 20,312.761 20,310 L20,167.972 L5.858,158.5 L20,151.83 L20,10 C20,7.239 22.239,5 25,5 L225,5 C227.761,5 230,7.239 230,10 L230,310 C230,312.761 227.761,315 225,315 Z" id="Shape" stroke="#E8E8E8"></path>
+        </g>
+    </g>
+</svg>

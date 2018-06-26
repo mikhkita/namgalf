@@ -3241,6 +3241,70 @@ form small{
 
 /*************ENDQUIZ**************/
 
+.b-popup-quit{
+	padding: 0px;
+}
+	.b-popup-quit .b-border{
+		padding-left: 564px;
+		padding-top: 32px;
+		padding-bottom: 50px;
+	}
+	.b-blanks{
+		position: absolute;
+		left: 40px;
+		top: 29px;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-image: url('../i/docs.jpg');
+		width: 484px;
+		height: 622px;
+	}
+	.b-popup-quit p{
+		margin-bottom: 11px;
+	}
+	.b-popup-quit h3{
+		font-size: 40px;
+		line-height: 45px;
+		padding-top: 5px;
+		margin-bottom: 14px;
+	}
+	.b-popup-quit h3 + p{
+		margin-left: 36px;
+		letter-spacing: 0px;
+	}
+	.b-popup-quit .b-popup-form{
+
+	}
+		.b-popup-quit input[type="text"]{
+			margin-left: -5px;
+			margin-bottom: 17px;
+		}
+		.b-popup-quit .b-btn{
+
+		}
+		.b-popup-quit small{
+			margin-top: 30px;
+			margin-left: 24px;
+			max-width: 340px;
+			letter-spacing: 0px;
+		}
+.fancybox-close-small{
+	right: 15px;
+	top: 15px;
+}
+	.fancybox-close-small:before{
+		color: #cccccc;
+		font-size: 21px;
+		opacity: 0.5;
+	}
+	.fancybox-close-small:hover:before{
+		color: #5e4abb;
+		opacity: 1;
+		cursor: pointer;
+	}
+	.fancybox-close-small:after{
+		display: none;
+	}
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	

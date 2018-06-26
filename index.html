@@ -1645,19 +1645,22 @@
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
 		<a href="#b-popup-quit" class="b-quit-popup-link fancy"></a>
 		<div class="b-popup b-note b-popup-quit" id="b-popup-quit">
-			<p>Жаль, что вы уходите.<br>Но у нас нет цели во что бы то ни стало<br>продать наши услуги.</p>
-			<h3>Скачайте пошаговый план бесплатно и попробуйте самостоятельно внедрить систему</h3>
-			<p>На какой email отправить план?</p>
-			<form action="kitsend.php" method="POST" data-goal="CALLBACK" method="POST" id="b-form-1">
-				<div class="b-popup-form">
-					<input type="text" id="email" name="email" placeholder="Введите ваш E-mail" required/>
-					<input type="hidden" name="subject" value="Заказ"/>
-					<input type="submit" style="display:none;">
-					<a href="#" class="b-btn b-green-btn ajax">Скачать план бесплатно</a>
-					<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных<br>данных и соглашаетесь с <a href="#">Политикой конфиденциальности</a></small>
-					<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
-				</div>
-			</form>
+			<div class="b-border">
+				<div class="b-blanks"></div>
+				<p>Жаль, что вы уходите.<br>Но у нас нет цели во что бы то ни стало<br>продать наши услуги.</p>
+				<h3><b>Скачайте пошаговый план бесплатно</b> и попробуйте самостоятельно внедрить систему</h3>
+				<p>На какой email отправить план?</p>
+				<form action="kitsend.php" method="POST" data-goal="CALLBACK" method="POST" id="b-form-1">
+					<div class="b-popup-form">
+						<input type="text" id="email" name="email" placeholder="Введите ваш E-mail" required/>
+						<input type="hidden" name="subject" value="Заказ"/>
+						<input type="submit" style="display:none;">
+						<a href="#" class="b-btn b-green-btn ajax"><span>Скачать план бесплатно</span></a>
+						<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с<br><a href="#">Политикой конфиденциальности</a></small>
+						<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+					</div>
+				</form>
+			</div>
 			<div class="b-note-shadow"></div>
 		</div>
 		<div class="b-popup" id="b-popup-1">

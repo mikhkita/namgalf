@@ -3276,6 +3276,9 @@ form small{
 		.b-footer small.b-copyright{
 			margin-top: 40px;
 		}
+.b-popup{
+	width: 1140px;
+}
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	

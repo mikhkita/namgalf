@@ -56,7 +56,7 @@
 				<div class="b-right-padding">
 					<h3>Раньше мы делали это с помощью одностраничных сайтов. <span class="thin">В этом году мы разработали схему, с которой</span> <b>повысим результаты вашего бизнеса 
 						<div class="b-20-indexes">
-							<a href="#">по более чем 20 показателям</a>
+							<a href="#" onclick="return false;">по более чем 20 показателям</a>
 							<div class="b-note b-20-indexes-note">
 								<div class="b-border">
 									<h4>CPC</h4>
@@ -1643,6 +1643,22 @@
 	</div>
 	<div style="display:none;">
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
+		<div class="b-popup b-note b-popup-quit" id="b-popup-quit">
+			<p>Жаль, что вы уходите.<br>Но у нас нет цели во что бы то ни стало<br>продать наши услуги.</p>
+			<h3>Скачайте пошаговый план бесплатно и попробуйте самостоятельно внедрить систему</h3>
+			<p>На какой email отправить план?</p>
+			<form action="kitsend.php" method="POST" data-goal="CALLBACK" method="POST" id="b-form-1">
+				<div class="b-popup-form">
+					<input type="text" id="email" name="email" placeholder="Введите ваш E-mail" required/>
+					<input type="hidden" name="subject" value="Заказ"/>
+					<input type="submit" style="display:none;">
+					<a href="#" class="b-btn b-green-btn ajax">Скачать план бесплатно</a>
+					<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных<br>данных и соглашаетесь с <a href="#">Политикой конфиденциальности</a></small>
+					<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+				</div>
+			</form>
+			<div class="b-note-shadow"></div>
+		</div>
 		<div class="b-popup" id="b-popup-1">
 			<h3>Оставьте заявку</h3>
 			<h4>и наши специалисты<br>свяжутся с Вами в ближайшее время</h4>

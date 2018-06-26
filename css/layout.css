@@ -811,6 +811,19 @@ form small{
 					   	 -o-transform: scaleY(0);
 							transform: scaleY(0);
 				}
+			.b-20-indexes{
+				position: relative;
+			}
+				.b-20-indexes a{
+
+				}
+				.b-20-indexes-note{
+					position: absolute;
+					left: 0px;
+					top: 0px;
+					z-index: 10;
+					background-color: #FFF;
+				}
 			.b-indicators{
 				margin-bottom: 28px;
 			}
@@ -3021,10 +3034,10 @@ form small{
 		width: 510px;
 		text-align: left;
 		background-color: #FFF;
-		padding: 7px;
 		margin-bottom: 110px;
 	}
-		.b-vertical-form .b-border{
+		.b-note .b-border{
+			margin: 6px;
 			border: 1px solid rgba(0,0,0,0.1);
 			border-radius: 3px;
 			padding: 41px 45px 46px 75px;

@@ -48,13 +48,15 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true, 
-        easing: 'easeOutCubic',
+        easing: 'easeOutQuart',
         speed: 800,
         useTransform: false,
         arrows: true,
         prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
         nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
-        touchThreshold: 100
+        touchThreshold: 100,
+        autoplay: true,
+        autoplaySpeed: 3000
     }); 
 
     $(".b-give-slide.slick-active").addClass("show");
@@ -92,13 +94,15 @@ $(document).ready(function(){
             calcActive();
         }
     });
+
     $(".b-diagram-tabs-cont").slick({
         dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        cssEase: 'ease', 
-        speed: 500,
+        easing: 'easeOutQuart',
+        speed: 800,
+        useTransform: false,
         arrows: true,
         prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
         nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
@@ -116,22 +120,20 @@ $(document).ready(function(){
         document.getElementById(el.attr("data-id")).beginElement();
     }
 
-    custom['lines-end'] = function(el){
-        $(".b-levels-email").addClass("fadeDown-show");
-    }
-
     $(".b-reviews-slider").slick({
         dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true, 
-        easing: 'easeOutCubic',
+        easing: 'easeOutQuart',
         speed: 800,
         useTransform: false,
         arrows: true,
         prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
         nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
-        touchThreshold: 100
+        touchThreshold: 100,
+        autoplay: true,
+        autoplaySpeed: 3000
     }); 
     animateIndexes($(".b-reviews-slide[data-slick-index='0']"));
 
@@ -141,12 +143,7 @@ $(document).ready(function(){
     });
 
     function animateIndexes($el){
-        $el.find(".b-review-index").each(function(){
-            var $this = $(this);
-            setTimeout(function(){
-                $this.addClass("show");
-            }, $this.index() * 100);
-        });
+        $el.find(".b-review-index").addClass("show");
     }
 
     $(".b-kind-slider").slick({
@@ -154,7 +151,25 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true, 
-        easing: 'easeOutCubic',
+        easing: 'easeOutQuart',
+        speed: 800,
+        useTransform: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+        touchThreshold: 100,
+        autoplay: true,
+        autoplaySpeed: 3000
+    }); 
+
+    $(".b-counter div").text($(".b-works-slide").length);
+
+    $(".b-works-slider").slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true, 
+        easing: 'easeOutQuart',
         speed: 800,
         useTransform: false,
         arrows: true,
@@ -163,19 +178,44 @@ $(document).ready(function(){
         touchThreshold: 100
     }); 
 
-    $(".b-works-slider").slick({
+    $(".b-works-slide[data-slick-index='0'] .slider-anim").addClass("show");
+
+    $('.b-works-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $(".b-counter span").text(nextSlide+1);
+    });
+
+    $(".b-works-slider").on('afterChange', function(event, slick, currentSlide, nextSlide){
+        $(".b-works-slide .slider-anim").removeClass("show");
+        $(".b-works-slide[data-slick-index='"+currentSlide+"'] .slider-anim").addClass("show");
+    });
+
+    $(".b-step-slider").slick({
         dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        infinite: true, 
-        easing: 'easeOutCubic',
-        speed: 800,
+        infinite: true,
+        easing: 'easeOutQuart',
         useTransform: false,
+        speed: 800,
         arrows: true,
         prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
         nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
         touchThreshold: 100
-    }); 
+    });
+
+    $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
+
+    $(".b-step-slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $(".b-step-tabs li.active").removeClass("active");
+        $(".b-step-tabs li").eq(nextSlide).addClass("active");
+
+        calcActive();
+    });
+
+    $(".b-step-slider").on('afterChange', function(event, slick, currentSlide, nextSlide){
+        $(".b-step-slide .slider-anim").removeClass("show");
+        $(".b-step-slide[data-slick-index='"+currentSlide+"'] .slider-anim").addClass("show");
+    });
 
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);

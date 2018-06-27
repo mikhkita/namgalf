@@ -2573,6 +2573,7 @@ form small{
 				    margin-left: 20px;
 				    border-radius: 3px;
 				    margin-top: -2px;
+				    white-space: nowrap;
 				}
 			.b-director-text{
 				width: 740px;
@@ -3350,6 +3351,239 @@ form small{
 	}
 	.fancybox-close-small:after{
 		display: none;
+	}
+.b-thanks{
+
+}
+	.b-thanks-header{
+		padding-top: 56px;
+		height: 118px;
+	}
+		.b-thanks-back{
+			font-size: 12px;
+			line-height: 18px;
+			color: #65bb59;
+			border-bottom: 1px solid;
+			position: relative;
+			text-transform: uppercase;
+			margin-left: 11px;
+			letter-spacing: 1.4px;
+			font-family: "MuseoSansCyrl-700";
+		}
+			.b-thanks-back:hover{
+				color: #5e4abb;
+			}
+			.b-thanks-back:before{
+				position: absolute;
+				font-size: 7px;
+				left: -11px;
+				top: 5px;
+				color: #65bb59;
+				-webkit-transition: transform 150ms ease-out;
+				   -moz-transition: transform 150ms ease-out;
+				    -ms-transition: transform 150ms ease-out;
+				   	 -o-transition: transform 150ms ease-out;
+						transition: transform 150ms ease-out;
+			}
+				.b-thanks-back:hover:before{
+					-webkit-transform: translateX(-5px);
+					   -moz-transform: translateX(-5px);
+					    -ms-transform: translateX(-5px);
+					   	 -o-transform: translateX(-5px);
+							transform: translateX(-5px);
+					color: #5e4abb;
+				}
+		.b-thanks-header .b-logo{
+			position: absolute;
+			left: 50%;
+			margin-left: -55px;
+			top: 32px;
+		}
+			.b-thanks-header .b-logo img{
+
+			}
+		.b-logo__text{
+
+		}
+	.b-thanks .b-blanks{
+		left: -120px;
+		top: -3px;
+	}
+		.b-thanks .b-blanks .b-check{
+			position: absolute;
+			left: 110px;
+			bottom: -70px;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-image: url('../i/check.png');
+			width: 93px;
+			height: 92px;
+		}
+	.b-thanks .b-text{
+		position: relative;
+		z-index: 1;
+		padding-left: 396px;
+		padding-top: 47px;
+		text-align: left;
+	}
+		.b-bird{
+			position: absolute;
+			right: -390px;
+			top: 50px;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-image: url('../i/golub.jpg');
+			width: 539px;
+			height: 682px;
+		}
+		.b-bird-2{
+			top: -50px;
+		}
+		.b-thanks .b-text h2{
+			margin-bottom: 16px;
+		}
+		.b-thanks .b-text h3{
+			letter-spacing: 0.7px;
+			margin-left: 52px;
+		}
+			.b-thanks .b-text h3 b{
+				font-family: "MuseoSansCyrl-700";
+			}
+		.b-yandex{
+			position: relative;
+			margin-left: 45px;
+			margin-top: -4px;
+			margin-bottom: 33px;
+		}
+			.b-yandex:before{
+				position: absolute;
+				content: "s";
+				font-size: 0px;
+				width: 17px;
+				height: 50px;
+				left: -3px;
+				top: -21px;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-image: url('../i/line.svg');
+				z-index: 2;
+			}
+			.b-yandex-image{
+				border-radius: 1000px;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-image: url('../i/yandex-logo.jpg');
+				width: 300px;
+				height: 80px;
+				background-color: #e1e9f8;
+				margin-right: 29px;
+				box-shadow: 0px 45px 45px 0px rgba(16, 20, 27, 0.05);
+			}
+			.b-yandex h4{
+				float: left;
+				width: calc( 100% - 370px );
+				padding-top: 10px;
+				letter-spacing: 0.6px;
+				color: rgba(0,0,0,0.5);
+			}
+		.b-yandex + h3{
+			letter-spacing: 0.4px !important;
+			margin-right: -10px;
+		}
+	.b-thanks-footer{
+		padding-top: 108px;
+	}
+		.b-thanks-footer .b-block{
+
+		}
+			.b-thanks-footer h2{
+			    margin-bottom: 5px;
+			}
+			.b-thanks-footer h3{
+				letter-spacing: 0.5px;
+			}
+				.b-thanks-footer h3 b{
+					
+				}
+			.b-thanks-footer .b-soc{
+				display: inline-block;
+				width: 821px;
+				margin-top: 10px;
+				margin-bottom: 117px;
+			}
+				.b-thanks-footer .b-soc-buttons{
+
+				}
+				.b-thanks-footer .b-soc h4{
+					width: calc(100% - 450px);
+					text-align: left;
+					margin-left: 30px;
+					margin-top: 15px;
+				}
+			.b-goodbye{
+				position: relative;
+				z-index: 2;
+			}
+			.b-thanks-footer .b-bottom{
+				text-align: left;
+			}
+				.b-thanks-footer .b-copyright{
+					font-size: 13px;
+					color: #9c9c9c;
+					position: absolute;
+					bottom: 80px;
+					left: 0px;
+					letter-spacing: 0.2px;
+				}
+				.b-thanks-footer .b-director{
+					background-position: 50% 50%;
+					background-repeat: no-repeat;
+					background-image: url('../i/surgay.jpg');
+					width: 516px;
+					height: 462px;
+					float: right;
+					margin-top: -199px;
+					margin-right: -76px;
+					position: relative;
+				}
+					.b-thanks-footer .b-director-desc{
+						position: absolute;
+						top: 297px;
+						left: 262px;
+					}
+.b-thanks-2{
+	
+}
+	.b-thanks-2 > h2{
+		margin-top: 47px;
+		position: relative;
+		z-index: 12;
+	}
+	.b-thanks-2 .b-text{
+		padding-top: 16px;
+		padding-left: 389px;
+	}
+	.b-thanks-2 h3{
+		
+	}
+	.b-thanks-2 .b-mail-block{
+		padding-top: 113px;
+	}
+		.b-thanks-2 .b-mail-block h3{
+			margin-bottom: 1px;
+		}
+		.b-thanks-2 .b-mail-block h2{
+			margin-left: 48px;
+			margin-bottom: 20px;
+		}
+	.b-thanks-2 .b-mail-block + h3{
+		
+	}
+	.b-thanks-2 .b-yandex{
+		
+	}
+	.b-thanks-2 .b-yandex + h3{
+		
 	}
 /*************QUIZ**************/
 .b-quiz-line-container{

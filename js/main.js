@@ -247,10 +247,6 @@ $(document).ready(function(){
         }
     });
 
-    $(".b-business-select").styler({
-        selectVisibleOptions: 5
-    });
-
     $("#type").chosen({
         disable_search_threshold : 10
     }).change(function(){
@@ -262,17 +258,39 @@ $(document).ready(function(){
         $(".b-pay-click").attr("data-id", $option.attr("data-id"));
         return false;
     });
-    
+    var bQuizOffer = false;
+    var bQuizRoadMap = false;
+
+    $("#b-quiz-offer").on("click",function(){
+        bQuizOffer = true;
+        bQuizRoadMap = false;
+    });
+
+    $("#b-quiz-road-map").on("click",function(){
+        bQuizOffer = false;
+        bQuizRoadMap = true;
+    });
+
     $("#b-quiz-popup .b-btn").on('click', function(){
 
-        var currentQuiz = $(this).parents(".b-quiz-container").attr('data-number');
+        var currentQuizNumber = $(this).parents(".b-quiz-container").attr('data-number');
         $(this).parents(".b-quiz-container").hide();
-        currentQuiz = parseInt(currentQuiz) + 1;
+        currentQuizNumber = parseInt(currentQuizNumber) + 1;
         currentLine = $(this).parents(".b-quiz-container").next().attr('data-result');
 
         $(".b-quiz-container").each(function(){
-            if($(this).attr('data-number') == currentQuiz){
-                $(this).show()
+            if($(this).attr('data-number') == currentQuizNumber){
+                if (currentQuizNumber == 5) {
+                    if (bQuizRoadMap) {
+                        $(".b-quiz-container.b-quiz-road-map").show()
+                    }
+                    else{
+                        $(".b-quiz-container.b-quiz-offer").show()
+                    }
+                }
+                else{
+                    $(this).show()
+                }
             };
         })
 
@@ -311,7 +329,6 @@ $(document).ready(function(){
         $(".ui-slider-handle").append("<div class='b-slider-result'></div>")
     });
 
-    $(".ajax").parents("form")
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
  //        zoom: 16,

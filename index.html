@@ -426,7 +426,7 @@
 			<h2><b>Через полгода</b> у вас будет примерно такая система</h2>
 			<div class="b-scheme">
 				<h4 class="icon-quote anim fadeDown" data-offset="300">В реальности она гораздо<br>сложнее. Сейчас мы даем вам лишь<br>общее понимание масштаба<span class="b-line"></span></h4>
-				<a href="#" class="b-btn b-green-btn"><span>Подробнее</span></a>
+				<a href="#b-quiz-popup" class="b-btn b-green-btn fancy" id="b-quiz-road-map"><span>Подробнее</span></a>
 			</div>
 		</div>
 	</div>
@@ -886,7 +886,7 @@
 			<div class="b-best">
 				<div class="b-ipad anim fadeRight"></div>
 				<h3><b class="orange">Мы анализируем результаты</b> каждого этапа, тестируем варианты. По итогам на ходу меняем стратегию, чтобы схема работала ещё лучше.<br><br><b class="orange">Потому что нам не всё равно</b> — мы работаем, чтобы создать лучший проект в вашей сфере бизнеса.</h3>
-				<a href="#b-quiz-popup" class="b-btn b-green-btn fancy"><span>Хочу лучший проект</span></a>
+				<a href="#b-quiz-popup" class="b-btn b-green-btn fancy" id="b-quiz-offer"><span>Хочу лучший проект</span></a>
 			</div>
 		</div>
 	</div>
@@ -1687,14 +1687,15 @@
 				<div class="b-quiz-line-container">
 					<div class="b-quiz-line-green" data-result="12"></div>
 				</div>
-				<div id="b-quiz-1" data-number="1" class="b-quiz-container b-quiz-1" data-result="12">
-					<h3><b>Отлично!</b><br>
-					Для начала расскажите немного о вашей компании:</h3>
-					<div class="b-quiz-left-col">
-						<form action="kitsend.php" method="POST" id="b-form-1">
+				<form action="kitsend.php" method="POST" id="b-form-4">
+					<div data-number="1" class="b-quiz-container b-quiz-1" data-result="12">
+						<h3><b>Отлично!</b><br>
+						Для начала расскажите немного о вашей компании:</h3>
+						<div class="b-quiz-left-col">
 							<div class="b-popup-form">
 								<label for="business">Хорошо. У меня бизнес в сфере:</label>
-								<select name="type" id="type">
+								<select name="type" id="type" required>
+									<option>Выберите сферу бизнеса</option>
 									<option value="business-1">Выберите сферу бизнеса</option>
 									<option value="business-2">Выберите сферу бизнеса</option>
 									<option value="business-3">Выберите сферу бизнеса</option>
@@ -1719,21 +1720,18 @@
 								<label for="site">Есть сайт:</label>
 								<input type="text" id="site" name="site" placeholder="ссылка на сайт и/или аккаунт в соцсетях" />
 								<a href="#" class="b-btn b-green-btn" onclick="return false;"><span>Дальше</span></a>
-								<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 							</div>
-						</form>
+						</div>
+						<div class="b-quiz-right-col">
+							<p>У нас есть опыт работы с более чем 90 сферами бизнеса.<br><br>
+							Расскажите подробнее, чем вы занимаетесь. <br><br>
+							<b>Это позволит выстроить цепочку действий</b> на основе нашего опыта в аналогичных проектах.</p>
+						</div>
 					</div>
-					<div class="b-quiz-right-col">
-						<p>У нас есть опыт работы с более чем 90 сферами бизнеса.<br><br>
-						Расскажите подробнее, чем вы занимаетесь. <br><br>
-						<b>Это позволит выстроить цепочку действий</b> на основе нашего опыта в аналогичных проектах.</p>
-					</div>
-				</div>
-				<div id="b-quiz-2" data-number="2" class="b-quiz-container b-quiz-2" data-result="24" style="display: none">
-					<h3><b>Супер!</b><br>
-					Какая у вас сейчас задача?</h3>
-					<div class="b-quiz-left-col">
-						<form action="kitsend.php" method="POST" id="b-form-2">
+					<div data-number="2" class="b-quiz-container b-quiz-2" data-result="24" style="display: none">
+						<h3><b>Супер!</b><br>
+						Какая у вас сейчас задача?</h3>
+						<div class="b-quiz-left-col">
 							<div class="b-popup-form">
 								<label class="b-quiz-label">Можете выбрать несколько пунктов</label>
 								<div class="checkbox-container">
@@ -1755,22 +1753,19 @@
 
 								<textarea name="mytask-text" class="b-quiz-textarea" placeholder="Например: в апреле организуем форум в Москве. Нужно собрать 1000 участников при среднем чеке 40 000 рублей."></textarea>
 								<a href="#" class="b-btn b-green-btn" onclick="return false;"><span>Дальше</span></a>
-								<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 							</div>
-						</form>
+						</div>
+						<div class="b-quiz-right-col">
+							<p><b>От задачи зависит набор инструментов.</b><br><br>
+							Например, в одном случае мы можем предложить быстрый выхлоп за счет «одноэкранников» на конструкторе.<br><br>
+							Если нужно создать «лицо компании», потребуется высококлассный дизайн, фотосессия, фирменный стиль.<br><br>
+							А если вы собираете играть в долгую, нужно выстроить систему, которая охватит все точки контакта клиентов с вами.</p>
+						</div>
 					</div>
-					<div class="b-quiz-right-col">
-						<p><b>От задачи зависит набор инструментов.</b><br><br>
-						Например, в одном случае мы можем предложить быстрый выхлоп за счет «одноэкранников» на конструкторе.<br><br>
-						Если нужно создать «лицо компании», потребуется высококлассный дизайн, фотосессия, фирменный стиль.<br><br>
-						А если вы собираете играть в долгую, нужно выстроить систему, которая охватит все точки контакта клиентов с вами.</p>
-					</div>
-				</div>
-				<div id="b-quiz-3" data-number="3" class="b-quiz-container b-quiz-3" data-result="45" style="display: none">
-					<h3><b>Вы понимаете,</b><br>
-					что потребуется бюджет<br>на рекламу?</h3>
-					<div class="b-quiz-left-col">
-						<form action="kitsend.php" method="POST" id="b-form-3">
+					<div data-number="3" class="b-quiz-container b-quiz-3" data-result="45" style="display: none">
+						<h3><b>Вы понимаете,</b><br>
+						что потребуется бюджет<br>на рекламу?</h3>
+						<div class="b-quiz-left-col">
 							<div class="b-popup-form">
 								<div class="checkbox-container">
 									<input type="checkbox" class="checkbox" id="checkbox-promotion-1" name="checkbox-promotion-1">
@@ -1794,21 +1789,18 @@
 								</div>
 
 								<a href="#" class="b-btn b-green-btn" onclick="return false;"><span>Дальше</span></a>
-								<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 							</div>
-						</form>
-					</div>
-					<div class="b-quiz-right-col">
-						<p><b>Мы рекомендуем вкладывать больше.</b> Потому что статистически «крупная рыба» попадается после вылова сотен мелких рыбешек. Например, наш клиент 500 LUX получил заказ на 36 миллионов после того, как инвестировал в рекламу 200 тысяч.<br><br>
+						</div>
+						<div class="b-quiz-right-col">
+							<p><b>Мы рекомендуем вкладывать больше.</b> Потому что статистически «крупная рыба» попадается после вылова сотен мелких рыбешек. Например, наш клиент 500 LUX получил заказ на 36 миллионов после того, как инвестировал в рекламу 200 тысяч.<br><br>
 
-						В любом случае, <b>мы всегда подскажем.</b> У нас есть статистические данные по запросам в разных сферах бизнеса. И мы не «сливаем» бюджет: всегда держим руку на пульсе, чтобы корректировать цену заявок.</p>
+							В любом случае, <b>мы всегда подскажем.</b> У нас есть статистические данные по запросам в разных сферах бизнеса. И мы не «сливаем» бюджет: всегда держим руку на пульсе, чтобы корректировать цену заявок.</p>
+						</div>
 					</div>
-				</div>
-				<div id="b-quiz-4" data-number="4" class="b-quiz-container b-quiz-4" data-result="66" style="display: none">
-					<h3><b>Скажите,</b><br>
-					чего вы хотите в целом?</h3>
-					<div class="b-quiz-left-col">
-						<form action="kitsend.php" method="POST" id="b-form-4">
+					<div data-number="4" class="b-quiz-container b-quiz-4" data-result="66" style="display: none">
+						<h3><b>Скажите,</b><br>
+						чего вы хотите в целом?</h3>
+						<div class="b-quiz-left-col">
 							<div class="b-popup-form">
 								<label class="b-quiz-radio">
 									  <input type="radio" name="more-request" />
@@ -1823,37 +1815,50 @@
 									  <div class="b-quiz-radio__text">Хочу как можно больше новых заявок и&nbsp;платежеспособных клиентов</div>
 								</label>
 								<a href="#" class="b-btn b-green-btn" onclick="return false;"><span>Дальше</span></a>
-								<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 							</div>
-						</form>
-					</div>
-					<div class="b-quiz-right-col">
-						<p>Поток заявок обеспечить не проблема. Вопрос в том, смогут ли менеджеры прогреть их по телефону. А главное, есть ли смысл тратить время на их обработку.<br><br>
+						</div>
+						<div class="b-quiz-right-col">
+							<p>Поток заявок обеспечить не проблема. Вопрос в том, смогут ли менеджеры прогреть их по телефону. А главное, есть ли смысл тратить время на их обработку.<br><br>
 
-						Платежеспособных клиентов обычно меньше, но именно они приносят большие средние чеки, покупают быстрее и становятся постоянными.<br><br>
+							Платежеспособных клиентов обычно меньше, но именно они приносят большие средние чеки, покупают быстрее и становятся постоянными.<br><br>
 
-						<b>Наша задача — привести много платежеспособных клиентов.</b> Мы добиваемся этого за счет построения системы, о которой вы читали на сайте.</p>
+							<b>Наша задача — привести много платежеспособных клиентов.</b> Мы добиваемся этого за счет построения системы, о которой вы читали на сайте.</p>
+						</div>
 					</div>
-				</div>
-				<div id="b-quiz-5" data-number="5" class="b-quiz-container b-quiz-5" data-result="88" style="display: none">
-					<h3><b>И последний шаг!</b><br>
-					Оставьте номер телефона</h3>
-					<div class="b-quiz-left-col">
-						<p>Нам нужно связаться с вами, чтобы уточнить пару<br>
-						моментов. Иначе ваша Road map будет типовой.</p>
-						<p>Это бесплатно и ни к чему вас не обязывает.</p>
-						<p>Введите телефон:</p>
-						<form action="kitsend.php" method="POST" id="b-form-5">
+					<div data-number="5" class="b-quiz-container b-quiz-5 b-quiz-road-map" data-result="88" style="display: none">
+						<h3><b>И последний шаг!</b><br>
+						Оставьте номер телефона</h3>
+						<div class="b-quiz-left-col">
+							<p>Нам нужно связаться с вами, чтобы уточнить пару<br>
+							моментов. Иначе ваша Road map будет типовой.</p>
+							<p>Это бесплатно и ни к чему вас не обязывает.</p>
+							<p>Введите телефон:</p>
 							<div class="b-line-input clearfix">
 								<input type="text" name="phone" class="b-phone-input" placeholder="Введите номер телефона" required>
 								<a href="#" class="b-btn b-green-btn ajax"><span>Получить Road map!</span></a>
 							</div>
 							<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 							<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных<br>данных и соглашаетесь с <a href="#">Политикой конфиденциальности</a></small>
-						</form>
+						</div>
+						<img src="i/docs.jpg">
 					</div>
-					<img src="i/docs.jpg">
-				</div>
+					<div data-number="5" class="b-quiz-container b-quiz-5 b-quiz-offer" data-result="88" style="display: none">
+						<h3><b>И последний шаг!</b><br>Оставьте номер телефона</h3>
+						<div class="b-quiz-left-col">
+							<p>Нам нужно связаться с вами, чтобы уточнить пару<br>
+							моментов.</p>
+							<p>После этого сможем назвать три варианта<br>по составу инструментов, срокам и цене.</p>
+							<p>Просто введите телефон:</p>
+							<div class="b-line-input clearfix">
+								<input type="text" name="phone" class="b-phone-input" placeholder="Введите номер телефона" required>
+								<a href="#" class="b-btn b-green-btn ajax"><span>Получить предложение</span></a>
+							</div>
+							<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+							<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных<br>данных и соглашаетесь с <a href="#">Политикой конфиденциальности</a></small>
+						</div>
+						<img src="i/docs.jpg">
+					</div>
+				</form>
 			</div>
 			<div class="b-note-shadow"></div>
 		</div>

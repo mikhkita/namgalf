@@ -239,13 +239,13 @@ $(document).ready(function(){
         }
     }, 1000);
 
-    $(document).mouseleave(function(){
-        if(!$(".fancybox-slide .b-popup").length && showLeave){
-            $(".b-quit-popup-link").click();
-            showLeave = false;
-            timerLeave = 0;
-        }
-    });
+    // $(document).mouseleave(function(){
+    //     if(!$(".fancybox-slide .b-popup").length && showLeave){
+    //         $(".b-quit-popup-link").click();
+    //         showLeave = false;
+    //         timerLeave = 0;
+    //     }
+    // });
 
     $("#type").chosen({
         disable_search_threshold : 10
@@ -258,21 +258,17 @@ $(document).ready(function(){
         $(".b-pay-click").attr("data-id", $option.attr("data-id"));
         return false;
     });
-    var bQuizOffer = false;
-    var bQuizRoadMap = false;
+    var type = null;
 
     $("#b-quiz-offer").on("click",function(){
-        bQuizOffer = true;
-        bQuizRoadMap = false;
+        type = "offer";
     });
 
     $("#b-quiz-road-map").on("click",function(){
-        bQuizOffer = false;
-        bQuizRoadMap = true;
+        type = "road-map";
     });
 
     $("#b-quiz-popup .b-btn").on('click', function(){
-
         var currentQuizNumber = $(this).parents(".b-quiz-container").attr('data-number');
         $(this).parents(".b-quiz-container").hide();
         currentQuizNumber = parseInt(currentQuizNumber) + 1;
@@ -281,7 +277,7 @@ $(document).ready(function(){
         $(".b-quiz-container").each(function(){
             if($(this).attr('data-number') == currentQuizNumber){
                 if (currentQuizNumber == 5) {
-                    if (bQuizRoadMap) {
+                    if (type == "road-map") {
                         $(".b-quiz-container.b-quiz-road-map").show()
                     }
                     else{
@@ -308,22 +304,21 @@ $(document).ready(function(){
     })
     
 
-    $( function() {
-        $( "#b-quiz-slider" ).slider({
-            range: "min",
-            value:20,
-            min: 20,
-            max: 200,
-            step: 2,
-            slide: function( event, ui ) {
-            $( "#amount" ).val(ui.value);
-            $("#b-quiz-slider").find(".b-slider-result").text(ui.value+" т.р.");
-            },
-            create: function( event, ui ) {}
-        });
-        $( "#amount" ).val($( "#slider" ).slider( "value" ) );
-        $("#b-quiz-slider").find(".b-slider-result").text(ui.value+" т.р.");
-      } );
+    $("#b-quiz-slider").slider({
+        range: "min",
+        value:20,
+        min: 20,
+        max: 200,
+        step: 2,
+        slide: function( event, ui ) {
+            $("#amount").val( ui.value );
+            $("#b-quiz-slider").find(".b-slider-result").text( ui.value + " т.р.");
+        },
+        create: function( event, ui ) {}
+    });
+
+    $("#amount").val( $("#slider").slider("value") );
+    // $("#b-quiz-slider").find(".b-slider-result").text(ui.value + " т.р.");
 
     $("#b-quiz-slider").on("slidecreate", function( event, ui ) {
         $(".ui-slider-handle").append("<div class='b-slider-result'></div>")

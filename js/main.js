@@ -247,7 +247,71 @@ $(document).ready(function(){
         }
     });
 
+    $(".b-business-select").styler({
+        selectVisibleOptions: 5
+    });
+
+    $("#type").chosen({
+        disable_search_threshold : 10
+    }).change(function(){
+        var $option = $(this).find("option[value='"+$(this).val()+"']");
+            click = $option.attr("data-id"),
+            price = $option.attr("data-price");
+        $(".b-19 h2.b-title span").text(price);
+
+        $(".b-pay-click").attr("data-id", $option.attr("data-id"));
+        return false;
+    });
     
+    $("#b-quiz-popup .b-btn").on('click', function(){
+
+        var currentQuiz = $(this).parents(".b-quiz-container").attr('data-number');
+        $(this).parents(".b-quiz-container").hide();
+        currentQuiz = parseInt(currentQuiz) + 1;
+        currentLine = $(this).parents(".b-quiz-container").next().attr('data-result');
+
+        $(".b-quiz-container").each(function(){
+            if($(this).attr('data-number') == currentQuiz){
+                $(this).show()
+            };
+        })
+
+        $(".b-quiz-line-green").attr("data-result", currentLine);
+        $(".b-quiz-line-green").css("width", currentLine+"%");
+
+    });
+    $("#checkbox-promotion-1").on('click', function(){
+        if ($("#checkbox-promotion-1").prop("checked")) {
+            $(".b-quiz-slider-container").css('display', 'block');
+        }
+        else{
+            $(".b-quiz-slider-container").css('display', 'none');
+        }
+    })
+    
+
+    $( function() {
+        $( "#b-quiz-slider" ).slider({
+            range: "min",
+            value:20,
+            min: 20,
+            max: 200,
+            step: 2,
+            slide: function( event, ui ) {
+            $( "#amount" ).val(ui.value);
+            $("#b-quiz-slider").find(".b-slider-result").text(ui.value+" т.р.");
+            },
+            create: function( event, ui ) {}
+        });
+        $( "#amount" ).val($( "#slider" ).slider( "value" ) );
+        $("#b-quiz-slider").find(".b-slider-result").text(ui.value+" т.р.");
+      } );
+
+    $("#b-quiz-slider").on("slidecreate", function( event, ui ) {
+        $(".ui-slider-handle").append("<div class='b-slider-result'></div>")
+    });
+
+    $(".ajax").parents("form")
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
  //        zoom: 16,

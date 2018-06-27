@@ -485,6 +485,15 @@ form small{
 		.b-green-btn:active:after{
 			opacity: 1;
 		}
+		.b-green-btn:active:before{
+			top: -10px;
+			opacity: 0;
+			-webkit-transition: opacity 0ms ease-out;
+			   -moz-transition: opacity 0ms ease-out;
+			    -ms-transition: opacity 0ms ease-out;
+			   	 -o-transition: opacity 0ms ease-out;
+					transition: opacity 0ms ease-out;
+		}
 .b-three-crirles{
 	display: inline-block;
 }

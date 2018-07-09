@@ -239,13 +239,13 @@ $(document).ready(function(){
         }
     }, 1000);
 
-    // $(document).mouseleave(function(){
-    //     if(!$(".fancybox-slide .b-popup").length && showLeave){
-    //         $(".b-quit-popup-link").click();
-    //         showLeave = false;
-    //         timerLeave = 0;
-    //     }
-    // });
+    $(document).mouseleave(function(){
+        if(!$(".fancybox-slide .b-popup").length && showLeave){
+            $(".b-quit-popup-link").click();
+            showLeave = false;
+            timerLeave = 0;
+        }
+    });
 
     $("#type").chosen({
         disable_search_threshold : 10

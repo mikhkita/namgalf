@@ -260,6 +260,10 @@ $(document).ready(function(){
     });
     var type = null;
 
+    $("#b-quiz-payback").on("click",function(){
+        type = "offer";
+    });
+
     $("#b-quiz-offer").on("click",function(){
         type = "offer";
     });

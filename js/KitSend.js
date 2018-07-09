@@ -78,6 +78,7 @@ $(document).ready(function(){
 			btnTpl : {
 		      smallBtn   : '<button data-fancybox-close class="fancybox-close-small icon-cross" title="Закрыть"></button>'
 		    },
+		    touch: false,
 			beforeShow: function(){
 				$(".fancybox-wrap").addClass("beforeShow");
 				$popup.find(".custom-field").remove();

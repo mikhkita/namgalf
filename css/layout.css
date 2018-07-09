@@ -928,7 +928,7 @@ form small{
 						vertical-align: middle;
 					}
 			.b-indicators + h3{
-				max-width: 560px;
+				max-width: 570px;
 			}
 .b-2{
 	position: relative;
@@ -958,7 +958,7 @@ form small{
 		z-index: 10;
 	}
 	.b-2 h2{
-		margin-top: -45px;
+		margin-top: -21px;
 		margin-bottom: 10px;
 	}
 	.b-2 h3{
@@ -1049,8 +1049,9 @@ form small{
 				top: -10px;
 			}
 			.b-second-four .b-four__item:nth-child(2) img{
-				left: 16px;
-				margin-top: 2px;
+			    left: -8px;
+			    margin-top: 16px;
+			    width: 100px;
 			}
 			.b-second-four .b-four__item:nth-child(3) img{
 				top: -9px;
@@ -1138,7 +1139,7 @@ form small{
 			}
 			.b-levels-line-2{
 				left: 629px;
-				top: 207px;
+				top: 213px;
 			}
 			.b-levels-line-3{
 				left: 836px;
@@ -1358,12 +1359,19 @@ form small{
 	}
 		.b-5 h2:after{
 			position: absolute;
-			content: "s";
-			font-size: 0px;
-			width: 38px;
-			height: 36px;
-			right: 300px;
-			top: 0px;
+		    content: "s";
+		    font-size: 0px;
+		    width: 38px;
+		    height: 36px;
+		    right: 289px;
+		    top: 18px;
+		    background-position: 50% 50%;
+		    background-repeat: no-repeat;
+		    background-image: url(../i/icons/round.svg);
+		    background-size: contain;
+}
+
+
 		}
 	.b-5 .b-two-blocks{
 		margin-bottom: 51px;
@@ -2665,6 +2673,11 @@ form small{
 				margin-left: 132px;
 				position: relative;
 			}
+			.b-director-desc-3{
+				top: 350px;
+    			left: 52px;
+				position: absolute;
+			}
 				.b-director-desc p{
 				    background-color: #FFF;
 				    border-radius: 3px;
@@ -3750,7 +3763,7 @@ form small{
 		font-size: 40px;
 		line-height: 50px;
 	    padding-top: 36px;
-    	padding-left: 18px;
+    	/*padding-left: 18px;*/
 	}
 		.b-quiz h3 b{
 			font-family: 'MuseoSansCyrl-700';
@@ -3761,20 +3774,22 @@ form small{
 		line-height: 40px;
 	}
 		.b-quiz .b-popup-form label[for=business]{
-			padding-left: 18px;
+			/*padding-left: 18px;*/
 		    letter-spacing: 0.4px;
 		}
 		.b-quiz .b-popup-form label[for=works]{
-		    padding-left: 8px;
+		    /*padding-left: 8px;*/
 		    letter-spacing: 0.3px;  
 		}
 		.b-quiz .b-popup-form label[for=site]{
-			padding-left: 8px;
+			/*padding-left: 8px;*/
     		letter-spacing: 0.4px;
 		    padding-right: 17px;
 		}
 		.b-quiz .b-popup-form input[name=site]{
 			padding: 20px 35px 18px 33px;
+			width: 100%;
+			margin-top: 10px;
 		}
 	.b-quiz .fancybox-close-small{
 		display: none;
@@ -3939,7 +3954,7 @@ form small{
         margin-top: 10px;
 	}
 		.ui-slider:before{
-			content: "20 Ñ‚.Ñ€.";
+			content: "20 т. р.";
 			font-size: 15px;
 			line-height: 30px;
 			font-family: 'MuseoSansCyrl-300';
@@ -3950,7 +3965,7 @@ form small{
 			position: absolute;
 		}
 		.ui-slider:after{
-			content: "> 200 Ñ‚.Ñ€.";
+			content: "> 200 т. р.";
 			font-size: 15px;
 			line-height: 30px;
 			font-family: 'MuseoSansCyrl-300';

@@ -161,38 +161,38 @@ $(document).ready(function(){
 				// yaCounter12345678.reachGoal($this.attr("data-goal"));
 			}
 
-  			$.ajax({
-			  	type: $(this).attr("method"),
-			  	url: $(this).attr("action"),
-			  	data:  $this.serialize(),
-				success: function(msg){
-					var $form;
-					if( msg == "1" ){
-						$link = $this.find(".b-thanks-link");
-					}else{
-						$link = $(".b-error-link");
-					}
+  	// 		$.ajax({
+			//   	type: $(this).attr("method"),
+			//   	url: $(this).attr("action"),
+			//   	data:  $this.serialize(),
+			// 	success: function(msg){
+			// 		var $form;
+			// 		if( msg == "1" ){
+			// 			$link = $this.find(".b-thanks-link");
+			// 		}else{
+			// 			$link = $(".b-error-link");
+			// 		}
 
-					if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
-						customHandlers[$this.attr("data-afterAjax")]($this);
-					}
+			// 		if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
+			// 			customHandlers[$this.attr("data-afterAjax")]($this);
+			// 		}
 
-					$.fancybox.close();
-					$link.click();
-				},
-				error: function(){
-					$.fancybox.close();
-					$(".b-error-link").click();
-				},
-				complete: function(){
-					$this.find(".ajax").removeAttr("onclick");
-					$this.find("input[type=text],textarea").val("");
-				}
-			});
+			// 		$.fancybox.close();
+			// 		$link.click();
+			// 	},
+			// 	error: function(){
+			// 		$.fancybox.close();
+			// 		$(".b-error-link").click();
+			// 	},
+			// 	complete: function(){
+			// 		$this.find(".ajax").removeAttr("onclick");
+			// 		$this.find("input[type=text],textarea").val("");
+			// 	}
+			// });
   		}else{
   			$(this).find("input.error,select.error,textarea.error").eq(0).focus();
+  			return false;
   		}
-  		return false;
   	});
 
 	$("body").on("click", ".ajax", function(){

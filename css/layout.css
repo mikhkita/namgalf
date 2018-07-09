@@ -3810,8 +3810,66 @@ form small{
 			margin-top: 0px;
 			margin-bottom: 30px;
 		}
+	.js-mobile .b-mobile-select{
+		position: relative;
+	}
+	.js-mobile .b-mobile-select div{
+	    position: absolute;
+	    width: 18px;
+	    height: 100%;
+		display: block;
+		top: 40px;
+		right: 26px;
+	}
+	.js-mobile .b-mobile-select div:before,
+	.js-mobile .b-mobile-select div:after{
+		position: absolute;
+		content: "s";
+		font-size: 0px;
+		left: 0px;
+		top: 0px;
+		width: 10px;
+		height: 2px;
+		background: #292929;
+		border-radius: 1px;
+		display: block;
+		-webkit-transition: -webkit-transform 150ms ease-out;
+		   -moz-transition: transform 150ms ease-out;
+		    -ms-transition: -ms-transform 150ms ease-out;
+		   	 -o-transition: -o-transform 150ms ease-out;
+				transition: transform 150ms ease-out;
+	}
+	.js-mobile .b-mobile-select div:before{
+		-webkit-transform: rotateZ(45deg);
+		-moz-transform: rotateZ(45deg);
+		-ms-transform: rotateZ(45deg);
+		-o-transform: rotateZ(45deg);
+		transform: rotateZ(45deg);
+		left: -6px;
+	}
+	.js-mobile .b-mobile-select div:after{
+		-webkit-transform: rotateZ(-45deg);
+		   -moz-transform: rotateZ(-45deg);
+		    -ms-transform: rotateZ(-45deg);
+		   	 -o-transform: rotateZ(-45deg);
+				transform: rotateZ(-45deg);
+	}
 	.b-quiz select{
-		display: none;
+		-webkit-appearance: none;
+		border: 0px;
+	    border-radius: 100px;
+	    background: #e3ede3;
+	    width: 520px !important;
+	    height: 60px;
+	    cursor: pointer;
+	    box-sizing: border-box;
+	    width: 100%;
+	    font-family: "MuseoSansCyrl-300";
+	    font-size: 15px;
+	    line-height: 20px;
+	    margin-top: 10px;
+	    margin-bottom: 21px;
+	    padding-left: 24px;
 	}
 .b-quiz-textarea{
 	display: block;
@@ -3826,6 +3884,9 @@ form small{
 	resize: vertical;
     margin-top: 9px;
     margin-bottom: 30px;
+}
+.b-quiz-2 .b-quiz-textarea{
+	display: none;
 }
 .b-quiz-right-col{
     width: 44%;
@@ -4007,10 +4068,12 @@ form small{
 	}
 .b-slider-result{
     top: -38px;
-    left: -12px;
+    left: -30px;
+    text-align: center;
     display: inline-block;
-    min-width: 60px;
+    min-width: 80px;
     position: absolute;
+    white-space: nowrap;
     font-family: "MuseoSansCyrl-300";
 }
 .b-quiz-3 h3{
@@ -4128,6 +4191,9 @@ form small{
 	line-height: 20px;
 	margin-top: 10px;
 	margin-bottom: 21px;
+}
+.error + label + .chosen-container{
+	box-shadow: 0 0px 0px 1.3px #F00;
 }
 .chosen-container.chosen-with-drop .chosen-drop{
 	background-color: #ffffff;

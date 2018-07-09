@@ -906,7 +906,7 @@
 				<div class="b-best">
 					<div class="b-ipad anim fadeRight"></div>
 					<h3><b class="orange">Мы анализируем результаты</b> каждого этапа, тестируем варианты. По итогам на ходу меняем стратегию, чтобы схема работала ещё лучше.<br><br><b class="orange">Потому что нам не всё равно</b> — мы работаем, чтобы создать лучший проект в вашей сфере бизнеса.</h3>
-					<a href="#b-quiz-popup" class="b-btn b-green-btn fancy" id="b-quiz-offer"><span>Хочу лучший проект</span></a>
+					<a href="#b-quiz-popup" class="b-btn b-green-btn b-quiz-link" id="b-quiz-road-map"><span>Хочу лучший проект</span></a>
 				</div>
 			</div>
 		</div>
@@ -1424,11 +1424,13 @@
 						<div class="b-img"></div>
 						<h2><b>Узнайте</b> точную стоимость вашего проекта</h2>
 						<p>Ответьте на несколько вопросов. Вы получите 3 варианта по ценам в ближайшие день-два</p>
-						<form action="kitsend.php" method="POST">
+						<form action="thanks.php" method="POST">
 							<div class="b-line-input clearfix">
 								<input type="text" name="email" class="b-email-input" placeholder="Введите ваш E-mail" required>
 								<a href="#" class="b-btn b-green-btn ajax"><span>Узнать стоимость</span></a>
 							</div>
+							<input type="hidden" name="subject" value="Заявка с формы «Узнайте точную стоимость вашего проекта»">
+							<input type="hidden" name="thanks" value="request">
 							<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 							<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных<br>данных и соглашаетесь с <a href="#">Политикой конфиденциальности</a></small>
 						</form>
@@ -1479,11 +1481,13 @@
 					<p class="b-quotes">Ответьте на несколько вопросов —  и получите <b>индивидуальное коммерческое предложение</b></p>
 					<h2><b>Три варианта</b> по составу инструментов, срокам и цене</h2>
 					<p>Это вас ни к чему не обязывает. Получив наше предложение, вы сможете примерить его на свой бизнес</p>
-					<form action="kitsend.php" method="POST">
+					<form action="thanks.php" method="POST">
 						<div class="b-line-input clearfix">
 							<input type="text" name="email" class="b-email-input" placeholder="Введите ваш E-mail" required>
 							<a href="#" class="b-btn b-green-btn ajax"><span>Получить предложение</span></a>
 						</div>
+						<input type="hidden" name="subject" value="Заявка с формы «Ответьте на несколько вопросов — и получите индивидуальное коммерческое предложение»">
+						<input type="hidden" name="thanks" value="offer">
 						<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 						<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных<br>данных и соглашаетесь с <a href="#">Политикой конфиденциальности</a></small>
 					</form>
@@ -1570,7 +1574,8 @@
 		<div class="b b-19">
 			<div class="b-block">
 				<p class="b-first-p">Нам интересно делать только wow-кейсы. Мы всей командой<br>буквально пашем ради этого. <strong>Поэтому берем только 9-10 проектов в год</strong></p>
-				<h3><b>В этом месяце мы можем взять 1 проект</b></h3>
+				<!-- <h3><b>В этом месяце мы можем взять 1 проект</b></h3> -->
+				<h3><b>В этом месяце у нас нет свободных мест</b></h3>
 				<div class="b-three-items b-projects">
 					<div class="b-three-item anim fadeDown">
 						<div class="b-img" style="background-image: url('i/19/photo-1.jpg');">
@@ -1581,9 +1586,18 @@
 							</div>
 						</div>
 					</div>
-					<div class="b-three-item anim fadeDown delay200 b-new-project">
+					<!-- <div class="b-three-item anim fadeDown delay200 b-new-project">
 						<h3><b>Место для<br>вашего проекта</b></h3>
 						<a href="#" class="b-btn b-green-btn b-go" data-block=".b-20" data-offset="-50"><span>Забронировать!</span></a>
+					</div> -->
+					<div class="b-three-item anim fadeDown delay200">
+						<div class="b-img" style="background-image: url('i/19/photo-2.jpg');">
+							<h3><b>«ENSOUL GROUP»</b></h3>
+							<div class="b-bottom-text">
+								<h4>ниша</h4>
+								<p>цифровое видеонаблюдение, охранные системы</p>
+							</div>
+						</div>
 					</div>
 					<div class="b-three-item anim fadeDown delay400">
 						<div class="b-img" style="background-image: url('i/19/photo-3.jpg');">
@@ -1610,11 +1624,13 @@
 						<div class="b-border">
 							<p>Вам нужно только <strong>оставить заявку</strong> и немного рассказать о своем бизнесе.</p>
 							<p>После этого мы свяжемся с вами, обговорим варианты и предложим детальный план проекта.</p>
-							<form action="kitsend.php" method="POST">
+							<form action="thanks.php" method="POST">
 								<input type="text" name="name" class="b-name-input" placeholder="Введите имя" required>
 								<input type="text" name="phone" class="b-phone-input" placeholder="Введите номер телефона" required>
 								<input type="text" name="email" class="b-email-input" placeholder="Введите ваш E-mail" required>
 								<a href="#" class="b-btn b-green-btn ajax"><span>Забронировать место</span></a>
+								<input type="hidden" name="subject" value="Заявка с формы «Забронируйте место, чтобы увеличить прибыль в 4-6 раз уже через полгода»">
+								<input type="hidden" name="thanks" value="offer">
 								<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 								<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с<br><a href="#">Политикой конфиденциальности</a></small>
 							</form>
@@ -1683,10 +1699,11 @@
 				<p>Жаль, что вы уходите.<br>Но у нас нет цели во что бы то ни стало<br>продать наши услуги.</p>
 				<h3><b>Скачайте пошаговый план бесплатно</b> и попробуйте самостоятельно внедрить систему</h3>
 				<p>На какой email отправить план?</p>
-				<form action="kitsend.php" method="POST" data-goal="CALLBACK" method="POST" id="b-form-1">
+				<form action="thanks.php" method="POST" data-goal="CALLBACK" method="POST" id="b-form-1">
 					<div class="b-popup-form">
 						<input type="text" id="email" name="email" placeholder="Введите ваш E-mail" required/>
-						<input type="hidden" name="subject" value="Заказ"/>
+						<input type="hidden" name="subject" value="Заявка с попапа «Жаль, что вы уходите»"/>
+						<input type="hidden" name="thanks" value="request">
 						<input type="submit" style="display:none;">
 						<a href="#" class="b-btn b-green-btn ajax"><span>Скачать план бесплатно</span></a>
 						<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с<br><a href="#">Политикой конфиденциальности</a></small>
@@ -1696,30 +1713,13 @@
 			</div>
 			<div class="b-note-shadow"></div>
 		</div>
-		<div class="b-popup" id="b-popup-1">
-			<h3>Оставьте заявку</h3>
-			<h4>и наши специалисты<br>свяжутся с Вами в ближайшее время</h4>
-			<form action="kitsend.php" method="POST" data-goal="CALLBACK" method="POST" id="b-form-1">
-				<div class="b-popup-form">
-					<label for="name">Введите Ваше имя</label>
-					<input type="text" id="name" name="name" required/>
-					<label for="tel">Введите Ваш номер телефона</label>
-					<input type="text" id="tel" name="phone" required/>
-					<label for="tel">Введите Ваш E-mail</label>
-					<input type="text" id="tel" name="email" required/>
-					<input type="hidden" name="subject" value="Заказ"/>
-					<input type="submit" style="display:none;">
-					<a href="#" class="b-btn b-blue-btn ajax">Заказать</a>
-					<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
-				</div>
-			</form>
-		</div>
 		<div class="b-popup b-note b-quiz" id="b-quiz-popup">
 			<div class="b-border">
 				<div class="b-quiz-line-container">
 					<div class="b-quiz-line-green" data-result="12"></div>
 				</div>
-				<form action="kitsend.php" method="POST" id="b-form-4">
+				<form action="thanks.php" method="POST" id="b-quiz-form">
+					<input type="hidden" name="quiz" value="Y">
 					<div data-number="1" class="b-quiz-container b-quiz-1" data-result="12">
 						<h3><b>Отлично!</b><br>
 						Для начала расскажите немного о вашей компании:</h3>
@@ -1760,19 +1760,19 @@
 							<div class="b-popup-form">
 								<label class="b-quiz-label">Можете выбрать несколько пунктов</label>
 								<div class="checkbox-container">
-									<input type="checkbox" class="checkbox" id="checkbox-more-clients" name="moreclients">
+									<input type="checkbox" class="checkbox" id="checkbox-more-clients" name="task[]" value="Получать больше новых клиентов">
 									<label for="checkbox-more-clients" class="icon-check">Получать больше новых клиентов</label>
 								</div>
 								<div class="checkbox-container">		
-									<input type="checkbox" class="checkbox" id="checkbox-more-cash" name="more-cash">
+									<input type="checkbox" class="checkbox" id="checkbox-more-cash" name="task[]" value="Повысить прибыль, средний чек">
 									<label for="checkbox-more-cash" class="icon-check">Повысить прибыль, средний чек</label>
 								</div>
 								<div class="checkbox-container">
-									<input type="checkbox" class="checkbox" id="checkbox-more-respect" name="more-respect">
+									<input type="checkbox" class="checkbox" id="checkbox-more-respect" name="task[]" value="Создать образ в интернете">
 									<label for="checkbox-more-respect" class="icon-check">Создать образ в интернете</label>
 								</div>
 								<div class="checkbox-container">
-									<input type="checkbox" class="checkbox" id="checkbox-mytask" name="mytask">
+									<input type="checkbox" class="checkbox" id="checkbox-mytask" name="task[]" value="Мне нужно решить конкретную задачу">
 									<label for="checkbox-mytask" class="icon-check">Мне нужно решить конкретную задачу:</label>
 								</div>
 
@@ -1793,23 +1793,23 @@
 						<div class="b-quiz-left-col">
 							<div class="b-popup-form">
 								<div class="checkbox-container">
-									<input type="checkbox" class="checkbox" id="checkbox-promotion-1" name="checkbox-promotion-1">
+									<input type="checkbox" class="checkbox" id="checkbox-promotion-1" name="promo[]" value="Да, конечно! У меня и сейчас реклама идет">
 									<label for="checkbox-promotion-1" class="icon-check">Да, конечно! У меня и сейчас реклама идет</label>
 								</div>
 								 <div class="b-quiz-slider-container">
 								 	<p>
 										<label for="amount">В месяц инвестирую в неё:</label>
-										<input type="text" id="amount" readonly style="display: none;">
+										<input type="text" name="amount" id="amount" readonly style="display: none;">
 									</p>
 								 
 									<div id="b-quiz-slider"></div>
 								 </div>
 								<div class="checkbox-container">		
-									<input type="checkbox" class="checkbox" id="checkbox-promotion-2" name="checkbox-promotion-2">
+									<input type="checkbox" class="checkbox" id="checkbox-promotion-2" name="promo[]" value="Да, но не знаю, сколько">
 									<label for="checkbox-promotion-2" class="icon-check">Да, но не знаю, сколько</label>
 								</div>
 								<div class="checkbox-container">
-									<input type="checkbox" class="checkbox" id="checkbox-promotion-3" name="checkbox-promotion-3">
+									<input type="checkbox" class="checkbox" id="checkbox-promotion-3" name="promo[]" value="Я думал, что это включено в общий бюджет">
 									<label for="checkbox-promotion-3" class="icon-check">Я думал, что это включено в общий бюджет</label>
 								</div>
 
@@ -1828,15 +1828,15 @@
 						<div class="b-quiz-left-col">
 							<div class="b-popup-form">
 								<label class="b-quiz-radio">
-									  <input type="radio" name="more-request" />
+									  <input type="radio" name="more-request" value="Хочу как можно больше новых заявок" />
 									  <div class="b-quiz-radio__text">Хочу как можно больше новых заявок</div>
 								</label>
 								<label class="b-quiz-radio">
-									  <input type="radio" name="more-request" />
+									  <input type="radio" name="more-request" value="Нужны самые платежеспособные клиенты" />
 									  <div class="b-quiz-radio__text">Нужны самые платежеспособные клиенты</div>
 								</label>
 								<label class="b-quiz-radio">
-									  <input type="radio" name="more-request" />
+									  <input type="radio" name="more-request" value="Хочу как можно больше новых заявок и платежеспособных клиентов" />
 									  <div class="b-quiz-radio__text">Хочу как можно больше новых заявок и&nbsp;платежеспособных клиентов</div>
 								</label>
 								<a href="#" class="b-btn b-green-btn" onclick="return false;"><span>Дальше</span></a>
@@ -1860,8 +1860,10 @@
 							<p>Введите телефон:</p>
 							<div class="b-line-input clearfix">
 								<input type="text" name="phone" class="b-phone-input" placeholder="Введите номер телефона" required>
-								<a href="#" class="b-btn b-green-btn ajax"><span>Получить Road map!</span></a>
+								<a href="#" class="b-btn b-green-btn quiz-submit"><span>Получить Road map!</span></a>
 							</div>
+							<input type="hidden" name="subject" value="Квиз «Получить Road map!»">
+							<input type="hidden" name="thanks" value="roadmap">
 							<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 							<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных<br>данных и соглашаетесь с <a href="#">Политикой конфиденциальности</a></small>
 						</div>
@@ -1876,8 +1878,10 @@
 							<p>Просто введите телефон:</p>
 							<div class="b-line-input clearfix">
 								<input type="text" name="phone" class="b-phone-input" placeholder="Введите номер телефона" required>
-								<a href="#" class="b-btn b-green-btn ajax"><span>Получить предложение</span></a>
+								<a href="#" class="b-btn b-green-btn quiz-submit"><span>Получить предложение</span></a>
 							</div>
+							<input type="hidden" name="subject" value="Квиз «Получить предложение!»">
+							<input type="hidden" name="thanks" value="offer">
 							<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 							<small>Нажимая на кнопку, вы даете согласие на обработку своих персональных<br>данных и соглашаетесь с <a href="#">Политикой конфиденциальности</a></small>
 						</div>
@@ -1901,6 +1905,7 @@
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="js/jquery.enllax.js"></script>
+	<script type="text/javascript" src="js/device.js"></script>
 	<script type="text/javascript" src="js/jquery.touch.min.js"></script>
 	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="js/jquery.lazylinepainter-1.5.1.js"></script>

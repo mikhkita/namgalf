@@ -15,6 +15,10 @@ $(document).ready(function(){
     $(window).resize(resize);
     resize();
 
+    if( device.mobile() || device.tablet() ){
+        $("body").addClass("js-mobile");
+    }
+
     $.fn.placeholder = function() {
         if(typeof document.createElement("input").placeholder == 'undefined') {
             $('[placeholder]').focus(function() {
@@ -100,9 +104,9 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        easing: 'easeOutQuart',
-        speed: 800,
-        useTransform: false,
+        ease: 'ease-out',
+        speed: 500,
+        useTransform: true,
         arrows: true,
         prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
         nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
@@ -247,18 +251,9 @@ $(document).ready(function(){
         }
     });
 
-    $("#type").chosen({
-        disable_search_threshold : 10
-    }).change(function(){
-        var $option = $(this).find("option[value='"+$(this).val()+"']");
-            click = $option.attr("data-id"),
-            price = $option.attr("data-price");
-        $(".b-19 h2.b-title span").text(price);
-
-        $(".b-pay-click").attr("data-id", $option.attr("data-id"));
-        return false;
-    });
-    var type = null;
+    var quiz = $("#b-quiz-popup").clone(),
+        type = null;
+    $("#b-quiz-popup").remove();
 
     $("#b-quiz-payback").on("click",function(){
         type = "offer";
@@ -272,60 +267,152 @@ $(document).ready(function(){
         type = "road-map";
     });
 
-    $("#b-quiz-popup .b-btn").on('click', function(){
-        var currentQuizNumber = $(this).parents(".b-quiz-container").attr('data-number');
-        $(this).parents(".b-quiz-container").hide();
-        currentQuizNumber = parseInt(currentQuizNumber) + 1;
-        currentLine = $(this).parents(".b-quiz-container").next().attr('data-result');
+    $(".b-quiz-link").click(function(){
+        $.fancybox.open(quiz.clone(), {
+            // html  : ,
+            // opts : {
+                afterLoad : function( instance, current ) {
+                    $("#b-quiz-popup .b-btn").on('click', function(){
+                        $("#b-quiz-form").valid();
 
-        $(".b-quiz-container").each(function(){
-            if($(this).attr('data-number') == currentQuizNumber){
-                if (currentQuizNumber == 5) {
-                    if (type == "road-map") {
-                        $(".b-quiz-container.b-quiz-road-map").show()
+                        if( $(this).parents(".b-quiz-container").find("input.error,select.error,textarea.error").length != 0 ){
+                            $(this).parents(".b-quiz-container").find("input.error,select.error,textarea.error").eq(0).focus();
+                            return false;
+                        }
+
+                        if( $(this).hasClass("quiz-submit") ){
+                            $("#b-quiz-form").submit();
+                            return true;
+                        }
+
+                        var currentQuizNumber = $(this).parents(".b-quiz-container").attr('data-number');
+                        $(this).parents(".b-quiz-container").hide();
+                        currentQuizNumber = parseInt(currentQuizNumber) + 1;
+                        currentLine = $(this).parents(".b-quiz-container").next().attr('data-result');
+
+                        $(".b-quiz-container").each(function(){
+                            if($(this).attr('data-number') == currentQuizNumber){
+                                if (currentQuizNumber == 5) {
+                                    if (type == "road-map") {
+                                        $(".b-quiz-container.b-quiz-road-map").show();
+                                        $(".b-quiz-container.b-quiz-offer").remove();
+                                    }
+                                    else{
+                                        $(".b-quiz-container.b-quiz-offer").show();
+                                        $(".b-quiz-container.b-quiz-road-map").remove();
+                                    }
+                                }
+                                else{
+                                    $(this).show()
+                                }
+                            };
+                        })
+
+                        $(".b-quiz-line-green").attr("data-result", currentLine);
+                        $(".b-quiz-line-green").css("width", currentLine+"%");
+
+                        return true;
+                    });
+
+                    $("#checkbox-promotion-1").on('click', function(){
+                        if ($("#checkbox-promotion-1").prop("checked")) {
+                            $(".b-quiz-slider-container").css('display', 'block');
+                        }
+                        else{
+                            $(".b-quiz-slider-container").css('display', 'none');
+                        }
+                    })
+                    
+
+                    $("#b-quiz-slider").slider({
+                        range: "min",
+                        value:20,
+                        min: 20,
+                        max: 200,
+                        step: 2,
+                        slide: function( event, ui ) {
+                            $("#amount").val( ui.value );
+                            if( ui.value*1 == 200 ){
+                                $("#b-quiz-slider").find(".b-slider-result").text( "> " + ui.value + " т.р.");
+                            }else{
+                                $("#b-quiz-slider").find(".b-slider-result").text( ui.value + " т.р.");
+                            }
+                        },
+                        create: function( event, ui ) {
+                            $(".ui-slider-handle").append("<div class='b-slider-result'></div>")
+                        }
+                    });
+
+                    $("#amount").val( $("#slider").slider("value") );
+
+                    $("#b-quiz-form").validate({
+                        rules: {
+                            email: 'email'
+                        },
+                        ignore: ":hidden:not(select)"
+                    });
+
+                    $("#b-quiz-form").find("input[name=phone]").mask('+7 (999) 999-99-99',{placeholder:" "});
+
+
+                    if( !device.mobile() && !device.tablet() ){
+                        $("#type").chosen({
+                            disable_search_threshold : 10
+                        });
                     }
-                    else{
-                        $(".b-quiz-container.b-quiz-offer").show()
-                    }
+
+                    $("#b-quiz-form").find("select, input, textarea").change(function(){
+                        $("#b-quiz-form").valid();
+                    });
+
+                    $("#checkbox-mytask").change(function(){
+                        if( $(this).prop("checked") ){
+                            $(".b-quiz-2 .b-quiz-textarea").fadeIn(300);
+                        }else{
+                            $(".b-quiz-2 .b-quiz-textarea").fadeOut(300);
+                        }
+                    });
+
+                    $("#b-quiz-form").submit(function(){
+                        var $this = $(this);
+
+                        $this.find(".quiz-submit").attr("onclick", "return false;");
+
+                        // if( $this.attr("data-goal") ){
+                            // yaCounter12345678.reachGoal($this.attr("data-goal"));
+                        // }
+
+                        // alert("Отправка!");
+                        // return false;
+                        // $.ajax({
+                        //     type: $(this).attr("method"),
+                        //     url: $(this).attr("action"),
+                        //     data:  $this.serialize(),
+                        //     success: function(msg){
+                        //         var $form;
+                        //         if( msg == "1" ){
+                        //             $link = $this.find(".b-thanks-link");
+                        //         }else{
+                        //             $link = $(".b-error-link");
+                        //         }
+
+                        //         $.fancybox.close();
+                        //         $link.click();
+                        //     },
+                        //     error: function(){
+                        //         $.fancybox.close();
+                        //         $(".b-error-link").click();
+                        //     },
+                        //     complete: function(){
+                        //         $this.find(".quiz-submit").removeAttr("onclick");
+                        //         $this.find("input[type=text], textarea").val("");
+                        //     }
+                        // });
+                        // return false;
+                    });
                 }
-                else{
-                    $(this).show()
-                }
-            };
-        })
-
-        $(".b-quiz-line-green").attr("data-result", currentLine);
-        $(".b-quiz-line-green").css("width", currentLine+"%");
-
-    });
-    $("#checkbox-promotion-1").on('click', function(){
-        if ($("#checkbox-promotion-1").prop("checked")) {
-            $(".b-quiz-slider-container").css('display', 'block');
-        }
-        else{
-            $(".b-quiz-slider-container").css('display', 'none');
-        }
-    })
-    
-
-    $("#b-quiz-slider").slider({
-        range: "min",
-        value:20,
-        min: 20,
-        max: 200,
-        step: 2,
-        slide: function( event, ui ) {
-            $("#amount").val( ui.value );
-            $("#b-quiz-slider").find(".b-slider-result").text( ui.value + " т.р.");
-        },
-        create: function( event, ui ) {}
-    });
-
-    $("#amount").val( $("#slider").slider("value") );
-    // $("#b-quiz-slider").find(".b-slider-result").text(ui.value + " т.р.");
-
-    $("#b-quiz-slider").on("slidecreate", function( event, ui ) {
-        $(".ui-slider-handle").append("<div class='b-slider-result'></div>")
+            // }
+        });
     });
 
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);

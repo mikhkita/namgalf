@@ -11,6 +11,7 @@ function fancyOpen(el){
     	padding:0,
     	fitToView: false,
         scrolling: 'no',
+        touch: false,
         beforeShow: function(){
 			$(".fancybox-wrap").addClass("beforeShow");
 			if( !device.mobile() ){

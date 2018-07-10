@@ -932,6 +932,7 @@ form small{
 			}
 .b-2{
 	position: relative;
+	padding-top: 80px;
 }
 	.b-2 .b-check, 
 	.b-6 .b-check{
@@ -1369,9 +1370,6 @@ form small{
 		    background-repeat: no-repeat;
 		    background-image: url(../i/icons/round.svg);
 		    background-size: contain;
-}
-
-
 		}
 	.b-5 .b-two-blocks{
 		margin-bottom: 51px;

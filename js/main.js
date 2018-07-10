@@ -271,6 +271,7 @@ $(document).ready(function(){
         $.fancybox.open(quiz.clone(), {
             // html  : ,
             // opts : {
+                touch: false,
                 afterLoad : function( instance, current ) {
                     $("#b-quiz-popup .b-btn").on('click', function(){
                         $("#b-quiz-form").valid();
@@ -317,6 +318,16 @@ $(document).ready(function(){
                     $("#checkbox-promotion-1").on('click', function(){
                         if ($("#checkbox-promotion-1").prop("checked")) {
                             $(".b-quiz-slider-container").css('display', 'block');
+                            var val = 20;
+                            var valueIncrease = setInterval(function() {
+                                val = val+2; 
+                                $( "#b-quiz-slider" ).slider( "value", val );
+                                if (val == 50){
+                                    clearInterval(valueIncrease);
+                                };
+                                $(" #b-quiz-slider ").find(".b-slider-result").text( val + " т.р.");
+                            }, 20);
+
                         }
                         else{
                             $(".b-quiz-slider-container").css('display', 'none');
@@ -326,7 +337,7 @@ $(document).ready(function(){
 
                     $("#b-quiz-slider").slider({
                         range: "min",
-                        value:20,
+                        value: 20,
                         min: 20,
                         max: 200,
                         step: 2,
@@ -352,7 +363,7 @@ $(document).ready(function(){
                         ignore: ":hidden:not(select)"
                     });
 
-                    $("#b-quiz-form").find("input[name=phone]").mask('+7 (999) 999-99-99',{placeholder:" "});
+                    $("#b-quiz-form").find("input[name=phone]").mask('+7 (999) 999-99-99',{placeholder:"_"});
 
 
                     if( !device.mobile() && !device.tablet() ){

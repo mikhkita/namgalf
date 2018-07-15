@@ -3058,7 +3058,7 @@ form small{
 				.b-works-slide .b-img{
 					position: absolute;
 					right: -33px;
-					top: -7px;
+					top: 0px;
 					background-position: 50% 50%;
 					background-repeat: no-repeat;
 					width: 981px;

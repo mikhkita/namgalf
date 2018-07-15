@@ -356,11 +356,43 @@ $(document).ready(function(){
 
                     $("#amount").val( $("#slider").slider("value") );
 
+                    // $.validator.addMethod("roles", function(value, elem, param) {
+                    //    return $(".roles:checkbox:checked").length > 0;
+                    // }, "You must select at least one!");
+
                     $("#b-quiz-form").validate({
                         rules: {
-                            email: 'email'
+                            email: 'email',
+                            "task[]": { 
+                                required: true, 
+                                minlength: 1 
+                            },
+                            "promo[]": {
+                                required: true, 
+                                minlength: 1 
+                            },
+                            "more-request": {
+                                required: true, 
+                                minlength: 1 
+                            }
                         },
-                        ignore: ":hidden:not(select)"
+                        messages: { 
+                            "task[]": "Выберите хотя бы один вариант",
+                            "promo[]": "Выберите хотя бы один вариант",
+                            "more-request": "Выберите один вариант"
+                        },
+                        ignore: ":hidden:not(select)",
+                        errorPlacement: function(error, element) {
+                            if( element.attr("name") == "task[]" || element.attr("name") == "promo[]" || element.attr("name") == "more-request" ){
+                                error.addClass("visible-label");
+
+                                if( element.attr("name") == "task[]" ){
+                                    element.parents(".b-popup-form").find(".b-quiz-label").after(error);
+                                }else{
+                                    element.parents(".b-popup-form").prepend(error);
+                                }
+                            }
+                        }
                     });
 
                     $("#b-quiz-form").find("input[name=phone]").mask('+7 (999) 999-99-99',{placeholder:"_"});

@@ -128,8 +128,20 @@ a{
 	text-decoration: none;
 	color: #292929;
 }
-label.error{
+label.error:not(.visible-label){
 	display: none !important;
+}
+.b-quiz .b-popup-form label.error.visible-label{
+	display: block;
+	font-size: 20px;
+	line-height: 20px;
+	color: #DA0000;
+	padding-left: 8px;
+	margin-top: 8px;
+}
+.b-quiz .b-quiz-4 .b-popup-form label.error.visible-label{
+	margin-top: 0px;
+	margin-bottom: 16px;
 }
 input.error,textarea.error{
 	border: 1.3px solid #F00 !important;
@@ -4190,7 +4202,7 @@ form small{
 	margin-top: 10px;
 	margin-bottom: 21px;
 }
-.error + label + .chosen-container{
+.error + .chosen-container{
 	box-shadow: 0 0px 0px 1.3px #F00;
 }
 .chosen-container.chosen-with-drop .chosen-drop{

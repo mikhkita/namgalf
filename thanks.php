@@ -1,11 +1,11 @@
 <?php
 	require_once("phpmail.php");
 
-	$email_admin = "mike@kitaev.pro";
+	$email_admin = "huckconversionlp@transfiguration.agency, mike@kitaev.pro";
 	// $email_admin = "mike@kitaev.pro";
 
 	$from = "“Флагман TFA”";
-	$email_from = "flagman@surgay.ru";
+	$email_from = "flagman@transfiguration.agency";
 
 	$deafult = array(
 		"name"=>"Имя", 

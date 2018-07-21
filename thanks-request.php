@@ -68,8 +68,8 @@
 			<h3><b>Среднее время ответа:</b> 4 минуты в рабочее время</h3>
 			<div class="b-soc clearfix">
 				<div class="b-soc-buttons left">
-					<a href="#" class="b-soc-item b-wa anim fadeDown" target="_blank"></a>
-					<a href="#" class="b-soc-item b-ft anim fadeDown delay100" target="_blank"></a>
+					<!-- <a href="#" class="b-soc-item b-wa anim fadeDown" target="_blank"></a>
+					<a href="#" class="b-soc-item b-ft anim fadeDown delay100" target="_blank"></a> -->
 					<a href="#" class="b-soc-item b-vk anim fadeDown delay200" target="_blank"></a>
 					<a href="#" class="b-soc-item b-tg anim fadeDown delay300" target="_blank"></a>
 				</div>

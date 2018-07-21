@@ -177,6 +177,7 @@ $(document).ready(function(){
         speed: 800,
         useTransform: false,
         arrows: true,
+        adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
         nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
         touchThreshold: 100
@@ -231,7 +232,21 @@ $(document).ready(function(){
         showLeave = false;
       });
 
-
+    $(".b-levels-slider").slick({
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true, 
+        easing: 'easeOutQuart',
+        speed: 800,
+        useTransform: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+        touchThreshold: 100,
+        autoplay: true,
+        autoplaySpeed: 3000
+    }); 
 
     if (navigator.userAgent.indexOf ('Windows') != -1) isWindows = true;
 

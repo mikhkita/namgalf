@@ -603,6 +603,10 @@ form small{
 			border: 0px;
 			cursor: pointer;
 		}
+		.b-12 .slick-dots li button{
+		    width: 22px;
+			height: 22px;
+		}
 			.slick-dots li button:before{
 				content: "s";
 				font-size: 0px;
@@ -613,6 +617,10 @@ form small{
 				width: 11px;
 				height: 11px;
 				line-height: 26px;
+			}
+			.b-12 .slick-dots li button:before{
+			    width: 8px;
+    			height: 8px;
 			}
 			.black .slick-dots li button:before{
 				border: 1px solid #FFF;
@@ -1485,7 +1493,7 @@ form small{
 				position: relative;
 			}
 			.b-three-block:nth-child(1) img{
-
+				
 			}
 			.b-three-block:nth-child(2) img{
 				left: -9px;
@@ -3005,14 +3013,15 @@ form small{
 		.b-17 h3.b-counter{
 
 		}
-		.b-17 h3.b-counter span{
+		.b-12 h3.b-counter span{
 			display: inline-block;
-			border: 1px solid rgba(0,0,0,0.2);
+			border: 1px solid rgba(255,255,255,0.2);
 			border-radius: 100px;
 			width: 42px;
 			height: 42px;
 			margin-left: 3px;
 			margin-right: 3px;
+
 		}
 		.b-counter div{
 			display: inline-block;
@@ -3025,7 +3034,7 @@ form small{
 		}
 		.b-works-slide{
 			text-align: left;
-			padding-bottom: 100px;
+		    padding-bottom: 134px;
 		}
 			.b-works-slide .b-block{
 				padding-left: 88px;
@@ -3039,8 +3048,15 @@ form small{
 						font-family: "MuseoSansCyrl-100";
 						font-size: 40px;
 						line-height: 45px;
-						max-width: 490px;
+						max-width: 640px;
 					}
+					.slider-logo-text{
+					  font-size: 15px;
+					  font-family: "MuseoSansCyrl-100";
+					  color: rgba(255, 255, 255, 0.251);
+					  line-height: 1.333;
+					  position: absolute;
+					 }
 					.b-works-slide p{
 						max-width: 490px;
 						margin-bottom: 22px;
@@ -3057,8 +3073,8 @@ form small{
 							}
 				.b-works-slide .b-img{
 					position: absolute;
-					right: -33px;
-					top: 0px;
+					right: -8px;
+    				bottom: -132px;
 					background-position: 50% 50%;
 					background-repeat: no-repeat;
 					width: 981px;
@@ -3720,7 +3736,7 @@ form small{
 	.b-thanks-2 .b-yandex + h3{
 		
 	}
-/*************QUIZ**************/
+/*************QUIZ*************
 .b-quiz-line-container{
     background: url(../i/quiz-line.png);
     width: 99%;

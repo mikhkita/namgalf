@@ -539,6 +539,9 @@ form small{
 		   	 -o-animation: three 1500ms 240ms ease infinite;
 				animation: three 1500ms 240ms ease infinite;
 	}
+.b-12 .slick-arrow{
+	top: 370px;
+}
 .slick-arrow{
 	width: 60px;
 	height: 60px;

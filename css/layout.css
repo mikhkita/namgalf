@@ -3804,7 +3804,7 @@ form small{
 		line-height: 40px;
 	}
 		.b-quiz .b-popup-form label[for=business]{
-			padding-left: 18px;
+			padding-left: 0px;
 		    letter-spacing: 0.4px;
 		}
 		.b-quiz .b-popup-form label[for=works]{
@@ -3812,7 +3812,7 @@ form small{
 		    letter-spacing: 0.3px;  
 		}
 		.b-quiz .b-popup-form label[for=site]{
-			padding-left: 8px;
+			padding-left: 0px;
     		letter-spacing: 0.4px;
 		    padding-right: 17px;
 		}

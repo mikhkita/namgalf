@@ -3793,7 +3793,7 @@ form small{
 		font-size: 40px;
 		line-height: 50px;
 	    padding-top: 36px;
-    	padding-left: 18px;
+    	padding-left: 24px;
 	}
 		.b-quiz h3 b{
 			font-family: 'MuseoSansCyrl-700';
@@ -3804,7 +3804,7 @@ form small{
 		line-height: 40px;
 	}
 		.b-quiz .b-popup-form label[for=business]{
-			padding-left: 0px;
+			padding-left: 24px;
 		    letter-spacing: 0.4px;
 		}
 		.b-quiz .b-popup-form label[for=works]{
@@ -3812,12 +3812,13 @@ form small{
 		    letter-spacing: 0.3px;  
 		}
 		.b-quiz .b-popup-form label[for=site]{
-			padding-left: 0px;
+			padding-left: 24px;
     		letter-spacing: 0.4px;
 		    padding-right: 17px;
+		    display: inline-block;
 		}
 		.b-quiz .b-popup-form input[name=site]{
-			padding: 20px 35px 18px 33px;
+			padding: 20px 35px 18px 24px;
 			width: 100%;
 			margin-top: 10px;
 		}

@@ -3737,7 +3737,7 @@ form small{
 	.b-thanks-2 .b-yandex + h3{
 		
 	}
-/*************QUIZ*************
+/************QUIZ*************/
 .b-quiz-line-container{
     background: url(../i/quiz-line.png);
     width: 99%;
@@ -3790,7 +3790,7 @@ form small{
 		font-size: 40px;
 		line-height: 50px;
 	    padding-top: 36px;
-    	/*padding-left: 18px;*/
+    	padding-left: 18px;
 	}
 		.b-quiz h3 b{
 			font-family: 'MuseoSansCyrl-700';
@@ -3801,15 +3801,15 @@ form small{
 		line-height: 40px;
 	}
 		.b-quiz .b-popup-form label[for=business]{
-			/*padding-left: 18px;*/
+			padding-left: 18px;
 		    letter-spacing: 0.4px;
 		}
 		.b-quiz .b-popup-form label[for=works]{
-		    /*padding-left: 8px;*/
+		    padding-left: 8px;
 		    letter-spacing: 0.3px;  
 		}
 		.b-quiz .b-popup-form label[for=site]{
-			/*padding-left: 8px;*/
+			padding-left: 8px;
     		letter-spacing: 0.4px;
 		    padding-right: 17px;
 		}

@@ -786,8 +786,8 @@ form small{
 			letter-spacing: 1px;
 		}
 		.b-1 .b-three-crirles{
-			margin-top: 80px;
-			margin-bottom: 84px;
+		    margin-top: 70px;
+    		margin-bottom: 54px;
 		}
 	.b-top-surgay{
 		padding-top: 15px;
@@ -1338,6 +1338,7 @@ form small{
 					   	 -o-transform: translateX(30px);
 							transform: translateX(30px);
 					opacity: 1;
+					line-height: 28px;
 				}
 				.b-give-slide .b-ipad{
 					background-position: 50% 50%;
@@ -1696,13 +1697,13 @@ form small{
 		    display: inline-block;
 		    bottom: -192px;
 		    position: absolute;
-		    margin-left: -163px;
+		    left: 2px;
 		    z-index: 10;
 		}
 			.b-system .b-scheme h4{
 				position: absolute;
 				display: inline-block;
-			    top: -84px;
+			    top: -47px;
     			left: 24px;
 				line-height: 25px;
 			}

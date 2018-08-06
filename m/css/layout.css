@@ -1554,25 +1554,26 @@ form small{
 			.b-zhgenti .b-woman p{
 				font-family: "MuseoSansCyrl-700";
 				position: absolute;
-				left: 167px;
-				top: 252px;
+				left: -73px;
+				top: 162px;
 				background-color: #FFF;
 				border-radius: 3px;
-				padding: 5px 17px;
+				padding: 3px 8px;
 				box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
 				z-index: 1;
 				letter-spacing: 1px;
 			}
 			.b-zhgenti .b-woman h4{
 				position: absolute;
-				left: 198px;
-				top: 287px;
+				left: 68px;
+				top: 192px;
 				background-color: #FFF;
-				padding: 9px 18px;
+				padding: 2px 8px;
 				color: rgba(41,41,41,0.5);
 				white-space: nowrap;
 				font-size: 13px;
 				border-radius: 3px;
+				box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
 			}
 		.b-zhgenti .b-woman-text{
 			text-align: left;
@@ -2713,41 +2714,47 @@ form small{
 				text-align: left;
 			}
 			.b-director-desc-1{
-				margin-top: 549px;
-				margin-left: 45px;
+				/* margin-top: auto; */
+				/* margin-left: 45px; */
+				top: 280px;
+				position:  absolute;
 			}
 			.b-director-desc-2{
-				margin-top: 559px;
-				margin-left: 132px;
-				position: relative;
+				/* margin-top: 559px; */
+				/* margin-left: 132px; */
+				position: absolute;
+				top: 1080px;
+				left: 160px;
 			}
 			.b-director-desc-3{
-				top: 350px;
-    			left: 52px;
+				top: 150px;
+				left: -8px;
 				position: absolute;
-				display: none;
 			}
 				.b-director-desc p{
 				    background-color: #FFF;
 				    border-radius: 3px;
-				    padding: 5px 14px;
+				    padding: 2px 8px;
 				    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
 				    z-index: 1;
 				    letter-spacing: 0.7px;
 				    display: inline-block;
+				    font-size: 12px;
 				}
 					.b-director-desc p b{
 						font-family: "MuseoSansCyrl-700";
 					}
 				.b-director-desc h4{
 				    background-color: #FFF;
-				    padding: 6px 15px;
+				    padding: 2px 8px;
 				    color: rgba(41,41,41,0.5);
-				    font-size: 13px;
-				    margin-left: 20px;
+				    font-size: 11px;
+				    margin-left: 8px;
 				    border-radius: 3px;
 				    margin-top: -2px;
 				    white-space: nowrap;
+				    line-height: 18px;
+				    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
 				}
 			.b-director-text{
 				/* width: 740px; */
@@ -3874,7 +3881,7 @@ form small{
 						position: absolute;
 						top: 297px;
 						left: 262px;
-						display:  none;
+						display: none;
 					}
 .b-thanks-2{
 	

@@ -775,6 +775,8 @@ form small{
 		.b-1 h1{
 			display: inline-block;
 			max-width: 860px;
+			font-size: 42px;
+			line-height: 58px;
 		}
 		.b-1 h1 + p{
 			max-width: 792px;
@@ -3213,11 +3215,11 @@ form small{
 	}
 		.b-20 .b-text p{
 			position: relative;
-			z-index: 2;
-			text-align: left;
-			margin-left: 90px;
-			max-width: 355px;
-			margin-top: 15px;
+		    z-index: 2;
+		    text-align: left;
+		    margin-left: 90px;
+		    max-width: 389px;
+		    margin-top: 15px;
 		}
 			.b-20 .b-text p .b-line{
 				background-position: 50% 50%;
@@ -3739,6 +3741,15 @@ form small{
 	}
 	.b-thanks-2 .b-yandex + h3{
 		
+	}
+	#thanks-offer .b-bird{
+
+	}
+	#thanks-offer .b-text{
+		padding-top: 134px;
+	}
+	#thanks-offer +.b-thanks-footer{
+		 padding-top: 278px;
 	}
 /************QUIZ*************/
 .b-quiz-line-container{

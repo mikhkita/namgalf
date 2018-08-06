@@ -128,7 +128,7 @@ a{
 	text-decoration: none;
 	color: #292929;
 }
-label.error{
+label.error:not(.visible-label){
 	display: none !important;
 }
 input.error,textarea.error{
@@ -242,8 +242,8 @@ h1{
 	margin-bottom: 28px;
 }
 h2{
-	font-size: 28px;
-	line-height: 34px;
+	font-size: 24px;
+	line-height: 32px;
 	font-family: "MuseoSansCyrl-100";
 	margin-bottom: 28px;
 }
@@ -251,7 +251,8 @@ h3{
 	font-size: 18px;
 	line-height: 28px;
 	font-family: "MuseoSansCyrl-300";
-	margin-bottom: 19px;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 h3 .thin{
 	font-family: "MuseoSansCyrl-100";
@@ -279,7 +280,7 @@ p{
 	content: "s";
 	font-size: 0px;
 	left: -29px;
-	top: -21px;
+	top: -12px;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-image: url('../i/icons/icomma.svg');
@@ -287,16 +288,19 @@ p{
 	height: 18px;
 	background-size: 22px;
 }
-input[type="text"]{
+input[type="text"],
+input[type="tel"]{
+	
 	border: 1.3px solid rgb(219, 219, 219);
 	background-color: rgb(249, 247, 244);
 	box-shadow: inset 1.414px 1.414px 6px 0px rgba(30, 30, 30, 0.1);
 	border-radius: 100px;
-	width: 370px;
-	padding: 28px 63px;
+	width: 100%;
+	padding: 20px 14px 20px 52px;
 	font-family: "MuseoSansCyrl-300";
 	font-size: 15px;
 	line-height: 20px;
+	-webkit-appearance: none;
 }
 .b-email-input{
 	background-position: 25px 50%;
@@ -412,15 +416,15 @@ form small{
 	text-transform: uppercase;
 	font-size: 14px;
 	line-height: 25px;
-	letter-spacing: 1.2px;
-	padding: 25px 40px 25px;
+	letter-spacing: 1px;
+	padding: 25px 25px 25px;
 	text-align: center;
 	position: relative;
 	-webkit-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
-	   -moz-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
-	    -ms-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
-	   	 -o-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
-			transition: box-shadow 150ms ease-out, transform 100ms ease-out;
+	-moz-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
+	-ms-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
+	-o-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
+	transition: box-shadow 150ms ease-out, transform 100ms ease-out;
 }
 	.b-green-btn:hover{
 		box-shadow: 0px 10px 30px rgba(63, 156, 49, 0.3), 0px 20px 50px rgba(68, 162, 53, 0.3), 0px 5px 20px rgba(64, 160, 49, 0.2), inset 0 -1px 0px 3px rgba(255, 255, 255, 0.15);
@@ -554,11 +558,17 @@ form small{
 .black .slick-arrow{
 	background-color: #2a2b2c;
 	box-shadow: none;
-	bottom: 110px;
+	bottom: -8px;
 	margin-top: 0px;
 	top: auto;
 }
-	.slick-arrow:hover{
+.black .slick-prev{
+	left:14px;
+}
+.black .slick-next{
+	right:14px;
+}
+	.slick-arrow:active{
 		background-color: #65bb59;
 	}
 	.slick-arrow:before{
@@ -571,15 +581,17 @@ form small{
 		-o-transition: color 100ms ease-out, opacity 100ms ease-out;
 		transition: color 100ms ease-out, opacity 100ms ease-out;
 	}
-		.slick-arrow:hover:before{
+		.slick-arrow:active:before{
 			color: #FFF;
 			opacity: 1;
 		}
 .slick-prev{
 	left: 24px;
+	background-color: #f0f0f0;
 }
 .slick-next{
 	right: 24px;
+	background-color: #f0f0f0;
 }
 .slick-dots{
 	font-size: 0px;
@@ -691,6 +703,25 @@ form small{
 					width: 109px;
 					float: left;
 				}
+				.b-thanks .b-logo img{
+					display: inline-block;
+					vertical-align: middle;
+					width: 109px;
+					float: right;
+				}
+				.b-thanks .b-logo__text{
+					font-size: 9px;
+					line-height: 16px;
+					color: #6974a3;
+					text-transform: uppercase;
+					letter-spacing: 1.1px;
+					display: inline-block;
+					vertical-align: middle;
+					font-family: "MuseoSansCyrl-500";
+					width: 100%;
+					text-align: right;
+					margin-top: 24px;
+				}
 				.b-logo__text{
 					font-size: 9px;
 					line-height: 16px;
@@ -702,6 +733,7 @@ form small{
 					font-family: "MuseoSansCyrl-500";
 					width: 100%;
 					text-align: left;
+					margin-top: 0px;
 				}
 			.b-menu{
 				max-width: 644px;
@@ -954,6 +986,10 @@ form small{
 	    margin-left: 78px;
 	    top: -73px;
 	}
+	.b-6 h3{
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
 	.b-2 .b-circle{
 		background-position: 50% 50%;
 	    background-repeat: no-repeat;
@@ -1104,7 +1140,7 @@ form small{
 }
 .b-3{
 	padding-top: 75px;
-	margin-bottom: 75px;
+	margin-bottom: 40px;
 }
 	.b-audience{
 		margin-bottom: 24px;
@@ -1202,7 +1238,7 @@ form small{
 	.b-4 h2.b-first-title{
 		display: inline-block;
 		max-width: 580px;
-		margin-bottom: 47px;
+		margin-bottom: 30px;
 	}
 	.b-4 .b-three-crirles{
 
@@ -1210,18 +1246,18 @@ form small{
 	.b-4 h2.b-second-title{
 		position: relative;
 		display: inline-block;
-		margin-top: 68px;
+		margin-top: 22px;
 		margin-bottom: 13px;
 	}
 		.b-4 h2.b-second-title:after{
 			position: absolute;
 			content: "s";
 			font-size: 0px;
-			width: 32px;
-			height: 32px;
-			right: 0px;
-    		top: -10px;
-    		background-size: 75%;
+			width: 28px;
+			height: 28px;
+			right: -30px;
+			top: -14px;
+			background-size: 75%;
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
 			background-image: url('../i/icons/search.svg');
@@ -1328,17 +1364,19 @@ form small{
 				    letter-spacing: 0px;
 				    font-size: 18px;
 				    -webkit-transition: transform 500ms 400ms cubic-bezier(.17,.67,.43,1), opacity 500ms 400ms cubic-bezier(.17,.67,.43,1);
-					   -moz-transition: transform 500ms 400ms cubic-bezier(.17,.67,.43,1), opacity 500ms 400ms cubic-bezier(.17,.67,.43,1);
-					    -ms-transition: transform 500ms 400ms cubic-bezier(.17,.67,.43,1), opacity 500ms 400ms cubic-bezier(.17,.67,.43,1);
-					   	 -o-transition: transform 500ms 400ms cubic-bezier(.17,.67,.43,1), opacity 500ms 400ms cubic-bezier(.17,.67,.43,1);
-							transition: transform 500ms 400ms cubic-bezier(.17,.67,.43,1), opacity 500ms 400ms cubic-bezier(.17,.67,.43,1);
-					-webkit-transform: translateX(30px);
-					   -moz-transform: translateX(30px);
-					    -ms-transform: translateX(30px);
-					   	 -o-transform: translateX(30px);
-							transform: translateX(30px);
-					opacity: 1;
-					line-height: 28px;
+				    -moz-transition: transform 500ms 400ms cubic-bezier(.17,.67,.43,1), opacity 500ms 400ms cubic-bezier(.17,.67,.43,1);
+				    -ms-transition: transform 500ms 400ms cubic-bezier(.17,.67,.43,1), opacity 500ms 400ms cubic-bezier(.17,.67,.43,1);
+				    -o-transition: transform 500ms 400ms cubic-bezier(.17,.67,.43,1), opacity 500ms 400ms cubic-bezier(.17,.67,.43,1);
+				    transition: transform 500ms 400ms cubic-bezier(.17,.67,.43,1), opacity 500ms 400ms cubic-bezier(.17,.67,.43,1);
+				    -webkit-transform: translateX(30px);
+				    -moz-transform: translateX(30px);
+				    -ms-transform: translateX(30px);
+				    -o-transform: translateX(30px);
+				    transform: translateX(30px);
+				    opacity: 1;
+				    line-height: 28px;
+				    /* text-align:  center; */
+				    left: calc(50% - 196px);
 				}
 				.b-give-slide .b-ipad{
 					background-position: 50% 50%;
@@ -1357,16 +1395,16 @@ form small{
 	}
 		.b-5 h2:after{
 			position: absolute;
-		    content: "s";
-		    font-size: 0px;
-		    width: 28px;
-		    height: 28px;
-		    right: 6px;
-		    top: -4px;
-		    background-position: 50% 50%;
-		    background-repeat: no-repeat;
-		    background-image: url(../i/icons/round.svg);
-		    background-size: contain;
+			content: "s";
+			font-size: 0px;
+			width: 28px;
+			height: 28px;
+			right: 6px;
+			top: -12px;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-image: url(../i/icons/round.svg);
+			background-size: contain;
 		}
 	.b-5 .b-two-blocks{
 		margin-bottom: 51px;
@@ -1509,7 +1547,7 @@ form small{
 			background-image: url('../i/6/woman.jpg');
 			background-size: contain;
 			width: 200px;
-			height: 228px;
+			height: 224px;
 			text-shadow: left;
 			margin-left: -80px;
 		}
@@ -1730,7 +1768,7 @@ form small{
 			}
 .b-8{
 	padding-top: 220px;
-	padding-bottom: 100px;
+	padding-bottom: 20px;
 }
 	.b-8 h3{
 		margin-bottom: 0px;
@@ -1738,6 +1776,13 @@ form small{
 	.b-8 h2{
 		margin-bottom: 32px;
 	}
+	.b-8 .b-border{
+		padding: 18px 18px 8px 18px !important;
+	}
+		.b-8 .b-border h2{
+			margin-bottom: 10px;
+			letter-spacing: -0.4px;
+		}
 	.b-note-svg{
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
@@ -1759,45 +1804,42 @@ form small{
 		.b-note-svg p{
 			letter-spacing: 0px;
 		}
-		.b-note-svg .b-img{
-			background-position: 50% 50%;
-			background-repeat: no-repeat;
-			position: absolute;
+		.b-form-1 img{
+			width: calc(100% + 48px);
+			height: auto;
+			left: -8px;
+			top: 0px;
+			position:  relative;
 		}
-		.b-note-svg-1 .b-img{
-			background-image: url('../i/8/image-1.png');
-			width: 698px;
-			height: 290px;
-			right: 54px;
-			top: 20px;
+		.b-form-2 img{
+			/* width: calc(100% + 48px); */
+			height: auto;
+			left: 81px;
+			bottom: -12px;
+			position:  relative;
+			height: 160px;
 		}
-		.b-note-svg-2 .b-img{
-			background-image: url('../i/8/image-2.png');
-			width: 457px;
-			height: 330px;
-			right: 105px;
-			top: 20px;
+		.b-form-3 img{
+			/* width: calc(100% + 48px); */
+			height: auto;
+			left: 80px;
+			top: 13px;
+			position:  relative;
+			height: 160px;
 		}
-		.b-note-svg-3 .b-img{
-			background-image: url('../i/8/image-3.png');
-			width: 554px;
-			height: 413px;
-			right: 60px;
-			top: -60px;
+		.b-form-4 img{
+			/* width: calc(100% + 48px); */
+			height: 160px;
+			left: 55px;
+			top: 12px;
+			position:  relative;
 		}
-		.b-note-svg-4 .b-img{
-			background-image: url('../i/8/image-4.png');
-			width: 511px;
-			height: 362px;
-			right: 129px;
-			bottom: 81px;
-		}
-		.b-note-svg-5 .b-img{
-			background-image: url('../i/8/image-5.png');
-			width: 639px;
-			height: 423px;
-			right: 54px;
-			bottom: 43px;
+		.b-form-5 img{
+			/* width: calc(100% + 38px); */
+			height: 160px;
+			left: 56px;
+			top: 31px;
+			position:  relative;
 		}
 .b-9{
 	padding-top: 60px;
@@ -1960,7 +2002,7 @@ form small{
 .b-10{
 	z-index: 2;
 	padding-bottom: 42px;
-	padding-top: 57px;
+	padding-top: 40px;
 }
 	.b-10 h2{
 		display: inline-block;
@@ -1974,7 +2016,7 @@ form small{
 	}
 	.b-timetable-cont{
 		text-align: left;
-		padding-top: 39px;
+		padding-top: 10px;
 	}
 		.b-legend{
 			width: 327px;
@@ -2639,7 +2681,7 @@ form small{
 				    margin-right: 30px;
 				    padding: 18px 22px 0px;
 				    vertical-align: top;
-				    height: 640px;
+				    height: 720px;
 				}
 				.b-kind-list:last-child{
 					margin-right: 0px;
@@ -2659,11 +2701,10 @@ form small{
 .b-14{
 	background-position: 50% 0%;
 	background-repeat: no-repeat;
-	background-color: #f4f4f4;
-	background-image: url('../i/14/mans.jpg');
+	/* background-color: #f4f4f4; */
+	background-image: url('../i/mobile/14/bg.jpg');
 }
 	.b-directors{
-		height: 1780px;
 	}
 		.b-director{
 			text-align: left;
@@ -2709,15 +2750,28 @@ form small{
 				    white-space: nowrap;
 				}
 			.b-director-text{
-				width: 740px;
+				/* width: 740px; */
 			}
+				.b-director-text h2{
+					font-size: 20px;
+					line-height: 28px;
+				}
+				.b-director-text h3{
+					font-size: 18px;
+					line-height: 28px;
+				}
 			.b-director-text-1{
-				margin-top: 136px;
+				/* margin-top: 136px; */
 				letter-spacing: -0.5px;
+				margin-top: 96px;
+				margin-left: 165px;
 			}
+				.b-director-text-1 h3{
+					margin-left: -165px;
+				}
 			.b-director-text-2{
-				width: 700px;
-				margin-top: 155px;
+				/* width: 700px; */
+				margin-top: 150px;
 				margin-left: -2px;
 			}
 				.b-director-desc-2 .b-check{
@@ -2730,34 +2784,40 @@ form small{
 					position: relative;
 					margin-bottom: 15px;
 				}
+					.b-director-text-1 h2{
+						margin-bottom: 130px;
+					} 
+					.b-director-text-2 h2{
+						margin-bottom: 175px;
+						width: 150px;
+					} 
 					.b-director-text h2 .b-svg-rubles{
 						height: 45px;
-						width: 82px;
+						width: 62px;
 					}
 					.b-director-text-1 h2:before{
-					    position: absolute;
-					    content: "s";
-					    font-size: 0px;
-					    left: -108px;
-					    top: 35px;
-					    width: 80px;
-					    height: 3px;
-					    border-radius: 1px;
-					    background-color: #ff6240;
+				        position: absolute;
+						content: "s";
+						font-size: 0px;
+						left: -30px;
+						top: 13px;
+						width: 20px;
+						height: 2px;
+						border-radius: 1px;
+						background-color: #ff6240;
 					}
 					.b-director-text-2 h2:before{
 					    position: absolute;
 					    content: "s";
 					    font-size: 0px;
-					    right: -111px;
-					    top: 35px;
-					    width: 80px;
-					    height: 3px;
+					    left: 136px;
+					    top: 13px;
+					    width: 20px;
+					    height: 2px;
 					    border-radius: 1px;
 					    background-color: #ff6240;
 					}
 				.b-director-text h3{
-					margin-left: 48px;
 					margin-bottom: 20px;
 					letter-spacing: 0.4px;
 				}
@@ -2802,9 +2862,10 @@ form small{
 
 		}
 			.b-line-input{
-				margin-left: -8px;
-				margin-right: -40px;
-				margin-top: 22px;
+				/* margin-left: -8px; */
+				/* margin-right: -40px; */
+				/* margin-top: 22px; */
+				px; */
 			}
 			.b-14 .b-line-input{
 				
@@ -2813,14 +2874,14 @@ form small{
 
 				}
 				.b-line-input .b-btn{
-					margin-left: -103px;
+					/* margin-left: -103px; */
 					position: relative;
 					top: 1px;
-					padding: 27px 40px 26px;
+					/* padding: 27px 25px 26px; */
 				}
 .b-15{
-	padding-top: 83px;
-	padding-bottom: 137px;
+	padding-top: 60px;
+	padding-bottom: 40px;
 }
 	.b-15 .b-block{
 
@@ -2846,11 +2907,11 @@ form small{
 			top: 21px;
 		}
 		.b-15 .b-text{
-			margin-left: 545px;
+			/* margin-left: 545px; */
 			position: relative;
 			z-index: 1;
 			text-align: left;
-			padding-top: 71px;
+			/* padding-top: 71px; */
 		}
 			.b-15 .b-text h2{
 				margin-bottom: 15px;
@@ -2935,22 +2996,27 @@ form small{
 						color: #a5a5a5;
 					}
 		.b-strong-price{
-			padding-top: 197px;
+			/* padding-top: 40px; */
 		}
 			.b-strong-price h3{
-				font-size: 40px;
-				line-height: 35px;
-				margin-bottom: 11px;
+				font-size: 28px;
+				line-height: 34px;
+				/* margin-bottom: 11px; */
 			}
 				.b-strong-price h3 b{
 
 				}
+			.b-strong-price h4 {
+				font-size: 18px;
+			    line-height: 28px;
+			    letter-spacing: 0.8px;
+			}
 			.b-strong-price p{
 				display: inline-block;
 				max-width: 800px;
 			}
 .b-16{
-	padding-bottom: 100px;
+	padding-bottom: 20px;
 }
 	.b-16 .b-note-svg{
 		background-position: 50% 50%;
@@ -2975,14 +3041,18 @@ form small{
 			width: 80px;
 			height: 100px;
 			position: absolute;
-			right: 126px;
-			top: 40px;
+			right: 41px;
+			top: 71px;
 		}
 		.b-16 p.b-quotes{
 			margin-top: 8px;
 			margin-bottom: 36px;
+			width: 190px;
+			/* margin-right: 10px; */
+			margin-left: 25px;
 		}
-		.b-16 h2{
+		.b-16 h2,
+		.b-14 .b-border h2{
 			margin-bottom: 7px;
 		}
 		.b-16 h2 + p{
@@ -3003,12 +3073,12 @@ form small{
 		.b-17 h3.b-counter{
 
 		}
-		.b-17 h3.b-counter span{
+		.b-12 h3.b-counter span{
 			display: inline-block;
-			border: 1px solid rgba(0,0,0,0.2);
+			border: 1px solid rgba(255,255,255,0.2);
 			border-radius: 100px;
-			width: 42px;
-			height: 42px;
+			width: 32px;
+			height: 32px;
 			margin-left: 3px;
 			margin-right: 3px;
 		}
@@ -3033,8 +3103,8 @@ form small{
 				}
 					.b-works-slide h3{
 						font-family: "MuseoSansCyrl-100";
-						font-size: 28px;
-						line-height: 34px;
+						font-size: 24px;
+						line-height: 32px;
 						text-align: center;
 					}
 					.b-works-slide p{
@@ -3051,19 +3121,89 @@ form small{
 							.b-works-slide h4 a:hover{
 								border-bottom-color: transparent;
 							}
+					.expander{
+						opacity: 0;
+						visibility: hidden;
+						height: 0px;
+					}
+						.show-ex.expander p{
+							font-size: 14px;
+							line-height: 24px;
+							letter-spacing: 0.4px;
+							color: #fff;
+							text-decoration: underline;
+							margin-bottom: 22px;
+						}
+						.expander p{
+							font-size: 0px;
+							line-height: 0px;
+							letter-spacing: 0px;
+							color: #fff;
+							text-decoration: underline;
+							margin-bottom: 0px;
+						}
+					.b-expand-description{
+						opacity: 0;
+						visibility: hidden;
+						height: 0px;
+					}
+					.show-ex{
+						opacity: 1;
+						visibility: visible;
+						height: auto;
+					}
 				.b-works-slide .b-img{
 				    position: relative;
 				    right: 0px;
-				    top: 0px;
+				    /* top: -30px; */
 				    background-position: 50% 50%;
 				    background-repeat: no-repeat;
 				    background-size: contain;
 				    width: 327px;
 				    height: 169px;
+				    margin-top: 50px;
+				}
+		.b-logo-container{
+			width: 100%;
+			text-align: left;
+			font-size: 12px;
+			line-height: 18px;
+			position:  absolute;
+		}
+			.b-logo-container div{
+				display: inline-block;
+				vertical-align: middle;
+				padding-top:  10px;
+			}
+			.b-logo-container img{
+				margin-right: 12px;
+				display: block;
+				vertical-align: middle;
+			}
+				.works-img-1{
+					width: 150px;
+				}
+				.works-img-2{
+					width: 38px;
+				}
+				.works-img-3{
+					width: 50px;
+				}
+				.works-img-4{
+					width: 50px;
+				}
+				.works-img-5{
+					width: 54px;
+				}
+				.works-img-6{
+					width: 50px;
+				}
+				.works-img-7{
+					width: 50px;
 				}
 .b-18{
-	padding-top: 68px;
-	padding-bottom: 100px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 	.b-18 h2{
 		display: inline-block;
@@ -3074,6 +3214,8 @@ form small{
 		display: inline-block;
 		max-width: 900px;
 		margin-bottom: 45px;
+		font-size: 18px;
+		line-height: 28px;
 	}
 	.b-three-items{
 		font-size: 0px;
@@ -3081,8 +3223,8 @@ form small{
 		.b-three-item{
 			display: inline-block;
 			vertical-align: top;
-			width: 360px;
-			margin-right: 30px;
+			width: 100%;
+			/* margin-right: 30px; */
 		}
 			.b-three-item:last-child{
 				margin-right: 0px;
@@ -3092,11 +3234,13 @@ form small{
 				height: 240px;
 				background-position: 50% 50%;
 				background-repeat: no-repeat;
+				background-size:  cover;
 			}
 			.b-three-item .b-text{
 				text-align: left;
-				padding-left: 20px;
+				/* padding-left: 20px; */
 				padding-top: 22px;
+				padding-bottom: 18px;
 			}
 				.b-three-item .b-text p{
 
@@ -3109,34 +3253,42 @@ form small{
 					letter-spacing: 0px;
 					padding-right: 20px;
 				}
+	.b-18 .slick-prev{
+		left: 12px;
+	}
+	.b-18 .slick-next{
+		right: 12px;
+	}
 .b-19{
-	padding-top: 85px;
-	padding-bottom: 100px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 	.b-19 p.b-first-p{
 		display: inline-block;
-		max-width: 760px;
-		line-height: 35px;
-		letter-spacing: 0.2px;
+		/* max-width: 760px; */
+		/* line-height: 35px; */
+		/* letter-spacing: 0.2px; */
 		margin-bottom: 37px;
 	}
 	.b-19 p.b-first-p + h3{
-		font-size: 40px;
-		line-height: 45px;
+		font-size: 28px;
+		line-height: 34px;
 		letter-spacing: 0px;
-		margin-bottom: 61px;
+		margin-bottom: 40px;
 	}
 	.b-three-items.b-projects{
 
 	}
 		.b-projects .b-three-item{
-			height: 260px;
+			/* height: 260px; */
 			position: relative;
+			margin-bottom: 20px;
 		}
 		.b-projects .b-img{
 			color: #FFF;
-			height: 260px;
-			padding-top: 35px;
+			height: 220px;
+			padding-top: 15px;
+			/* padding-bottom:  20px; */
 		}
 			.b-projects .b-img h3{
 				line-height: 35px;
@@ -3166,35 +3318,45 @@ form small{
 		}
 		.b-new-project .b-btn{
 			padding: 18px 40px 18px;
-			font-size: 14px;
-			min-width: 257px;
+		    font-size: 14px;
+		    min-width: 257px;
+		    max-width: 240px;
+		    position: relative;
+		    top: -20px;
 		}
 	.b-19 .b-circle{
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-image: url('../i/circle.png');
+		background-size: 50%;
 		width: 106px;
 		height: 105px;
 		position: absolute;
 		right: -40px;
-		bottom: -190px;
+		bottom: -70px;
 	}
+		.b-19 h4{
+			font-size: 18px;
+			line-height: 28px;
+		}
 .b-20{
-	padding-top: 106px;
+	padding-top: 20px;
 }
 	.b-20 h2{
 		margin-bottom: 43px;
 	}
 	.b-20 .b-text{
 		position: relative;
+		display:  none;
 	}
 		.b-20 .b-text p{
 			position: relative;
-			z-index: 2;
+			z-index: 220;
 			text-align: left;
 			margin-left: 90px;
 			max-width: 355px;
-			margin-top: 49px;
+			margin-top: 39px;
+			top: -60px;
 		}
 			.b-20 .b-text p .b-line{
 				background-position: 50% 50%;
@@ -3219,32 +3381,39 @@ form small{
 	.b-vertical-form{
 		position: relative;
 		z-index: 1;
-		width: 510px;
+		/* width: 510px; */
 		text-align: left;
 		background-color: #FFF;
-		margin-bottom: 110px;
+		margin-bottom: 20px;
+		padding: 6px;
 	}
+		.b-popup .b-vertical-form{
+			margin-bottom: 0px;
+		}
+
 		.b-note .b-border{
-			margin: 6px;
+			/* margin: 6px; */
 			border: 1px solid rgba(0,0,0,0.1);
 			border-radius: 3px;
-			padding: 41px 45px 46px 75px;
+			padding: 24px 24px 24px 24px;
+			overflow: hidden;
 		}
 			.b-vertical-form p{
 				letter-spacing: 0px;
-				margin-bottom: 20px;
+				margin-bottom: 0px;
 			}
 				.b-vertical-form form{
 					padding-top: 12px;
 				}
-				.b-vertical-form input[type="text"]{
-					padding: 26px 63px;
+				.b-vertical-form input[type="text"],
+				.b-vertical-form input[type="tel"]{
+					padding: 20px 50px;
 					margin-bottom: 20px;
-					margin-left: -13px;
+					margin-left: 0px;
 				}
 				.b-vertical-form .b-btn{
-					min-width: 370px;
-					margin-left: -14px;
+					/* min-width: 370px; */
+					margin-left: 0px;
 				}
 				.b-vertical-form form small{
 					margin-left: 12px;
@@ -3252,21 +3421,23 @@ form small{
 					padding-top: 5px;
 				}
 .b-21{
-	padding-bottom: 94px;
+	padding-bottom: 24px;
 	padding-top: 13px;
 }
 	.b-21 .b-block{
-		padding: 0px 114px;
+		/* padding: 0px 24px; */
 	}
 		.b-21 .b-text{
 			text-align: left;
-			width: 440px;
-			padding-left: 23px;
+			width: 100%;
+			/* padding-left: 23px; */
 		}
 			.b-21 .b-text h3{
-				font-size: 40px;
-				line-height: 45px;
+				font-size: 29px;
+				line-height: 38px;
 				margin-bottom: 25px;
+				margin-top: 25px;
+				text-align:  center;
 			}
 				.b-21 .b-text h3 b{
 					font-family: "MuseoSansCyrl-700";
@@ -3274,21 +3445,26 @@ form small{
 			.b-21 .b-text h4{
 				color: #9c9c9c;
 				letter-spacing: 0.1px;
+				text-align:  center;
+				margin-bottom: 20px;
+				width: 100%;
+				display:  inline-block;
 			}
 		.b-soc{
-			width: 430px;
+			/* width: 430px; */
 			margin-top: -4px;
 		}
 			.b-soc-buttons{
 				font-size: 0px;
 				margin-bottom: 15px;
+				float: none !important;
 			}
 				.b-soc-item{
 					background-color: #666;
 					border-radius: 100px;
 					display: inline-block;
-					width: 80px;
-					height: 80px;
+					width: 60px;
+					height: 60px;
 					margin-left: 20px;
 					position: relative;
 				}
@@ -3300,6 +3476,7 @@ form small{
 				}
 				.b-soc-item.b-vk{
 					background-color: #3884b9;
+					margin-left: -12px;
 				}
 				.b-soc-item.b-tg{
 					background-color: #00afec;
@@ -3330,30 +3507,30 @@ form small{
 						background-repeat: no-repeat;
 						background-image: url('../i/light.png');
 						-webkit-transition: opacity 150ms ease-out;
-						   -moz-transition: opacity 150ms ease-out;
-						    -ms-transition: opacity 150ms ease-out;
-						   	 -o-transition: opacity 150ms ease-out;
-								transition: opacity 150ms ease-out;
+						-moz-transition: opacity 150ms ease-out;
+						-ms-transition: opacity 150ms ease-out;
+						-o-transition: opacity 150ms ease-out;
+						transition: opacity 150ms ease-out;
 					}
 						.b-soc-item:hover:after{
 							opacity: 0;
 						}
 					.b-soc-item.b-wa:before{
 						background-image: url('../i/icons/wa.svg');
-						background-size: 35px;
+						background-size: 25px;
 					}
 					.b-soc-item.b-ft:before{
 						background-image: url('../i/icons/ft.svg');
-						background-size: 35px;
+						background-size: 25px;
 					}
 					.b-soc-item.b-vk:before{
 						background-image: url('../i/icons/vk.svg');
-						background-size: 38px;
+						background-size: 30px;
 						margin-left: -2px;
 					}
 					.b-soc-item.b-tg:before{
 						background-image: url('../i/icons/tg.svg');
-						background-size: 34px;
+						background-size: 26px;
 						margin-left: -2px;
 						margin-top: 1px;
 					}
@@ -3361,13 +3538,13 @@ form small{
 				color: #9c9c9c;
 				line-height: 25px;
 				letter-spacing: 0px;
-				margin-left: 16px;
+				/* margin-left: 16px; */
 			}
 .b-footer{
 	color: #9c9c9c;
 	border-top: 1px solid rgba(0,0,0,0.1);
-	padding-top: 49px;
-	padding-bottom: 20px;
+	padding-top: 30px;
+	padding-bottom: 0px;
 }
 	.b-footer .b-logo{
 		display: inline-block;
@@ -3375,9 +3552,11 @@ form small{
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-image: url('../i/21/tfa.svg');
-		width: 104px;
+		width: 90px;
 		height: 38px;
 		background-size: contain;
+		position:  relative;
+		top: 5px;
 	}
 	.b-footer .b-links{
 		display: inline-block;
@@ -3385,6 +3564,7 @@ form small{
 	}
 		.b-footer h4 b{
 			font-family: "MuseoSansCyrl-500";
+			/* float: left; */
 		}
 		.b-footer h4 a,
 		.b-footer small a{
@@ -3399,6 +3579,7 @@ form small{
 			display: block;
 			margin-bottom: 10px;
 			letter-spacing: 0px;
+			text-align:  right;
 		}
 			.b-footer h4 a{
 
@@ -3406,7 +3587,7 @@ form small{
 		.b-footer small{
 			display: block;
 			margin-top: -4px;
-			margin-bottom: 14px;
+			/* margin-bottom: 12px; */
 			font-size: 13px;
 			letter-spacing: 0.4px;
 		}
@@ -3414,11 +3595,13 @@ form small{
 
 			}
 		.b-footer small.b-copyright{
-			margin-top: 40px;
+			/* margin-top: 30px; */
 		}
 
 .b-popup{
-	width: 1140px; 
+	width: calc(100% - 24px);
+	border-radius: 5px;
+	padding:  0px;
 }
 .b-popup-quit{
 	padding: 0px;
@@ -3435,8 +3618,9 @@ form small{
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-image: url('../i/docs.jpg');
-		width: 484px;
-		height: 622px;
+		/* width: 484px; */
+		/* height: 622px; */
+		/* display:  none; */
 	}
 	.b-popup-quit p{
 		margin-bottom: 11px;
@@ -3484,12 +3668,10 @@ form small{
 	.fancybox-close-small:after{
 		display: none;
 	}
-.b-thanks{
-
-}
+.b-thanks{overflow: hidden;}
 	.b-thanks-header{
-		padding-top: 56px;
-		height: 118px;
+		padding-top: 24px;
+		height: 98px;
 	}
 		.b-thanks-back{
 			font-size: 12px;
@@ -3527,9 +3709,9 @@ form small{
 				}
 		.b-thanks-header .b-logo{
 			position: absolute;
-			left: 50%;
+			right: 0%;
 			margin-left: -55px;
-			top: 32px;
+			top: 14px;
 		}
 			.b-thanks-header .b-logo img{
 
@@ -3543,48 +3725,54 @@ form small{
 	}
 		.b-thanks .b-blanks .b-check{
 			position: absolute;
-			left: 110px;
-			bottom: -70px;
+			left: 380px;
+			bottom: -40px;
 			background-position: 50% 50%;
+			background-size: 50%;
 			background-repeat: no-repeat;
 			background-image: url('../i/check.png');
 			width: 93px;
 			height: 92px;
 		}
+		#b-roadmap .b-blanks .b-check{
+			left: 380px;
+			bottom: -130px;
+		}
 	.b-thanks .b-text{
 		position: relative;
 		z-index: 1;
-		padding-left: 396px;
-		padding-top: 47px;
+		/* padding-left: 396px; */
+		/* padding-top: 47px; */
 		text-align: left;
 	}
 		.b-bird{
 			position: absolute;
-			right: -390px;
-			top: 50px;
+			right: -100px;
+			top: 290px;
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
 			background-image: url('../i/golub.jpg');
-			width: 539px;
-			height: 682px;
+			background-size: contain;
+			width: 200px;
+			height: 200px;
 		}
 		.b-bird-2{
-			top: -50px;
+			top: 190px;
 		}
 		.b-thanks .b-text h2{
 			margin-bottom: 16px;
 		}
 		.b-thanks .b-text h3{
 			letter-spacing: 0.7px;
-			margin-left: 52px;
+			/* margin-left: 52px; */
 		}
 			.b-thanks .b-text h3 b{
 				font-family: "MuseoSansCyrl-700";
 			}
 		.b-yandex{
 			position: relative;
-			margin-left: 45px;
-			margin-top: -4px;
+			margin-left: 0px;
+			/* margin-top: -4px; */
 			margin-bottom: 33px;
 		}
 			.b-yandex:before{
@@ -3613,7 +3801,7 @@ form small{
 			}
 			.b-yandex h4{
 				float: left;
-				width: calc( 100% - 370px );
+				width: 100%;
 				padding-top: 10px;
 				letter-spacing: 0.6px;
 				color: rgba(0,0,0,0.5);
@@ -3623,7 +3811,7 @@ form small{
 			margin-right: -10px;
 		}
 	.b-thanks-footer{
-		padding-top: 108px;
+		padding-top: -2px;
 	}
 		.b-thanks-footer .b-block{
 
@@ -3639,22 +3827,24 @@ form small{
 				}
 			.b-thanks-footer .b-soc{
 				display: inline-block;
-				width: 821px;
+				/* width: 821px; */
 				margin-top: 10px;
-				margin-bottom: 117px;
+				margin-bottom: 27px;
 			}
 				.b-thanks-footer .b-soc-buttons{
 
 				}
 				.b-thanks-footer .b-soc h4{
-					width: calc(100% - 450px);
+					width: 100%;
 					text-align: left;
-					margin-left: 30px;
+					/* margin-left: 30px; */
 					margin-top: 15px;
 				}
 			.b-goodbye{
-				position: relative;
+				position: absolute;
 				z-index: 2;
+				bottom: 120px;
+				left: 125px;
 			}
 			.b-thanks-footer .b-bottom{
 				text-align: left;
@@ -3664,49 +3854,54 @@ form small{
 					color: #9c9c9c;
 					position: absolute;
 					bottom: 80px;
-					left: 0px;
+					right: 0px;
 					letter-spacing: 0.2px;
+					z-index:  20;
 				}
 				.b-thanks-footer .b-director{
-					background-position: 50% 50%;
+					background-position: 20% 100%;
 					background-repeat: no-repeat;
 					background-image: url('../i/surgay.jpg');
-					width: 516px;
-					height: 462px;
+					background-size: 63%;
+					width: 375px;
+					height: 392px;
 					float: right;
 					margin-top: -199px;
-					margin-right: -76px;
+					margin-right: 24px;
 					position: relative;
 				}
 					.b-thanks-footer .b-director-desc{
 						position: absolute;
 						top: 297px;
 						left: 262px;
+						display:  none;
 					}
 .b-thanks-2{
 	
 }
 	.b-thanks-2 > h2{
-		margin-top: 47px;
+		margin-top: 12px;
 		position: relative;
 		z-index: 12;
 	}
 	.b-thanks-2 .b-text{
-		padding-top: 16px;
-		padding-left: 389px;
+		/* padding-top: 16px; */
+		/* padding-left: 389px; */
 	}
 	.b-thanks-2 h3{
 		
 	}
 	.b-thanks-2 .b-mail-block{
-		padding-top: 113px;
+		/* padding-top: 13px; */
 	}
 		.b-thanks-2 .b-mail-block h3{
 			margin-bottom: 1px;
 		}
 		.b-thanks-2 .b-mail-block h2{
-			margin-left: 48px;
+			/* margin-left: 48px; */
 			margin-bottom: 20px;
+			text-align:  center;
+			margin-top: 20px;
 		}
 	.b-thanks-2 .b-mail-block + h3{
 		
@@ -3723,15 +3918,15 @@ form small{
     width: 99%;
     position: relative;
     border-radius: 7.5px;
-    height: 15px;
+    height: 10px;
     animation: move 1s infinite;
-    animation-timing-function: linear; 
+    animation-timing-function: linear;
 }
 
 	.b-quiz-line-green{
 	    background: #99d790;
 	    width: 12%;
-	    height: 15px;
+	    height: 10px;
 	    border-top-left-radius: 7.5px;
 	    border-bottom-left-radius: 7.5px;
 	    -webkit-transition: all 550ms;
@@ -3740,49 +3935,51 @@ form small{
 	}
 	.b-quiz-line-container:after{
 		position: absolute;
-	    content: '';
-	    background: url(../i/mountain.png);
-	    height: 97px;
-	    background-repeat: no-repeat;
-	    width: 99px;
-	    right: -29px;
-	    top: -50px;
+		content: '';
+		background: url(../i/mountain.png);
+		height: 97px;
+		background-repeat: no-repeat;
+		width: 99px;
+		right: -63px;
+		top: -24px;
+		background-size: 50%;
 	}
 	.b-quiz-line-container:before{
 		content: "результат";
 		text-transform: uppercase;
 		color: #ff6240;
 		position: absolute;
-		right: -23px;
-	    letter-spacing: 1.2px;
-	    font-size: 12px;
-	    bottom: -48px;
+		right: -20px;
+		letter-spacing: 1.2px;
+		font-size: 9px;
+		bottom: -19px;
 		font-family: 'MuseoSansCyrl-500';
 	}
 .b-quiz{
-	padding: 0;
+	padding: 6px;
 }
 	.b-quiz.b-note .b-border{
 	    padding: 33px 40px 46px 53px;
-	    padding: 33px 40px 12px 53px;
+	    padding: 26px 18px 24px 18px;
 	}
 	.b-quiz h3{
-		font-size: 40px;
-		line-height: 50px;
-	    padding-top: 36px;
-    	/*padding-left: 18px;*/
+		font-size: 16px;
+		line-height: 22px;
+		padding-top: 6px;
+		/*padding-left: 18px;*/
 	}
 		.b-quiz h3 b{
 			font-family: 'MuseoSansCyrl-700';
 		}
 	.b-quiz .b-popup-form label{
 		font-family: 'MuseoSansCyrl-300';
-		font-size: 25px;
-		line-height: 40px;
+		font-size: 16px;
+		line-height: 22px;
 	}
 		.b-quiz .b-popup-form label[for=business]{
 			/*padding-left: 18px;*/
-		    letter-spacing: 0.4px;
+			letter-spacing: 0px;
+			position:  relative;
 		}
 		.b-quiz .b-popup-form label[for=works]{
 		    /*padding-left: 8px;*/
@@ -3794,28 +3991,28 @@ form small{
 		    padding-right: 17px;
 		}
 		.b-quiz .b-popup-form input[name=site]{
-			padding: 20px 35px 18px 33px;
+			padding: 22px 24px 18px 24px;
 			width: 100%;
-			margin-top: 10px;
+			margin-top: 0px;
 		}
 	.b-quiz .fancybox-close-small{
 		display: none;
 	}
 	.b-quiz-left-col{
-		width: 70%;
+		width: 100%;
 		max-width: 520px;
 		display: inline-block;
 		vertical-align: top;
 	}
 		.b-quiz-left-col .b-green-btn{
-		    margin-top: 50px;
-		    margin-left: 150px;
-	        margin-bottom: 32px;
-		    padding: 27px 142px 27px;
+		    margin-top: 24px;
+		    /* margin-left: 150px; */
+		    margin-bottom: 0px;
+		    /* padding: 27px 142px 27px; */
 		}
 		form .b-quiz-left-col small{
 			margin-top: 0px;
-			margin-bottom: 30px;
+			/* margin-bottom: 30px; */
 		}
 	.js-mobile .b-mobile-select{
 		position: relative;
@@ -3864,64 +4061,94 @@ form small{
 	.b-quiz select{
 		-webkit-appearance: none;
 		border: 0px;
-	    border-radius: 100px;
-	    background: #e3ede3;
-	    width: 520px !important;
-	    height: 60px;
-	    cursor: pointer;
-	    box-sizing: border-box;
-	    width: 100%;
-	    font-family: "MuseoSansCyrl-300";
-	    font-size: 15px;
-	    line-height: 20px;
-	    margin-top: 10px;
-	    margin-bottom: 21px;
-	    padding-left: 24px;
+		border-radius: 100px;
+		background: #e3ede3;
+		/* width: 520px !important; */
+		height: 60px;
+		cursor: pointer;
+		box-sizing: border-box;
+		width: 100%;
+		font-family: "MuseoSansCyrl-300";
+		font-size: 15px;
+		line-height: 20px;
+		margin-top: 10px;
+		margin-bottom: 24px;
+		padding-left: 24px;
 	}
+		.b-quiz #type-label:before{
+			background: #292929;
+			/* border: 1px solid #FFFFFF; */
+			border-radius: 1px;
+			width: 10px;
+			height: 2px;
+			font-size: 0px;
+			line-height: 0px;
+			content: ' ';
+			position: absolute;
+			transform: rotateZ(-45deg);
+			right: -30px;
+			/* top: 200px; */
+			top: 61px;
+		}
+		.b-quiz #type-label:after{
+			background: #292929;
+			border-radius: 1px;
+			width: 10px;
+			height: 2px;
+			font-size: 0px;
+			line-height: 0px;
+			content: ' ';
+			position: absolute;
+			transform: rotateZ(45deg);
+			right: -24px;
+			top: 61px;
+		}
 .b-quiz-textarea{
 	display: block;
 	width: 100%;
 	border: 1.3px solid rgb(219, 219, 219);
-    background-color: rgb(249, 247, 244);
-    box-shadow: inset 1.414px 1.414px 6px 0px rgba(30, 30, 30, 0.1);
-    padding: 17px 24px 30px 23px;
-    font-family: "MuseoSansCyrl-300";
-    font-size: 15px;
-    line-height: 25px;
+	background-color: rgb(249, 247, 244);
+	box-shadow: inset 1.414px 1.414px 6px 0px rgba(30, 30, 30, 0.1);
+	padding: 14px;
+	font-family: "MuseoSansCyrl-300";
+	font-size: 15px;
+	line-height: 25px;
 	resize: vertical;
-    margin-top: 9px;
-    margin-bottom: 30px;
+	margin-top: 9px;
+	margin-bottom: 30px;
 }
 .b-quiz-2 .b-quiz-textarea{
 	display: none;
 }
 .b-quiz-right-col{
-    width: 44%;
+    width: 100%;
     margin-top: 10px;
-    margin-left: 47px;
-	display: inline-block;
-	vertical-align: top;
-	background: #fff;
-	border-radius: 5px;
- 	box-shadow: 0px 0px 40px 5px rgba(30, 30, 30, 0.1);
- 	padding: 33px 84px 75px 38px;
+    /* margin-left: 47px; */
+    display: none;
+    vertical-align: top;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px 5px rgba(30, 30, 30, 0.1);
+    /* padding: 33px 84px 75px 38px; */
 }
 	.b-quiz-right-col p{
 		font-size: 20px;
 		line-height: 28px;
 		letter-spacing: 0;
+		padding: 24px 24px 24px 24px;
 	}
 		.b-quiz-right-col p b{
 			font-family: 'MuseoSansCyrl-700';
 		}
 .checkbox-container{
-	display: block;
-    padding-top: 20px;
-    padding-bottom: 5px;
+	display: inline-block;
+	padding-top: 14px;
+	padding-bottom: 5px;
 }
 .b-quiz .b-popup-form .checkbox-container label{
-	font-size: 20px;
-    line-height: 20px;
+	font-size: 16px;
+	line-height: 22px;
+	display: inline-block;
 }
 .checkbox {
   position: absolute;
@@ -3931,7 +4158,7 @@ form small{
 }
 	.checkbox + label {
 	  position: relative;
-	  padding: 0 0 0 39px;
+	  padding: 0 0 0 34px;
 	  cursor: pointer;
 	  font-size: 20px;
 	  line-height: 20px;
@@ -3939,8 +4166,8 @@ form small{
 		.checkbox + label:after {
 		  content: '';
 		  position: absolute;
-		  top: 2px;
-		  left: 10px;
+		  top: 1px;
+		  left: 0px;
 		  width: 20px;
 		  height: 20px;
 		  border-radius: 5px;
@@ -3958,8 +4185,8 @@ form small{
 			-webkit-transition: all 200ms;
 			-o-transition: all 200ms;
 			transition: all 200ms;
-			left: 14px;
-		    top: 7px;
+			left: 4px;
+			top: 6px;
 			z-index: 1;
 			font-size: 10px;
 			opacity: 1;
@@ -3969,11 +4196,11 @@ form small{
 		  background: #5e4abb;
 		}
 .b-quiz .b-quiz-2 h3{
-		padding-left: 8px;
+		/* padding-left: 8px; */
 	}
 	.b-quiz-2 .b-quiz-label{
-	    padding-left: 8px;
-    	letter-spacing: 0.4px;
+	    /* padding-left: 8px; */
+	    /* letter-spacing: 0.4px; */
 	}		
 	.b-quiz-2 .b-quiz-textarea{
 		margin-top: 15px;
@@ -3981,20 +4208,21 @@ form small{
         margin-bottom: 0px;
 	}
 		.b-quiz-2 .b-quiz-right-col{
-		    padding: 33px 42px 45px 38px;
-    		margin-top: -120px;
+		    /* padding: 33px 42px 45px 38px; */
+		    /* margin-top: -120px; */
 		}
 	
 .b-quiz-slider-container{
 	display: none;
-    height: 146px;
+	height: 146px;
 	box-shadow: 0px 0px 40px 5px rgba(30, 30, 30, 0.1);
 	margin-top: 18px;
-    padding: 11px 20px 0px 20px;
-    position: relative;	
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 6px;
+	padding: 11px 20px 0px 20px;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 6px;
+	/* min-height: 105px; */
 }
 	.b-quiz-slider-container p{
 		margin-bottom: 43px;
@@ -4011,7 +4239,7 @@ form small{
 	    border-right: 20px solid transparent;
 	}
 	.b-quiz .b-popup-form .b-quiz-slider-container label{
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 20px;
 	}
 	.ui-slider {
@@ -4088,10 +4316,10 @@ form small{
     margin-bottom: 7px;
 }
 .b-quiz-3 .b-quiz-right-col{
-    margin-top: -158px;
+    /* margin-top: -158px; */
     background: none;
-    box-shadow: none; 
-    padding:33px 27px 75px 38px;
+    box-shadow: none;
+    /* padding:33px 27px 75px 38px; */
 }
 .b-quiz-radio input {
   position: absolute;
@@ -4101,30 +4329,30 @@ form small{
 }
 .b-quiz-radio__text {
   position: relative;
-  padding: 1px 0 19px 39px;
+  padding: 1px 0 19px 36px;
   cursor: pointer;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 22px;
 }
 .b-quiz-radio__text:before {
 	content: '';
 	position: absolute;
 	top: 6px;
-	left: 9px;
+	left: 0px;
 	width: 19px;
 	height: 19px;
 	border: 1px solid rgba(0,0,0,.2);
 	box-shadow: inset 0 0 5px rgba(0,0,0,.2);
 	border-radius: 50%;
-  	background: #FFF;
+	background: #FFF;
 }
 .b-quiz-radio__text:after {
 	content: '';
 	position: absolute;
-    top: 10px;
-    left: 13px;
-    width: 13px;
-    height: 13px;
+	top: 10px;
+	left: 4px;
+	width: 13px;
+	height: 13px;
 	border-radius: 50%;
 	background: #5e4abb;
 	box-shadow: inset 0 0 5px rgba(0,0,0,.2);
@@ -4141,16 +4369,16 @@ form small{
 	border: 1px solid #5e4abb;
 }
 .b-quiz-4 h3{
-    padding-left: 8px;
-    padding-top: 39px;
+    /* padding-left: 8px; */
+    /* padding-top: 39px; */
     line-height: 45px;
 }
 .b-quiz-4 .b-quiz-right-col{
-	margin-top: -113px;
-    padding: 33px 19px 34px 38px;
+	/* margin-top: -113px; */
+	/* padding: 33px 19px 34px 38px; */
 }
 .b-quiz-5 h3{
-	padding-left: 8px;
+	/* padding-left: 8px; */
 	margin-bottom: 14px;
 }
 .b-quiz-5 p{
@@ -4159,24 +4387,26 @@ form small{
 }
 .b-quiz-5 .b-quiz-left-col{
 	width: 100%;
-    max-width: 580px;
-    padding-left: 10px;
+	max-width: 580px;
+	/* padding-left: 10px; */
 }
 	.b-quiz-5 .b-line-input{
-	    margin-top: -40px;
+	    /* margin-top: -40px; */
 	}
 		.b-quiz-5 form small{
 		    letter-spacing: -0.1px;
 		    margin-top: -2px;
 		}
 	.b-quiz-5 .b-quiz-left-col .b-green-btn{
-	    margin-left: -103px;
-	    padding: 27px 30px 26px;
+	    /* margin-left: -103px; */
+	    padding: 20px 30px 20px;
+	    margin-bottom: 24px;
 	}
 	.b-quiz-5 img{
 	    width: 360px;
-		margin-top: -129px;
-		margin-left: 67px;
+	    margin-top: -129px;
+	    margin-left: 67px;
+	    display: none;
 	}
     
 .chosen-container,
@@ -4199,7 +4429,7 @@ form small{
 	margin-top: 10px;
 	margin-bottom: 21px;
 }
-.error + label + .chosen-container{
+#type.error{
 	box-shadow: 0 0px 0px 1.3px #F00;
 }
 .chosen-container.chosen-with-drop .chosen-drop{
@@ -4320,7 +4550,29 @@ form small{
 	   	 -o-transform: rotateZ(45deg) translateY(-2px) translateX(-2px);
 			transform: rotateZ(45deg) translateY(-2px) translateX(-2px);
 }
+#b-indexes-popup{
+	width: calc(100% - 140px);
+    border-radius: 5px;
+    padding: 0px;
+}
 
+#b-indexes-popup h4{
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.b-quiz .b-popup-form label.error.visible-label{
+	display: block;
+	font-size: 16px;
+	line-height: 22px;
+	color: #DA0000;
+	/* padding-left: 8px; */
+	margin-top: 8px;
+}
+.b-quiz .b-quiz-4 .b-popup-form label.error.visible-label{
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
 
 /*************ENDQUIZ**************/
 

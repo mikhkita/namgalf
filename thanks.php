@@ -1,7 +1,29 @@
+<?
+$link = false;
+$mails = array(
+	"yandex.ru" => "http://mail.yandex.ru/",
+	"ya.ru" => "http://mail.yandex.ru/",
+	"gmail.com" => "http://mail.google.com/",
+	"mail.ru" => "http://mail.ru/",
+	"inbox.ru" => "http://mail.ru/",
+	"list.ru" => "http://mail.ru/",
+	"bk.ru" => "http://mail.ru/",
+);
+if( isset($_POST["email"]) && $_POST["email"] != "" ){
+	$arr = explode("@", trim($_POST["email"]));
+	if( isset($mails[$arr[1]]) ){
+		$link = $mails[$arr[1]];
+	}
+}
+?>
+<? if( $link !== false ): ?>
+	<a href="<?=$link?>" class="b-btn b-orange-btn b-btn-big" target='_blank'><span>Проверить почту</span></a>
+<? endif; ?>
 <?php
 	require_once("phpmail.php");
 
-	$email_admin = "huckconversionlp@transfiguration.agency, mike@kitaev.pro";
+	$email_admin = "dima@redder.pro";
+	// $email_admin = "huckconversionlp@transfiguration.agency, mike@kitaev.pro";
 	// $email_admin = "mike@kitaev.pro";
 
 	$from = "“Флагман TFA”";
@@ -64,4 +86,5 @@
 
 		require_once("thanks-".$_POST["thanks"].".php");
 	}
+
 ?>

@@ -43,6 +43,27 @@ $(document).ready(function(){
             });
         }
     }
+    $( ".expander" ).click(function(){
+        if ($( ".b-expand-description" ).hasClass( "show-ex" ) && $( ".expander" ).hasClass( "show-ex" )){
+            $( ".b-expand-description" ).removeClass( "show-ex" );
+            $( ".expander" ).addClass( "show-ex" );
+        } else {
+            $( ".b-expand-description" ).addClass( "show-ex" );
+            $( ".expander" ).removeClass( "show-ex" );
+            setTimeout(function(){
+            }, 50);
+
+        }
+        $('.b-works-slider').slick('refresh');
+        return false;
+    });
+    
+    $(".b-works-slider").on("afterChange", function (){
+        $('.b-works-slide:not(.slick-current) .b-expand-description').removeClass( "show-ex" );
+        $('.b-works-slide:not(.slick-current) .expander').addClass( "show-ex" );
+    })
+    
+
     $.fn.placeholder();
 
     // $(window).enllax();
@@ -54,7 +75,7 @@ $(document).ready(function(){
         easing: 'easeOutQuart',
         speed: 800,
         useTransform: false,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         arrows: true,
         prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
@@ -92,6 +113,37 @@ $(document).ready(function(){
         $(".b-give-slide[data-slick-index='"+currentSlide+"']").addClass("show");
     });
 
+    $(".three-slide").slick({
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true, 
+        easing: 'easeOutQuart',
+        speed: 800,
+        useTransform: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+        touchThreshold: 100,
+        autoplay: true,
+        autoplaySpeed: 5000
+    }); 
+
+    // $(".b-how-much-slider").slick({
+    //     dots: false,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     infinite: true, 
+    //     easing: 'easeOutQuart',
+    //     speed: 800,
+    //     useTransform: false,
+    //     arrows: true,
+    //     prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+    //     nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+    //     touchThreshold: 100,
+    //     autoplay: false,
+    //     adaptiveHeight: true
+    // }); 
     calcActive();
 
     function calcActive(){
@@ -201,7 +253,8 @@ $(document).ready(function(){
         arrows: true,
         prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
         nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
-        touchThreshold: 100
+        touchThreshold: 100,
+        adaptiveHeight: true
     }); 
 
     $(".b-works-slide[data-slick-index='0'] .slider-anim").addClass("show");
@@ -336,7 +389,6 @@ $(document).ready(function(){
 
                         return true;
                     });
-
                     $("#checkbox-promotion-1").on('click', function(){
                         if ($("#checkbox-promotion-1").prop("checked")) {
                             $(".b-quiz-slider-container").css('display', 'block');
@@ -378,14 +430,43 @@ $(document).ready(function(){
 
                     $("#amount").val( $("#slider").slider("value") );
 
-                    $("#b-quiz-form").validate({
+                     $("#b-quiz-form").validate({
                         rules: {
-                            email: 'email'
+                            email: 'email',
+                            "task[]": { 
+                                required: true, 
+                                minlength: 1 
+                            },
+                            "promo[]": {
+                                required: true, 
+                                minlength: 1 
+                            },
+                            "more-request": {
+                                required: true, 
+                                minlength: 1 
+                            }
                         },
-                        ignore: ":hidden:not(select)"
+                        messages: { 
+                            "task[]": "Выберите хотя бы один вариант",
+                            "promo[]": "Выберите хотя бы один вариант",
+                            "more-request": "Выберите один вариант"
+                        },
+                        ignore: ":hidden:not(select)",
+                        errorPlacement: function(error, element) {
+                            if( element.attr("name") == "task[]" || element.attr("name") == "promo[]" || element.attr("name") == "more-request" ){
+                                error.addClass("visible-label");
+
+                                if( element.attr("name") == "task[]" ){
+                                    element.parents(".b-popup-form").find(".b-quiz-label").after(error);
+                                }else{
+                                    element.parents(".b-popup-form").prepend(error);
+                                }
+                            }
+                        }
                     });
 
-                    $("#b-quiz-form").find("input[name=phone]").mask('+7 (999) 999-99-99',{placeholder:"_"});
+                    // $("#b-quiz-form").find("input[name=phone]").mask('+7 (999) 999-99-99',{placeholder:"_"});
+                    $("#b-quiz-slider").draggable();
 
 
                     if( !device.mobile() && !device.tablet() ){
@@ -410,6 +491,35 @@ $(document).ready(function(){
                         var $this = $(this);
 
                         $this.find(".quiz-submit").attr("onclick", "return false;");
+                    });
+
+                    // $(".ajax").parents("form").each(function(){
+                    if( $(".b-quiz-container").find("input[name=phone]").length ){
+                        $(".b-quiz-container").find("input[name=phone]").each(function(){
+                            var phoneMaskPopup = new IMask($(this)[0], {
+                                mask: '+{7} (000) 000-00-00',
+                                prepare: function(value, masked){
+                                    if( value == 8 && masked._value.length == 0 ){
+                                        return "+7 (";
+                                    }
+
+                                    if( value == 8 && masked._value == "+7 (" ){
+                                        return "";
+                                    }
+
+                                    tmp = value.match(/[\d\+]*/g);
+                                    // console.log(tmp);
+                                    if( tmp && tmp.length ){
+                                        value = tmp.join("");
+                                    }else{
+                                        value = "";
+                                    }
+                                    // console.log(value);
+                                    return value;
+                                }
+                            });
+                        });
+                    };
 
                         // if( $this.attr("data-goal") ){
                             // yaCounter12345678.reachGoal($this.attr("data-goal"));
@@ -442,12 +552,11 @@ $(document).ready(function(){
                         //     }
                         // });
                         // return false;
-                    });
+                    // });
                 }
             // }
         });
     });
-
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
  //        zoom: 16,

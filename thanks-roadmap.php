@@ -33,7 +33,7 @@
 	<meta name="msapplication-TileImage" content="favicon/mstile-144x144.png" />
 </head>
 <body>
-	<div class="b-thanks">
+	<div class="b-thanks" id="thanks-roadmap">
 		<div class="b-block b-thanks-header clearfix">
 			<a href="index.html" class="b-thanks-back icon-arrow-left left">вернуться на сайт</a>
 			<a href="index.html" class="b-logo left">
@@ -64,8 +64,8 @@
 				<div class="b-soc-buttons left">
 					<!-- <a href="#" class="b-soc-item b-wa anim fadeDown" target="_blank"></a>
 					<a href="#" class="b-soc-item b-ft anim fadeDown delay100" target="_blank"></a> -->
-					<a href="#" class="b-soc-item b-vk anim fadeDown delay200" target="_blank"></a>
-					<a href="#" class="b-soc-item b-tg anim fadeDown delay300" target="_blank"></a>
+					<a href="https://vk.me/transfiguration.agency" class="b-soc-item b-vk anim fadeDown delay200" target="_blank"></a>
+					<a href="https://telegram.me/tfa_transfiguration_bot" class="b-soc-item b-tg anim fadeDown delay300" target="_blank"></a>
 				</div>
 				<h4 class="left">Нажмите на одну из кнопок, чтобы открыть чат с менеджером TFA  в удобном вам мессенджере</h4>
 			</div>

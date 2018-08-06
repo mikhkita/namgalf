@@ -33,7 +33,7 @@
 	<meta name="msapplication-TileImage" content="favicon/mstile-144x144.png" />
 </head>
 <body>
-	<div class="b-thanks b-thanks-2">
+	<div class="b-thanks b-thanks-2" id="thanks-offer">
 		<div class="b-block b-thanks-header clearfix">
 			<a href="index.html" class="b-thanks-back icon-arrow-left left">вернуться на сайт</a>
 			<a href="index.html" class="b-logo left">
@@ -51,7 +51,7 @@
 				<h3 class="anim fadeDown delay100" data-cont=".b-thanks .b-text">Я лично или наш менеджер позвоним вам в ближайшее время, чтобы уточнить пару моментов.</h3>
 				<h3 class="anim fadeDown delay200" data-cont=".b-thanks .b-text">Так мы сможем подготовить для вас <b>индивидуальные предложения с тремя вариантами</b> по цене и срокам.</h3>
 				<h3 class="anim fadeDown delay300" data-cont=".b-thanks .b-text">Если они вас устроят, забронируем за вашим<br>проектом место.</h3>
-				<div class="b-mail-block">
+				<!-- <div class="b-mail-block">
 					<h3 class="anim fadeDown delay400" data-cont=".b-thanks .b-text">А пока вы ждете звонка, зайдите в почту</h3>
 					<h2 class="anim fadeDown delay500" data-cont=".b-thanks .b-text">Мы <b>отправили<br>вам</b> список вопросов</h2>
 				</div>
@@ -59,7 +59,7 @@
 				<div class="b-yandex clearfix">
 					<div class="b-yandex-image left anim fadeDown delay700" data-cont=".b-thanks .b-text"></div>
 					<h4 class="anim fadeDown delay800" data-cont=".b-thanks .b-text">Если письма нет во входящих, проверьте папку «Промоакции» или «Спам». Письмо могло попасть туда по ошибке.</h4>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -71,8 +71,8 @@
 				<div class="b-soc-buttons left">
 					<!-- <a href="#" class="b-soc-item b-wa anim fadeDown" target="_blank"></a>
 					<a href="#" class="b-soc-item b-ft anim fadeDown delay100" target="_blank"></a> -->
-					<a href="#" class="b-soc-item b-vk anim fadeDown delay200" target="_blank"></a>
-					<a href="#" class="b-soc-item b-tg anim fadeDown delay300" target="_blank"></a>
+					<a href="https://vk.me/transfiguration.agency" class="b-soc-item b-vk anim fadeDown delay200" target="_blank"></a>
+					<a href="https://telegram.me/tfa_transfiguration_bot" class="b-soc-item b-tg anim fadeDown delay300" target="_blank"></a>
 				</div>
 				<h4 class="left">Нажмите на одну из кнопок, чтобы открыть чат с менеджером TFA  в удобном вам мессенджере</h4>
 			</div>

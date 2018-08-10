@@ -57,7 +57,7 @@
 				<? if( $link !== false ): ?>
 					<h3 class="anim fadeDown delay500" data-cont=".b-thanks .b-text"><b>Вы можете войти в почту прямо отсюда</b></h3>
 					<div class="b-yandex clearfix">
-					<a href="<?=$link?>" class="b-yandex-image left anim fadeDown delay600" data-cont=".b-thanks .b-text"></a>
+					<a href="<?=$link?>" class="b-yandex-image left anim fadeDown delay600" data-cont=".b-thanks .b-text" target="_blank"></a>
 					<h4 class="anim fadeDown delay700" data-cont=".b-thanks .b-text">Если письма нет во входящих, проверьте папку «Промоакции» или «Спам». Письмо могло попасть туда по ошибке.</h4>
 				<? endif; ?>
 				</div>

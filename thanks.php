@@ -16,9 +16,9 @@ if( isset($_POST["email"]) && $_POST["email"] != "" ){
 	}
 }
 ?>
-<? if( $link !== false ): ?>
-	<a href="<?=$link?>" class="b-btn b-orange-btn b-btn-big" target='_blank'><span>Проверить почту</span></a>
-<? endif; ?>
+<!-- <? if( $link !== false ): ?>
+	<a href="<?=$link?>" class="b-btn b-orange-btn b-btn-big" target="_blank"><span>Проверить почту</span></a>
+<? endif; ?> -->
 <?php
 	require_once("phpmail.php");
 

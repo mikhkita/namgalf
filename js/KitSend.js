@@ -152,7 +152,9 @@ $(document).ready(function(){
   			var $this = $(this),
   				$thanks = $($this.attr("data-block"));
 
-  			$this.find(".ajax").attr("onclick", "return false;");
+  			$this.find(".ajax").click(function(){
+				return false;
+			});
 
   			if( $this.attr("data-beforeAjax") && customHandlers[$this.attr("data-beforeAjax")] ){
 				customHandlers[$this.attr("data-beforeAjax")]($this);

@@ -128,7 +128,21 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 5000
     }); 
-
+    $(".b-team").slick({
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true, 
+        easing: 'easeOutQuart',
+        speed: 800,
+        useTransform: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow icon-arrow-left"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow icon-arrow-right"></button>',
+        touchThreshold: 100,
+        autoplay: false,
+        autoplaySpeed: 5000
+    }); 
     // $(".b-how-much-slider").slick({
     //     dots: false,
     //     slidesToShow: 1,

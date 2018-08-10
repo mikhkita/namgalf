@@ -4356,7 +4356,14 @@ form small{
 			transform: rotateZ(45deg) translateY(-2px) translateX(-2px);
 }
 
-
+.b-quiz-road-map, .b-quiz-offer{
+	visibility: hidden;
+	display: none;
+}
+.show-p {
+	visibility: visible;
+	display: block;
+}
 /*************ENDQUIZ**************/
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {

@@ -1530,7 +1530,7 @@ form small{
     			float: right;
 			}
 	.b-zhgenti{
-		padding-top: 39px;
+		padding-top: 90px;
 		position: relative;
 	}
 		.b-zhgenti p {
@@ -1555,7 +1555,7 @@ form small{
 				font-family: "MuseoSansCyrl-700";
 				position: absolute;
 				left: -73px;
-				top: 162px;
+				top: 138px;
 				background-color: #FFF;
 				border-radius: 3px;
 				padding: 3px 8px;
@@ -1566,7 +1566,7 @@ form small{
 			.b-zhgenti .b-woman h4{
 				position: absolute;
 				left: 68px;
-				top: 192px;
+				top: 168px;
 				background-color: #FFF;
 				padding: 2px 8px;
 				color: rgba(41,41,41,0.5);
@@ -1617,42 +1617,37 @@ form small{
 	.b-team{
 		background-position: 50% 50%;
 	    background-repeat: no-repeat;
-	    background-image: url(../i/7/people.jpg);
 	    background-size: contain;
 	    width: 100%;
 	    height: 300px;
-	    margin-left: -9px;
 	    font-size: 0px;
 	    text-align: left;
+	    margin-top: 20px;
 	}
+		.b-team-photo{width:  100%;position: relative;}
+			.b-team-photo img{
+				width: 300px;
+				margin: 0 auto;
+			}
+		.b-7.black .slick-arrow{
+			bottom: 80px;
+		}
 		.b-team-item{
 			display: inline-block;
 			vertical-align: top;
-			width: 25%;
-			height: 386px;
-			margin-bottom: 1px;
-			padding-top: 258px;
+			width: 100%;
+			/* height: 386px; */
+			/* margin-bottom: 1px; */
+			/* padding-top: 258px; */
 			text-align: center;
-			opacity: 0;
-			-webkit-transition: opacity 300ms ease-out, transform 300ms ease-out;
-			   -moz-transition: opacity 300ms ease-out, transform 300ms ease-out;
-			    -ms-transition: opacity 300ms ease-out, transform 300ms ease-out;
-			   	 -o-transition: opacity 300ms ease-out, transform 300ms ease-out;
-					transition: opacity 300ms ease-out, transform 300ms ease-out;
-			-webkit-transform: translateY(10px);
-			   -moz-transform: translateY(10px);
-			    -ms-transform: translateY(10px);
-			   	 -o-transform: translateY(10px);
-					transform: translateY(10px);
+			opacity: 1;
+			/* position: absolute; */
+			top:  0px;
+			/* right: calc(50% + -48px); */
+			/* margin:  0 auto; */
+			position:  relative;
+			top: -130px;
 		}
-			.b-team-item:hover{
-				opacity: 1;
-				-webkit-transform: translateY(0px);
-				   -moz-transform: translateY(0px);
-				    -ms-transform: translateY(0px);
-				   	 -o-transform: translateY(0px);
-						transform: translateY(0px);
-			}
 			.b-team-item p{
 				font-size: 18px;
 			}
@@ -1674,7 +1669,7 @@ form small{
 		bottom: -30px;
 	}
 .b-first-result{
-	margin-top: 80px;
+	margin-top: 60px;
 }
 	.b-first-result h3{
 		margin-bottom: 30px;
@@ -2319,6 +2314,7 @@ form small{
 .b-11{
 	padding-top: 40px;
 	z-index: 1;
+	padding-bottom: 55px;
 }
 	.b-11 h2{
 		margin-bottom: 6px;
@@ -2359,7 +2355,10 @@ form small{
 			
 		}
 .b-12{
-	padding-top: 60px;
+	padding-top: 10px;
+	padding-bottom: 40px;
+	position:  relative;
+	top: -1px;
 }
 	.b-12 h2{
 		display: inline-block;
@@ -2746,14 +2745,14 @@ form small{
 					}
 				.b-director-desc h4{
 				    background-color: #FFF;
-				    padding: 2px 8px;
+				    padding: 6px 8px;
 				    color: rgba(41,41,41,0.5);
 				    font-size: 11px;
 				    margin-left: 8px;
 				    border-radius: 3px;
 				    margin-top: -2px;
 				    white-space: nowrap;
-				    line-height: 18px;
+				    line-height: 16px;
 				    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
 				}
 			.b-director-text{
@@ -3168,7 +3167,7 @@ form small{
 				    background-size: contain;
 				    width: 327px;
 				    height: 169px;
-				    margin-top: 50px;
+				    margin-top: 20px;
 				}
 		.b-logo-container{
 			width: 100%;
@@ -3391,7 +3390,7 @@ form small{
 		/* width: 510px; */
 		text-align: left;
 		background-color: #FFF;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 		padding: 6px;
 	}
 		.b-popup .b-vertical-form{
@@ -3414,7 +3413,7 @@ form small{
 				}
 				.b-vertical-form input[type="text"],
 				.b-vertical-form input[type="tel"]{
-					padding: 20px 50px;
+					padding: 20px 20px 20px 50px;
 					margin-bottom: 20px;
 					margin-left: 0px;
 				}
@@ -3964,6 +3963,7 @@ form small{
 	}
 .b-quiz{
 	padding: 6px;
+	transform: translate3d(0, 0, 0);
 }
 	.b-quiz.b-note .b-border{
 	    padding: 33px 40px 46px 53px;

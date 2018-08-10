@@ -419,7 +419,6 @@ form small{
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 1.2px;
-	padding: 25px 40px 25px;
 	text-align: center;
 	position: relative;
 	-webkit-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
@@ -444,6 +443,15 @@ form small{
 				transform: translateY(10px);
 		box-shadow: 0px 5px 20px rgba(63, 156, 49, 0.3), 0px 10px 30px rgba(68, 162, 53, 0.3), 0px 3px 14px rgba(64, 160, 49, 0.2), inset 0 -1px 0px 3px rgba(255, 255, 255, 0.15);
 	}
+	.b-green-btn:active span:before{
+		position: absolute;
+		content: "s";
+		font-size: 0px;
+		width: 100%;
+		height: 10px;
+		left: 0px;
+		top: -10px;
+	}
 	.b-line-input .b-green-btn:active{
 		box-shadow: 0px 10px 30px rgba(63, 156, 49, 0.3), 0px 20px 50px rgba(68, 162, 53, 0.3), 0px 5px 20px rgba(64, 160, 49, 0.2), inset 0 -1px 0px 3px rgba(255, 255, 255, 0.15);
 		-webkit-transform: translateY(0px);
@@ -455,6 +463,8 @@ form small{
 	.b-green-btn span{
 		position: relative;
 		z-index: 3;
+		display: block;
+		padding: 25px 40px 25px;
 	}
 	.b-green-btn:before,
 	.b-green-btn:after{
@@ -2832,8 +2842,10 @@ form small{
 					margin-left: -103px;
 					position: relative;
 					top: 1px;
-					padding: 27px 40px 26px;
 				}
+					.b-line-input .b-btn span{
+						padding: 27px 40px 26px;
+					}
 .b-15{
 	padding-top: 83px;
 	padding-bottom: 137px;
@@ -3190,10 +3202,12 @@ form small{
 			margin-bottom: 33px;
 		}
 		.b-new-project .b-btn{
-			padding: 18px 40px 18px;
 			font-size: 14px;
 			min-width: 257px;
 		}
+			.b-new-project .b-btn span{
+				padding: 18px 40px 18px;
+			}
 	.b-19 .b-circle{
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
@@ -3473,7 +3487,7 @@ form small{
 		margin-bottom: 14px;
 	}
 	.b-popup-quit h3 + p{
-		margin-left: 36px;
+		margin-left: 24px;
 		letter-spacing: 0px;
 	}
 	.b-popup-quit .b-popup-form{
@@ -3760,6 +3774,7 @@ form small{
     height: 15px;
     animation: move 1s infinite;
     animation-timing-function: linear; 
+    z-index: 2;
 }
 
 	.b-quiz-line-green{
@@ -3846,7 +3861,8 @@ form small{
 		    margin-top: 50px;
 		    margin-left: 150px;
 	        margin-bottom: 32px;
-		    padding: 27px 142px 27px;
+		    /*padding: 27px 142px 27px;*/
+		    float: right;
 		}
 		form .b-quiz-left-col small{
 			margin-top: 0px;
@@ -4198,7 +4214,7 @@ form small{
     padding-left: 10px;
 }
 	.b-quiz-5 .b-line-input{
-	    margin-top: -40px;
+	    margin-top: 12px;
 	}
 		.b-quiz-5 form small{
 		    letter-spacing: -0.1px;
@@ -4206,12 +4222,14 @@ form small{
 		}
 	.b-quiz-5 .b-quiz-left-col .b-green-btn{
 	    margin-left: -103px;
-	    padding: 27px 30px 26px;
+	    /* padding: 27px 30px 26px; */
+	    margin-top: -1px;
 	}
-	.b-quiz-5 img{
+	.b-quiz-5 img {
 	    width: 360px;
-		margin-top: -129px;
-		margin-left: 67px;
+	    position: absolute;
+	    right: 60px;
+	    top: 76px;
 	}
     
 .chosen-container,

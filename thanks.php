@@ -24,7 +24,7 @@ if( isset($_POST["email"]) && $_POST["email"] != "" ){
 
 	$email_admin = "dima@redder.pro";
 	// $email_admin = "huckconversionlp@transfiguration.agency, mike@kitaev.pro";
-	// $email_admin = "mike@kitaev.pro";
+	$email_admin = "mike@kitaev.pro";
 
 	$from = "“Флагман TFA”";
 	$email_from = "flagman@transfiguration.agency";

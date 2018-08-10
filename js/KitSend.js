@@ -147,14 +147,13 @@ $(document).ready(function(){
 			yaCounter12345678.reachGoal($(this).attr("data-goal"));
 	});
 
+	var sended = false;
 	$(".ajax").parents("form").submit(function(){
-  		if( $(this).find("input.error,select.error,textarea.error").length == 0 ){
+  		if( $(this).find("input.error,select.error,textarea.error").length == 0 && sended ){
   			var $this = $(this),
   				$thanks = $($this.attr("data-block"));
 
-  			$this.find(".ajax").click(function(){
-				return false;
-			});
+  			sended = true;
 
   			if( $this.attr("data-beforeAjax") && customHandlers[$this.attr("data-beforeAjax")] ){
 				customHandlers[$this.attr("data-beforeAjax")]($this);

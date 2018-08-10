@@ -359,40 +359,40 @@ $(document).ready(function(){
 
                         $this.find(".quiz-submit").attr("onclick", "return false;");
 
-                    $("#b-quiz-form, .email-form").validate({
-                        rules: {
-                            email: 'email',
-                            "task[]": { 
-                                required: true, 
-                                minlength: 1
-                            },
-                            "promo[]": {
-                                required: true, 
-                                minlength: 1 
-                            },
-                            "more-request": {
-                                required: true, 
-                                minlength: 1 
-                            }
-                        },
-                        messages: { 
-                            "task[]": "Выберите хотя бы один вариант",
-                            "promo[]": "Выберите хотя бы один вариант",
-                            "more-request": "Выберите один вариант"
-                        },
-                        ignore: ":hidden:not(select)",
-                        errorPlacement: function(error, element) {
-                            if( element.attr("name") == "task[]" || element.attr("name") == "promo[]" || element.attr("name") == "more-request" ){
-                                error.addClass("visible-label");
+                        // $("#b-quiz-form, .email-form").validate({
+                        //     rules: {
+                        //         email: 'email',
+                        //         "task[]": { 
+                        //             required: true, 
+                        //             minlength: 1
+                        //         },
+                        //         "promo[]": {
+                        //             required: true, 
+                        //             minlength: 1 
+                        //         },
+                        //         "more-request": {
+                        //             required: true, 
+                        //             minlength: 1 
+                        //         }
+                        //     },
+                        //     messages: { 
+                        //         "task[]": "Выберите хотя бы один вариант",
+                        //         "promo[]": "Выберите хотя бы один вариант",
+                        //         "more-request": "Выберите один вариант"
+                        //     },
+                        //     ignore: ":hidden:not(select)",
+                        //     errorPlacement: function(error, element) {
+                        //         if( element.attr("name") == "task[]" || element.attr("name") == "promo[]" || element.attr("name") == "more-request" ){
+                        //             error.addClass("visible-label");
 
-                                if( element.attr("name") == "task[]" ){
-                                    element.parents(".b-popup-form").find(".b-quiz-label").after(error);
-                                }else{
-                                    element.parents(".b-popup-form").prepend(error);
-                                }
-                            }
-                        }
-                    });
+                        //             if( element.attr("name") == "task[]" ){
+                        //                 element.parents(".b-popup-form").find(".b-quiz-label").after(error);
+                        //             }else{
+                        //                 element.parents(".b-popup-form").prepend(error);
+                        //             }
+                        //         }
+                        //     }
+                        // });
                         // if( $this.attr("data-goal") ){
                             // yaCounter12345678.reachGoal($this.attr("data-goal"));
                         // }
@@ -470,15 +470,17 @@ $(document).ready(function(){
 
                     
 
+                    var sended = false;
     $("#b-quiz-popup .b-btn").on('click', function(){
                         $("#b-quiz-form").valid();
 
-                        if( $(this).parents(".b-quiz-container").find("input.error,select.error,textarea.error").length != 0 ){
+                        if( $(this).parents(".b-quiz-container").find("input.error,select.error,textarea.error").length != 0 || sended ){
                             $(this).parents(".b-quiz-container").find("input.error,select.error,textarea.error").eq(0).focus();
                             return false;
                         }
 
                         if( $(this).hasClass("quiz-submit") ){
+                            sended = true;
                             $("#b-quiz-form").submit();
                             return true;
                         }

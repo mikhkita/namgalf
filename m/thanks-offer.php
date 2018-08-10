@@ -43,22 +43,22 @@
 		</div>
 		<h2 class="anim fadeDown"><b>Да,</b> нам есть,<br> что предложить вам!</h2>
 		<div class="b-block">
-			<div class="b-blanks anim fadeDown" data-cont=".b-thanks .b-text">
+			<div class="b-blanks anim fadeDown">
 				<div class="b-check"></div>
 			</div>
 			<div class="b-text">
 				<div class="b-bird"></div>
-				<h3 class="anim fadeDown delay100" data-cont=".b-thanks .b-text">Я лично или наш менеджер позвоним вам в ближайшее время, чтобы уточнить пару моментов.</h3>
-				<h3 class="anim fadeDown delay200" data-cont=".b-thanks .b-text">Так мы сможем подготовить для вас <b>индивидуальные предложения с тремя вариантами</b> по цене и срокам.</h3>
-				<h3 class="anim fadeDown delay300" data-cont=".b-thanks .b-text">Если они вас устроят, забронируем за вашим<br>проектом место.</h3>
-				<div class="b-mail-block">
-					<h3 class="anim fadeDown delay400" data-cont=".b-thanks .b-text">А пока вы ждете звонка, зайдите в почту.</h3>
-					<h2 class="anim fadeDown delay500" data-cont=".b-thanks .b-text">Мы <b>отправили<br>вам</b> список вопросов</h2>
+				<h3 class="anim fadeDown delay100">Я лично или наш менеджер позвоним вам в ближайшее время, чтобы уточнить пару моментов.</h3>
+				<h3 class="anim fadeDown delay200">Так мы сможем подготовить для вас <b>индивидуальные предложения с тремя вариантами</b> по цене и срокам.</h3>
+				<h3 class="anim fadeDown delay300">Если они вас устроят,<br> забронируем за вашим проектом&nbsp;место.</h3>
+				<!-- <div class="b-mail-block">
+					<h3 class="anim fadeDown delay400">А пока вы ждете звонка, зайдите в почту.</h3>
+					<h2 class="anim fadeDown delay500">Мы <b>отправили вам</b> список вопросов</h2>
 				</div>
-				<h3 class="anim fadeDown delay600" data-cont=".b-thanks .b-text"><b>Вы можете войти в почту прямо отсюда</b></h3>
+				<h3 class="anim fadeDown delay600"><b>Вы можете войти в почту прямо отсюда</b></h3>
 				<div class="b-yandex clearfix">
-					<div class="b-yandex-image left anim fadeDown delay700" data-cont=".b-thanks .b-text"></div>
-					<h4 class="anim fadeDown delay800" data-cont=".b-thanks .b-text">Если письма нет во входящих, проверьте папку «Промоакции» или «Спам». Письмо могло попасть туда по ошибке.</h4>
+					<div class="b-yandex-image left anim fadeDown delay700"></div>
+					<h4 class="anim fadeDown delay800" >Если письма нет во входящих, проверьте папку «Промоакции» или «Спам». Письмо могло попасть туда по ошибке.</h4> -->
 				</div>
 			</div>
 		</div>

@@ -1528,6 +1528,7 @@ form small{
 				vertical-align: middle;
 			    width: 70%;
     			float: right;
+    			font-family: MuseoSansCyrl-300;
 			}
 	.b-zhgenti{
 		padding-top: 90px;
@@ -2132,6 +2133,7 @@ form small{
 					display: inline-block;
 					vertical-align: top;
 					min-height: 40px;
+					font-family: MuseoSansCyrl-300;
 				}
 		.b-timetable{
 			background-position: 50% 50%;
@@ -3099,7 +3101,7 @@ form small{
 		}
 		.b-works-slide{
 			text-align: left;
-			padding-bottom: 20px;
+			/* padding-bottom: 20px; */
 		}
 			.b-works-slide .b-block{
 			}
@@ -3161,7 +3163,7 @@ form small{
 				.b-works-slide .b-img{
 				    position: relative;
 				    right: 0px;
-				    /* top: -30px; */
+				    top: -30px;
 				    background-position: 50% 50%;
 				    background-repeat: no-repeat;
 				    background-size: contain;
@@ -3187,7 +3189,7 @@ form small{
 				vertical-align: middle;
 			}
 				.works-img-1{
-					width: 150px;
+					width: 110px;
 				}
 				.works-img-2{
 					width: 38px;
@@ -3549,7 +3551,7 @@ form small{
 .b-footer{
 	color: #9c9c9c;
 	border-top: 1px solid rgba(0,0,0,0.1);
-	padding-top: 30px;
+	padding-top: 20px;
 	padding-bottom: 0px;
 }
 	.b-footer .b-logo{
@@ -3567,6 +3569,7 @@ form small{
 	.b-footer .b-links{
 		display: inline-block;
 		vertical-align: top;
+		margin-bottom: 5px;
 	}
 		.b-footer h4 b{
 			font-family: "MuseoSansCyrl-500";
@@ -3689,6 +3692,7 @@ form small{
 			margin-left: 11px;
 			letter-spacing: 1.4px;
 			font-family: "MuseoSansCyrl-700";
+			top: 15px;
 		}
 			.b-thanks-back:hover{
 				color: #5e4abb;
@@ -3754,7 +3758,7 @@ form small{
 		.b-bird{
 			position: absolute;
 			right: -100px;
-			top: 290px;
+			top: 140px;
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
 			background-image: url('../i/golub.jpg');
@@ -3836,6 +3840,8 @@ form small{
 				/* width: 821px; */
 				margin-top: 10px;
 				margin-bottom: 27px;
+				position:  relative;
+				z-index: 2;
 			}
 				.b-thanks-footer .b-soc-buttons{
 
@@ -3996,6 +4002,8 @@ form small{
 			/*padding-left: 8px;*/
     		letter-spacing: 0.4px;
 		    padding-right: 17px;
+		    padding-bottom: 10px;
+		    display: inline-block;
 		}
 		.b-quiz .b-popup-form input[name=site]{
 			padding: 22px 24px 18px 24px;
@@ -4319,7 +4327,7 @@ form small{
     font-family: "MuseoSansCyrl-300";
 }
 .b-quiz-3 h3{
-    padding-left: 8px;
+    /* padding-left: 8px; */
     margin-bottom: 7px;
 }
 .b-quiz-3 .b-quiz-right-col{
@@ -4581,6 +4589,14 @@ form small{
 	margin-bottom: 16px;
 }
 
+.b-quiz-road-map, .b-quiz-offer{
+	visibility: hidden;
+	display: none;
+}
+.show-p {
+	visibility: visible;
+	display: block;
+}
 /*************ENDQUIZ**************/
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {

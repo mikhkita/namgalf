@@ -43,22 +43,24 @@
 		</div>
 		<h2 class="anim fadeDown"><b>Отлично!</b> Мы уже<br> получили вашу заявку</h2>
 		<div class="b-block">
-			<div class="b-blanks anim fadeDown" data-cont=".b-thanks .b-text">
+			<div class="b-blanks anim fadeDown">
 				<div class="b-check"></div>
 			</div>
 			<div class="b-text">
 				<div class="b-bird b-bird-2"></div>
-				<h3 class="anim fadeDown delay100" data-cont=".b-thanks .b-text">Я лично или наш менеджер позвоним вам в ближайшее время, чтобы уточнить пару моментов.</h3>
-				<h3 class="anim fadeDown delay200" data-cont=".b-thanks .b-text">Так мы сможем подготовить для вас <b>индивидуальные предложения с тремя вариантами</b> по цене и срокам.</h3>
+				<h3 class="anim fadeDown delay100">Я лично или наш менеджер позвоним вам в ближайшее время, чтобы уточнить пару моментов.</h3>
+				<h3 class="anim fadeDown delay200">Так мы сможем подготовить для вас <b>индивидуальные предложения с тремя вариантами</b> по цене и срокам.</h3>
 				<div class="b-mail-block">
-					<h3 class="anim fadeDown delay300" data-cont=".b-thanks .b-text">А пока вы ждете звонка, зайдите в почту.</h3>
-					<h2 class="anim fadeDown delay400" data-cont=".b-thanks .b-text">Мы <b>отправили<br>вам</b> список вопросов</h2>
+					<h3 class="anim fadeDown delay300">А пока вы ждете звонка,<br> зайдите в почту.</h3>
+					<h2 class="anim fadeDown delay400">Мы <b>отправили вам</b> список вопросов</h2>
 				</div>
-				<h3 class="anim fadeDown delay500" data-cont=".b-thanks .b-text"><b>Вы можете войти в почту прямо отсюда</b></h3>
+				<? if( $link !== false ): ?>
+				<h3 class="anim fadeDown delay500"><b>Вы можете войти в почту прямо отсюда</b></h3>
 				<div class="b-yandex clearfix">
-					<div class="b-yandex-image left anim fadeDown delay600" data-cont=".b-thanks .b-text"></div>
-					<h4 class="anim fadeDown delay700" data-cont=".b-thanks .b-text">Если письма нет во входящих, проверьте папку «Промоакции» или «Спам». Письмо могло попасть туда по ошибке.</h4>
+					<a href="<?=$link?>" class="b-yandex-image left anim fadeDown delay600" data-cont=".b-thanks .b-text" target="_blank"></a>
+					<h4 class="anim fadeDown delay700">Если письма нет во входящих, проверьте папку «Промоакции» или «Спам». Письмо могло попасть туда по ошибке.</h4>
 				</div>
+				<? endif; ?>
 			</div>
 		</div>
 	</div>

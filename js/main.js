@@ -297,14 +297,6 @@ $(document).ready(function(){
         };
     });
 
-    // $(".email-form .b-btn").on("click",function(){
-    //     $("#e-mail-1").val($(".b-line-input input").val());
-    //     console.log($("#e-mail-1").val());
-    //     if ($("#e-mail-1").val() != 0) {
-    //         $("input[name=thanks]").val("request");
-    //         console.log($("input[name=thanks]").val());
-    // }
-    // });
     function quizOpen($button){
         var $form = $button.parents(".email-form"),
             $data = $($button.attr("href"));
@@ -321,17 +313,10 @@ $(document).ready(function(){
             }
         };
         $.fancybox.open($data, {
-            // html  : ,
-            // opts : {
                 touch: false,
                 afterLoad : function( instance, current ) {
                     
-
                     $("#amount").val( 50 );
-
-                    // $.validator.addMethod("roles", function(value, elem, param) {
-                    //    return $(".roles:checkbox:checked").length > 0;
-                    // }, "You must select at least one!");
 
                     $("#b-quiz-form").find("input[name=phone]").mask('+7 (999) 999-99-99',{placeholder:"_"});
 
@@ -358,75 +343,8 @@ $(document).ready(function(){
                         var $this = $(this);
 
                         $this.find(".quiz-submit").attr("onclick", "return false;");
-
-                        // $("#b-quiz-form, .email-form").validate({
-                        //     rules: {
-                        //         email: 'email',
-                        //         "task[]": { 
-                        //             required: true, 
-                        //             minlength: 1
-                        //         },
-                        //         "promo[]": {
-                        //             required: true, 
-                        //             minlength: 1 
-                        //         },
-                        //         "more-request": {
-                        //             required: true, 
-                        //             minlength: 1 
-                        //         }
-                        //     },
-                        //     messages: { 
-                        //         "task[]": "Выберите хотя бы один вариант",
-                        //         "promo[]": "Выберите хотя бы один вариант",
-                        //         "more-request": "Выберите один вариант"
-                        //     },
-                        //     ignore: ":hidden:not(select)",
-                        //     errorPlacement: function(error, element) {
-                        //         if( element.attr("name") == "task[]" || element.attr("name") == "promo[]" || element.attr("name") == "more-request" ){
-                        //             error.addClass("visible-label");
-
-                        //             if( element.attr("name") == "task[]" ){
-                        //                 element.parents(".b-popup-form").find(".b-quiz-label").after(error);
-                        //             }else{
-                        //                 element.parents(".b-popup-form").prepend(error);
-                        //             }
-                        //         }
-                        //     }
-                        // });
-                        // if( $this.attr("data-goal") ){
-                            // yaCounter12345678.reachGoal($this.attr("data-goal"));
-                        // }
-
-                        // alert("Отправка!");
-                        // return false;
-                        // $.ajax({
-                        //     type: $(this).attr("method"),
-                        //     url: $(this).attr("action"),
-                        //     data:  $this.serialize(),
-                        //     success: function(msg){
-                        //         var $form;
-                        //         if( msg == "1" ){
-                        //             $link = $this.find(".b-thanks-link");
-                        //         }else{
-                        //             $link = $(".b-error-link");
-                        //         }
-
-                        //         $.fancybox.close();
-                        //         $link.click();
-                        //     },
-                        //     error: function(){
-                        //         $.fancybox.close();
-                        //         $(".b-error-link").click();
-                        //     },
-                        //     complete: function(){
-                        //         $this.find(".quiz-submit").removeAttr("onclick");
-                        //         $this.find("input[type=text], textarea").val("");
-                        //     }
-                        // });
-                        // return false;
                     });
                 }
-            // }
         });    
     }
     $("#checkbox-promotion-1").on('click', function(){
@@ -472,47 +390,48 @@ $(document).ready(function(){
 
                     var sended = false;
     $("#b-quiz-popup .b-btn").on('click', function(){
-                        $("#b-quiz-form").valid();
+        $("#b-quiz-form").valid();
 
-                        if( $(this).parents(".b-quiz-container").find("input.error,select.error,textarea.error").length != 0 || sended ){
-                            $(this).parents(".b-quiz-container").find("input.error,select.error,textarea.error").eq(0).focus();
-                            return false;
-                        }
+        if( $(this).parents(".b-quiz-container").find("input.error,select.error,textarea.error").length != 0 || sended ){
+            $(this).parents(".b-quiz-container").find("input.error,select.error,textarea.error").eq(0).focus();
+            return false;
+        }
 
-                        if( $(this).hasClass("quiz-submit") ){
-                            sended = true;
-                            $("#b-quiz-form").submit();
-                            return true;
-                        }
+        if( $(this).hasClass("quiz-submit") ){
+            sended = true;
+            $("#b-quiz-form").submit();
+            return true;
+        }
 
-                        var currentQuizNumber = $(this).parents(".b-quiz-container").attr('data-number');
-                        $(this).parents(".b-quiz-container").hide();
-                        currentQuizNumber = parseInt(currentQuizNumber) + 1;
-                        currentLine = $(this).parents(".b-quiz-container").next().attr('data-result');
+        var currentQuizNumber = $(this).parents(".b-quiz-container").attr('data-number');
+        $(this).parents(".b-quiz-container").hide();
+        currentQuizNumber = parseInt(currentQuizNumber) + 1;
+        currentLine = $(this).parents(".b-quiz-container").next().attr('data-result');
 
-                        $(".b-quiz-container").each(function(){
-                            if($(this).attr('data-number') == currentQuizNumber){
-                                if (currentQuizNumber == 5) {
-                                    if (type == "road-map") {
-                                        $(".b-quiz-container.b-quiz-road-map").addClass("show-p");
-                                        $(".b-quiz-container.b-quiz-offer").removeClass("show-p");
-                                    }
-                                    else{
-                                        $(".b-quiz-container.b-quiz-offer").addClass("show-p");
-                                        $(".b-quiz-container.b-quiz-road-map").removeClass("show-p");
-                                    }
-                                }
-                                else{
-                                    $(this).show()
-                                }
-                            };
-                        })
+        $(".b-quiz-container").each(function(){
+            if($(this).attr('data-number') == currentQuizNumber){
+                if (currentQuizNumber == 5) {
+                    if (type == "road-map") {
+                        $(".b-quiz-container.b-quiz-road-map").addClass("show-p");
+                        $(".b-quiz-container.b-quiz-offer").removeClass("show-p");
+                    }
+                    else{
+                        $(".b-quiz-container.b-quiz-offer").addClass("show-p");
+                        $(".b-quiz-container.b-quiz-road-map").removeClass("show-p");
+                    }
+                }
+                else{
+                    $(this).show()
+                }
+            };
+        })
 
-                        $(".b-quiz-line-green").attr("data-result", currentLine);
-                        $(".b-quiz-line-green").css("width", currentLine+"%");
+        $(".b-quiz-line-green").attr("data-result", currentLine);
+        $(".b-quiz-line-green").css("width", currentLine+"%");
 
-                        return true;
-                    });
+        return true;
+    });
+
     $(".b-quiz-link").click(function(){
         quizOpen($(this));
     });

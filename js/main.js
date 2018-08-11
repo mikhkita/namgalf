@@ -318,7 +318,7 @@ $(document).ready(function(){
                     
                     $("#amount").val( 50 );
 
-                    // $("#b-quiz-form").find("input[name=phone]").mask('+7 (999) 999-99-99',{placeholder:"_"});
+                    $("#b-quiz-form").find("input[name=phone]").mask('99999999999',{placeholder:"_"});
 
 
                     if( !device.mobile() && !device.tablet() ){

@@ -384,7 +384,7 @@ $(document).ready(function(){
                     
                     $("#amount").val( 50 );
 
-                    $("#b-quiz-form").find("input[name=phone]").mask('+7 (999) 999-99-99',{placeholder:"_"});
+                    // $("#b-quiz-form").find("input[name=phone]").mask('+7 (999) 999-99-99',{placeholder:"_"});
 
 
                     if( !device.mobile() && !device.tablet() ){
@@ -535,32 +535,32 @@ $(document).ready(function(){
             }
         }
     });
-     if( $(".b-quiz-container").find("input[name=phone]").length ){
-        $(".b-quiz-container").find("input[name=phone]").each(function(){
-            var phoneMaskPopup = new IMask($(this)[0], {
-                mask: '+{7} (000) 000-00-00',
-                prepare: function(value, masked){
-                    if( value == 8 && masked._value.length == 0 ){
-                        return "+7 (";
-                    }
+    // if( $(".b-quiz-container").find("input[name=phone]").length ){
+    //     $(".b-quiz-container").find("input[name=phone]").each(function(){
+    //         var phoneMaskPopup = new IMask($(this)[0], {
+    //             mask: '+{7} (000) 000-00-00',
+    //             prepare: function(value, masked){
+    //                 if( value == 8 && masked._value.length == 0 ){
+    //                     return "+7 (";
+    //                 }
 
-                    if( value == 8 && masked._value == "+7 (" ){
-                        return "";
-                    }
+    //                 if( value == 8 && masked._value == "+7 (" ){
+    //                     return "";
+    //                 }
 
-                    tmp = value.match(/[\d\+]*/g);
-                    // console.log(tmp);
-                    if( tmp && tmp.length ){
-                        value = tmp.join("");
-                    }else{
-                        value = "";
-                    }
-                    // console.log(value);
-                    return value;
-                }
-            });
-        });
-    };
+    //                 tmp = value.match(/[\d\+]*/g);
+    //                 // console.log(tmp);
+    //                 if( tmp && tmp.length ){
+    //                     value = tmp.join("");
+    //                 }else{
+    //                     value = "";
+    //                 }
+    //                 // console.log(value);
+    //                 return value;
+    //             }
+    //         });
+    //     });
+    // };
     $(".email-form").each(function(){
         $(this).validate({
             rules: {

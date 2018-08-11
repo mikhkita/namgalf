@@ -200,34 +200,34 @@ $(document).ready(function(){
 		$(this).parents("form").submit();
 		return false;
 	});
-	$(".ajax").parents("form").each(function(){
-        if( $(this).find("input[name=phone]").length ){
-            $(this).find("input[name=phone]").each(function(){
-                var phoneMask = new IMask($(this)[0], {
-                    mask: '+{7} (000) 000-00-00',
-                    prepare: function(value, masked){
-                        if( value == 8 && masked._value.length == 0 ){
-                            return "+7 (";
-                        }
+	// $(".ajax").parents("form").each(function(){
+ //        if( $(this).find("input[name=phone]").length ){
+ //            $(this).find("input[name=phone]").each(function(){
+ //                var phoneMask = new IMask($(this)[0], {
+ //                    mask: '+{7} (000) 000-00-00',
+ //                    prepare: function(value, masked){
+ //                        if( value == 8 && masked._value.length == 0 ){
+ //                            return "+7 (";
+ //                        }
 
-                        if( value == 8 && masked._value == "+7 (" ){
-                            return "";
-                        }
+ //                        if( value == 8 && masked._value == "+7 (" ){
+ //                            return "";
+ //                        }
 
-                        tmp = value.match(/[\d\+]*/g);
-                        // console.log(tmp);
-                        if( tmp && tmp.length ){
-                            value = tmp.join("");
-                        }else{
-                            value = "";
-                        }
-                        // console.log(value);
-                        return value;
-                    }
-                });
-            });
-        };
-    });
+ //                        tmp = value.match(/[\d\+]*/g);
+ //                        // console.log(tmp);
+ //                        if( tmp && tmp.length ){
+ //                            value = tmp.join("");
+ //                        }else{
+ //                            value = "";
+ //                        }
+ //                        // console.log(value);
+ //                        return value;
+ //                    }
+ //                });
+ //            });
+ //        };
+ //    });
     $(".b-quiz-container .ajax").parents("form").each(function(){
         if( $(this).find("input[name=phone]").length ){
             $(this).find("input[name=phone]").each(function(){

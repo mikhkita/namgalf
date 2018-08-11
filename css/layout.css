@@ -293,7 +293,8 @@ p{
 	height: 18px;
 	background-size: 22px;
 }
-input[type="text"]{
+input[type="text"],
+input[type="tel"]{
 	border: 1.3px solid rgb(219, 219, 219);
 	background-color: rgb(249, 247, 244);
 	box-shadow: inset 1.414px 1.414px 6px 0px rgba(30, 30, 30, 0.1);
@@ -3276,7 +3277,8 @@ form small{
 				.b-vertical-form form{
 					padding-top: 12px;
 				}
-				.b-vertical-form input[type="text"]{
+				.b-vertical-form input[type="text"],
+				.b-vertical-form input[type="tel"]{
 					padding: 26px 63px;
 					margin-bottom: 20px;
 					margin-left: -13px;

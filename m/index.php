@@ -318,6 +318,15 @@ if( !$mobile ){
 				</div>
 				<div class="b-team-person">
 					<div class="b-team-photo">
+						<img src="i/7/man-5.jpg">
+						<div class="b-team-item">
+							<p><b>Роман Твердохлеб</b></p>
+							<small>Сооснователь TFA,<br>технический директор</small>
+						</div>
+					</div>
+				</div>
+				<div class="b-team-person">
+					<div class="b-team-photo">
 						<img src="i/7/man-2.jpg">
 						<div class="b-team-item">
 							<p><b>Артем Федорченко</b></p>
@@ -340,15 +349,6 @@ if( !$mobile ){
 						<div class="b-team-item">
 							<p><b>Даниил</b></p>
 							<small>Дизайнер</small>
-						</div>
-					</div>
-				</div>
-				<div class="b-team-person">
-					<div class="b-team-photo">
-						<img src="i/7/man-5.jpg">
-						<div class="b-team-item">
-							<p><b>Роман Твердохлеб</b></p>
-							<small>Сооснователь TFA,<br>технический директор</small>
 						</div>
 					</div>
 				</div>
@@ -1233,7 +1233,7 @@ if( !$mobile ){
 							<p>После этого мы свяжемся с вами, обговорим варианты и <strong>предложим детальный план проекта.</strong></p>
 							<form action="thanks.php" method="POST">
 								<input type="text" name="name" class="b-name-input" placeholder="Введите имя" required>
-								<input type="tel" name="phone" class="b-phone-input" placeholder="Введите номер телефона" required>
+								<input type="tel" pattern="\d\d\d\d\d\d\d\d\d\d\d" data-mask="99999999999" class="b-phone-input" name="phone" value="" required="" placeholder="Мобильный телефон с 8*">
 								<input type="text" name="email" class="b-email-input" placeholder="Введите ваш E-mail" required>
 								<a href="#" class="b-btn b-green-btn ajax"><span>Забронировать место</span></a>
 								<input type="hidden" name="subject" value="Заявка с формы «Забронируйте место, чтобы увеличить прибыль в 4-6 раз уже через полгода»">
@@ -1442,7 +1442,7 @@ if( !$mobile ){
 							<p>Это бесплатно и ни к чему вас не обязывает.</p>
 							<p><b>Введите телефон:</b></p>
 							<div class="b-line-input clearfix">
-								<input type="tel" name="phone" class="b-phone-input" placeholder="Введите номер телефона" required>
+								<input type="tel" pattern="\d\d\d\d\d\d\d\d\d\d\d" data-mask="99999999999" class="b-phone-input" name="phone" value="" required="" placeholder="Мобильный телефон с 8*">
 								<a href="#" class="b-btn b-green-btn quiz-submit"><span>Получить Road map!</span></a>
 							</div>
 							<input type="hidden" name="subject" value="Квиз «Получить Road map!»">
@@ -1459,8 +1459,8 @@ if( !$mobile ){
 							<p>После этого сможем назвать три варианта<br>по составу инструментов, срокам и цене.</p>
 							<p><b>Телефон для консультации:</b></p>
 							<div class="b-line-input clearfix">
-								<input type="tel" name="phone" class="b-phone-input" placeholder="Введите номер телефона" required>
 								<a href="#" class="b-btn b-green-btn quiz-submit"><span>Получить результат!</span></a>
+								<input type="tel" pattern="\d\d\d\d\d\d\d\d\d\d\d" data-mask="99999999999" class="b-phone-input" name="phone" value="" required="" placeholder="Мобильный телефон с 8*">
 							</div>
 							<input type="hidden" name="subject" value="Квиз «Получить предложение!»">
 							<input type="hidden" name="thanks" value="offer">

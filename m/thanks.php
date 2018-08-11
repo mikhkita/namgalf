@@ -24,6 +24,7 @@ if( isset($_POST["email"]) && $_POST["email"] != "" ){
 
 	// $email_admin = "dima@redder.pro";
 	$email_admin = "huckconversionlp@transfiguration.agency";
+	// $email_admin = "mike@kitaev.pro";
 
 	$from = "“Флагман TFA”";
 	$email_from = "flagman@transfiguration.agency";
@@ -33,6 +34,7 @@ if( isset($_POST["email"]) && $_POST["email"] != "" ){
 		"phone"=>"Телефон", 
 		"email"=>"E-mail", 
 		"type" => "У меня бизнес в сфере", 
+		"type-more" => "Другая сфера бизнеса", 
 		"works" => "Если коротко, то мы",
 		"site" => "Есть сайт",
 		"task" => "Какая у вас сейчас задача?",
@@ -51,15 +53,16 @@ if( isset($_POST["email"]) && $_POST["email"] != "" ){
 				if( is_array($_POST[$key]) ){
 					$_POST[$key] = implode(", ", $_POST[$key]);
 				}
-				if( $key == "amount" ){
-					if( intval($_POST[$key]) == 200 ){
-						$_POST[$key] = "> ".$_POST[$key];
+				if( $_POST[$key] != "" ){
+					if( $key == "amount" ){
+						if( intval($_POST[$key]) == 200 ){
+							$_POST[$key] = "> ".$_POST[$key];
+						}
+						$fields[$value] = $_POST[$key]." тысяч рублей";
+					}else{
+						$fields[$value] = $_POST[$key];
 					}
-					$fields[$value] = $_POST[$key]." тысяч рублей";
-				}else{
-					$fields[$value] = $_POST[$key];
 				}
-
 			}
 		}
 

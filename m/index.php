@@ -1327,6 +1327,10 @@ if( !$mobile ){
 									<option value="Производство">Производство</option>
 									<option value="Другое">Другое</option>
 								</select>
+								<div class="b-type-more">
+									<label for="type-more">Другая сфера деятельности:</label>
+									<input type="text" id="type-more" name="type-more" placeholder="например, школа танцев" />
+								</div>
 								<label for="site">Вставьте ссылку на ваш сайт или пропустите этот шаг:</label>
 								<input type="text" id="site" name="site" placeholder="ссылка на сайт и/или аккаунт в соцсетях" />
 								<a href="#" class="b-btn b-green-btn" onclick="return false;"><span>Дальше</span></a>

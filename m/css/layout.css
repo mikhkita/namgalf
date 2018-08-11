@@ -3984,6 +3984,12 @@ form small{
 		.b-quiz h3 b{
 			font-family: 'MuseoSansCyrl-700';
 		}
+	.b-type-more{
+		display: none;
+	}
+	.b-type-more.show{
+		display: block;
+	}
 	.b-quiz .b-popup-form label{
 		font-family: 'MuseoSansCyrl-300';
 		font-size: 16px;
@@ -3998,17 +4004,22 @@ form small{
 		    /*padding-left: 8px;*/
 		    letter-spacing: 0.3px;  
 		}
-		.b-quiz .b-popup-form label[for=site]{
+		.b-quiz .b-popup-form label[for=site],
+		.b-quiz .b-popup-form label[for=type-more]{
 			/*padding-left: 8px;*/
     		letter-spacing: 0.4px;
 		    padding-right: 17px;
 		    padding-bottom: 10px;
 		    display: inline-block;
 		}
-		.b-quiz .b-popup-form input[name=site]{
+		.b-quiz .b-popup-form input[name=site],
+		.b-quiz .b-popup-form input[name=type-more]{
 			padding: 22px 24px 18px 24px;
 			width: 100%;
 			margin-top: 0px;
+		}
+		.b-quiz .b-popup-form input[name=type-more]{
+			margin-bottom: 16px;
 		}
 	.b-quiz .fancybox-close-small{
 		display: none;

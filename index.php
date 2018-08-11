@@ -1772,6 +1772,10 @@ if( $mobile ){
 									<option value="Производство">Производство</option>
 									<option value="Другое">Другое</option>
 								</select>
+								<div class="b-type-more">
+									<label for="type-more">Другая сфера деятельности:</label>
+									<input type="text" id="type-more" name="type-more" placeholder="например, школа танцев" />
+								</div>
 								<!-- <label for="works">Если коротко, то мы:</label>
 								<textarea name="works" class="b-quiz-textarea" placeholder="Занимаемся оптовой продажей кофе по России и в страны        Азии с 2014 года. Сейчас хотим запустить франшизу."></textarea> -->
 								<label for="site">Вставьте ссылку на ваш сайт или пропустите этот шаг:</label>

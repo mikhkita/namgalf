@@ -35,8 +35,8 @@
 <body>
 	<div class="b-thanks" id="b-roadmap">
 		<div class="b-block b-thanks-header clearfix">
-			<a href="index.html" class="b-thanks-back icon-arrow-left left">вернуться на сайт</a>
-			<a href="index.html" class="b-logo left">
+			<a href="/m/" class="b-thanks-back icon-arrow-left left">вернуться на сайт</a>
+			<a href="/m/" class="b-logo left">
 				<img src="i/1/logo@2x.png" alt="" width=106>
 			</a>
 			<div class="b-logo__text right">Агентство<br> интернет-маркетинга</div>

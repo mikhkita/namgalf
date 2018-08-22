@@ -44,8 +44,51 @@ if( $mobile ){
 <body>
 	<div class="b-overflow">
 		<div class="b b-1">
+			<div class="b-fade-menu">
+				<div class="b-menu-wrap">
+					<div id="column-1" class="b-menu-column fadeIn delay300">
+						<h3 class="b-menu-header">Компания</h3>
+						<ul>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Клиенты</a></li>
+							<li><a href="#">Награды</a></li>
+							<li><a href="#">События</a></li>
+							<li><a href="#">Студия в СМИ</a></li>
+						</ul>
+					</div>
+					<div id="column-2" class="b-menu-column fadeIn delay500">
+						<h3 class="b-menu-header">Проекты</h3>
+						<ul>
+							<li><a href="#">Системы и сервисы</a></li>
+							<li><a href="#">Mobile</a></li>
+							<li><a href="#">Посмотреть все</a></li>
+						</ul>
+					</div>
+					<div id="column-3"class="b-menu-column fadeIn delay700">
+						<h3 class="b-menu-header">Работа у нас</h3>
+						<ul>
+							<li><a href="#">О работе в Студии</a></li>
+							<li><a href="#">Вакансии</a></li>
+							<li><a href="#">корпоративная культура</a></li>
+						</ul>
+					</div>
+					<div id="column-4" class="b-menu-column fadeIn delay800">
+						<h3 class="b-menu-header">Контакты</h3>
+						<ul>
+							<li><a href="#">+7 495 268-06-61</a></li>
+							<li><a href="#">+7 863 303-61-91</a></li>
+							<li><a href="#">hello@tfa.ru</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 			<div class="b-block b-header">
 				<div class="b-header-top clearfix">
+					<div class="b-menu-button">
+						<div class="line-1"></div>
+						<div class="line-2"></div>
+						<div class="line-3"></div>
+					</div>
 					<a href="#" class="b-logo left">
 						<img src="i/1/logo@2x.png" alt="" width=106>
 						<div class="b-logo__text">Агентство интернет-маркетинга</div>

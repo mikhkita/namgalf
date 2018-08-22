@@ -46,7 +46,7 @@
 		<div class="b b-1">
 			<div class="b-fade-menu">
 				<div class="b-menu-wrap">
-					<div id="column-1" class="b-menu-column fadeIn delay300">
+					<div id="column-1" class="b-menu-column fadeDown delay300">
 						<h3 class="b-menu-header">Компания</h3>
 						<ul>
 							<li><a href="#">Услуги</a></li>
@@ -56,7 +56,7 @@
 							<li><a href="#">Студия в СМИ</a></li>
 						</ul>
 					</div>
-					<div id="column-2" class="b-menu-column fadeIn delay500">
+					<div id="column-2" class="b-menu-column fadeDown delay500">
 						<h3 class="b-menu-header">Проекты</h3>
 						<ul>
 							<li><a href="#">Системы и сервисы</a></li>
@@ -64,7 +64,7 @@
 							<li><a href="#">Посмотреть все</a></li>
 						</ul>
 					</div>
-					<div id="column-3"class="b-menu-column fadeIn delay700">
+					<div id="column-3"class="b-menu-column fadeDown delay700">
 						<h3 class="b-menu-header">Работа у нас</h3>
 						<ul>
 							<li><a href="#">О работе в Студии</a></li>
@@ -72,7 +72,7 @@
 							<li><a href="#">корпоративная культура</a></li>
 						</ul>
 					</div>
-					<div id="column-4" class="b-menu-column fadeIn delay800">
+					<div id="column-4" class="b-menu-column fadeDown delay800">
 						<h3 class="b-menu-header">Контакты</h3>
 						<ul>
 							<li><a href="#">+7 495 268-06-61</a></li>

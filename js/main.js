@@ -513,6 +513,10 @@ $(document).ready(function(){
             $(".line-2").removeClass("line-2-show");
             $(".line-3").removeClass("line-3-show");
             $("html,body").css("overflow","auto");
+            $("#column-1").removeClass("show");
+            $("#column-2").removeClass("show");
+            $("#column-3").removeClass("show");
+            $("#column-4").removeClass("show");
         } else{
             $('html, body').animate({scrollTop:0}, 'fast');
             $(".b-fade-menu").addClass("menu-show");

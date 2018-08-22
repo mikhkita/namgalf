@@ -543,6 +543,50 @@ $(document).ready(function(){
             }
         }
     });
+
+     $(".b-menu-button").on("click", function(){
+        if($(".b-fade-menu").hasClass("menu-show")){
+            $(".b-fade-menu").removeClass("menu-show");
+            $(".b-menu-button").removeClass("button-show");
+            $(".line-1").removeClass("line-1-show");
+            $(".line-2").removeClass("line-2-show");
+            $(".line-3").removeClass("line-3-show");
+            $("html,body").css("overflow","auto");
+        } else{
+            $('html, body').animate({scrollTop:0}, 'fast');
+            $(".b-fade-menu").addClass("menu-show");
+            $(".b-menu-button").addClass("button-show");
+            $(".line-1").addClass("line-1-show");
+            $(".line-2").addClass("line-2-show");
+            $(".line-3").addClass("line-3-show");
+            $("html,body").css("overflow","hidden");
+            $("#column-1").addClass("show");
+            $("#column-2").addClass("show");
+            $("#column-3").addClass("show");
+            $("#column-4").addClass("show");
+        }
+    });
+
+    $(".b-fade-menu a").on("click", function(){
+        $(".b-fade-menu").removeClass("menu-show");
+        $(".b-menu-button").removeClass("button-show");
+        $(".line-1").removeClass("line-1-show");
+        $(".line-2").removeClass("line-2-show");
+        $(".line-3").removeClass("line-3-show");
+        $("html,body").css("overflow","auto");
+    });
+
+    $( "#hider" ).click(function(){
+        if ($( "#search" ).hasClass( "show-s" )){
+            $( "#search" ).removeClass( "show-s" );
+        } else {
+            $( "#search" ).addClass( "show-s" )
+            setTimeout(function(){
+                $( "#title-search-input" ).focus();
+            }, 50);
+        }
+        return false;
+    });
     // if( $(".b-quiz-container").find("input[name=phone]").length ){
     //     $(".b-quiz-container").find("input[name=phone]").each(function(){
     //         var phoneMaskPopup = new IMask($(this)[0], {

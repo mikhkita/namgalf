@@ -696,13 +696,12 @@ form small{
 			background-color: transparent;
 			z-index: 40;
 			position: relative;
-			padding-bottom: 8px;
+			padding-bottom: 16px;
 			-webkit-transition: background-color 300ms;
-			   -moz-transition: background-color 300ms;
-			    -ms-transition: background-color 300ms;
-			   	 -o-transition: background-color 300ms;
-					transition: background-color 300ms;
-
+			-moz-transition: background-color 300ms;
+			-ms-transition: background-color 300ms;
+			-o-transition: background-color 300ms;
+			transition: background-color 300ms;
 		}
 			.b-header-top-show{
 				background-color: #fff;

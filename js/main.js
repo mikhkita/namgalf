@@ -1,4 +1,14 @@
 $(document).ready(function(){	
+    var isIE = /edge\/(\d+(\.\d+)?)/i.test(navigator.userAgent);
+
+    if( isIE ){
+        $("#level-line-path-1, #level-line-path-2-1, #level-line-path-2-2, #level-line-path-3-1, #level-line-path-3-2").css({
+            "stroke-dashoffset" : "0px"
+        });
+
+        $(".b-levels-email").removeClass("delay1000").addClass("show");
+    }
+
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -121,7 +131,9 @@ $(document).ready(function(){
     });
 
     custom['svg-anim'] = function(el){
-        document.getElementById(el.attr("data-id")).beginElement();
+        if( !isIE ){
+            document.getElementById(el.attr("data-id")).beginElement();
+        }
     }
 
     $(".b-reviews-slider").slick({

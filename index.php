@@ -407,7 +407,7 @@ if( $mobile ){
 				<div class="b-team">
 					<div class="b-team-item" style="width: 27%;margin-left: 5%;padding-left: 88px;">
 						<p><b>Владимир Сургай</b></p>
-						<small>Сооснователь TFA,<br>ведущий маркетолог</small>
+						<small>Основатель TFA,<br>ведущий маркетолог</small>
 					</div>
 					<div class="b-team-item" style="width: 20%;padding-left: 40px;padding-top: 268px;">
 						<p><b>Артем Федорченко</b></p>
@@ -1953,6 +1953,6 @@ if( $mobile ){
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main.js?1"></script>
 </body>
 </html>

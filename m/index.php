@@ -312,7 +312,7 @@ if( !$mobile ){
 						<img src="i/7/man-1.jpg">
 						<div class="b-team-item">
 							<p><b>Владимир Сургай</b></p>
-							<small>Сооснователь TFA,<br>ведущий маркетолог</small>
+							<small>Основатель TFA,<br>ведущий маркетолог</small>
 						</div>
 					</div>
 				</div>

@@ -552,8 +552,10 @@ $(document).ready(function(){
             $(".line-2").removeClass("line-2-show");
             $(".line-3").removeClass("line-3-show");
             $("html,body").css("overflow","auto");
-        } else{
+            $(".b-header-top").removeClass("b-header-top-show");
             $('html, body').animate({scrollTop:0}, 'fast');
+            $('.b-fade-menu').animate({scrollTop:0}, 'fast');
+        } else{
             $(".b-fade-menu").addClass("menu-show");
             $(".b-menu-button").addClass("button-show");
             $(".line-1").addClass("line-1-show");
@@ -564,6 +566,7 @@ $(document).ready(function(){
             $("#column-2").addClass("show");
             $("#column-3").addClass("show");
             $("#column-4").addClass("show");
+            $(".b-header-top").addClass("b-header-top-show");
         }
     });
 
@@ -574,6 +577,7 @@ $(document).ready(function(){
         $(".line-2").removeClass("line-2-show");
         $(".line-3").removeClass("line-3-show");
         $("html,body").css("overflow","auto");
+        $(".b-header-top").removeClass("b-header-top-show");
     });
 
     $( "#hider" ).click(function(){
